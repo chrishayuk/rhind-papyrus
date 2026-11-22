@@ -1,0 +1,14 @@
+% Problem 48. Chace vol. II pl. 70 (photograph XIX), PDF pp. 187-188; Peet pp. 88-89 (Pl. O).
+No. 48
+% No words. A figure: a square with a circle (drawn as an octagon) inside it, and 9 written in the circle. The notation has no figure.
+% The papyrus writes areas over 10 setat as a number of "thousands-of-land" (each 10 setat) before the word setat, then the remaining setat:
+% "1 '' 6" is 1 thousand-of-land 6 setat, i.e. 16 setat. The notation has no thousand-of-land unit, so each is written here in setat, with the papyrus's form in a note.
+  1     8 setat
+  2     16 setat      % written 1 (thousand-of-land) 6 setat; Chace n.1: the 6 is a special sign resembling 60, used for 6 setat and 6 hekat
+  4     32 setat      % written 3 (thousands-of-land) 2 setat
+\ 8     64 setat      % written 6 (thousands-of-land) 4 setat
+\ 1     9 setat       % Chace n.2: the 9 is a special sign used for 9 setat and 9 hekat
+  2     18 setat      % written 1 (thousand-of-land) 8 setat
+  4     36 setat      % written 3 (thousands-of-land) 6 setat; Chace n.1: special sign for 6; Peet n.3: "The text has 60 setat"
+\ 8     72 setat      % written 7 (thousands-of-land) 2 setat
+Total 81 setat.       % written 8 (thousands-of-land) 1 setat

@@ -1,0 +1,32 @@
+% Problem 33. Chace vol. II pl. 55 (photograph XIV, registers 5-6), PDF pp. 157-158; Peet pp. 68-70 (Pl. K).
+No. 33
+{"A quantity, 2/3 of it, '2 of it, '7 of it, added to it, becomes it: 37."}
+  1      1 2/3 '2 '7
+  2      4 '3 '4 '28
+  4      9 6 '14          % 6 for '6: Chace fn 1: "The fractional dots in these places are omitted in the original."
+  8      18 '3 '7
+\ 16     36 2/3 '4 '28    {28}  {10 '2}  {1 '2}    % red, beneath 2/3 '4 '28: their values in 42nds
+  1      42
+  2/3    28               % no tick; Peet: "sic 2/3" (it is one of the three to be added)
+  '2     21
+\ '4     10 '2
+\ '28    1 '2
+"The total is 40, the remainder is: 2."   % 28, 10 '2 and 1 '2 (the 2/3 row and the ticked rows), not the ticked rows alone; quoted for that reason
+% the remainder divided (the 1 2/3 '2 '7 in 42nds, Total 97, is not here: Chace fn 1: "The calculation of 97 may be found with Problem 31"; Peet supplies it from No. 38: "<1 42 / 2/3 28 / '2 21 / '7 6 / Total 99 (sic: read 97)>")
+  97     42       1       % 97 for '97 and 42 for '42 (Chace fn 1). No tick; Peet prints no ticks on these two rows
+\ '56 '679 '776   '21     2
+"Total 37."               % "dmd 37": 36 and the 1 of the 42nds
+{"Example of proof."}
+% each row: multiplier, product on the quantity 16 '56 '679 '776; the papyrus writes beneath the small fractions, in red, their values in 5432nds; they are put at the end of the row, one per fraction
+  1      16 '56 '679 '776                 {97}  {8}  {7}
+  2/3    10 2/3 '84 '1358 '4074 '1184     {64 2/3}  {4}  {1 '3}  {4 2/3}   % Peet: "'1184 (read '1164)"; Chace prints '1184 without comment (his red value 4 2/3 under it is that of '1164)
+  '2     8 '112 '1358 '1552               {48 '2}  {4}  {3 '2}
+  '7     2 '4 '28 '392 '4753 '5432        {12 '2 '4 '14 '28}  {1 '7}  {1}   % red beneath '392 '4753 '5432
+"36 2/3 '4 '28, the remainder is: '28 '84"   % the whole numbers and larger fractions (Peet: "<Total> 36 + 2/3 + '4 + '28; remainder '28 + '84")
+"{'3621 '3 '1358 '194} {'194 64 2/3}"     % red: beneath 2/3 '4 '28 and '28 '84, their values in 5432nds. Chace fn 2: "These are whole numbers, but are marked with the fractional dot in the original" (3621 '3, 1358, 194, 194 written with the part sign)
+  1      5432
+  2/3    3621 '3
+  '2     2716
+  '4     1358
+  '28    194
+"The total is 5173 '3, the remainder is: 258 2/3."   % "dmd 5173 '3": the 2/3, '4 and '28 rows only (3621 '3, 1358, 194); 5432 less 5173 '3 is 258 2/3, which the red values above add to

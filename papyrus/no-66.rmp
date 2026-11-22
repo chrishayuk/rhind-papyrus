@@ -1,0 +1,17 @@
+% Problem 66. Chace vol. II pl. 88, PDF pp. 223-224; Peet pp. 109-110 (Pl. S).
+No. 66
+{"Fat, hekat 10,"} "goes out for a year; what is the share of a day therein?"
+"The working-out of it: Make thou the fat, hekat 10, in ro; there become 3200."   % Chace: the scribe first omitted "hekat 10" and added it above the line
+"Make thou the year in days; there become 365."
+"Call thou 3200 out of 365; there become 8 2/3 '10 '2190, making in ro: '64 3 ro 2/3 '10 '2190; the share of a day this is."   % Chace: "m r'w [in ro] is not accurately used since we have first a fraction of a hekat"; Peet: "making in ro (sic) '64 hekat and (3 2/3 '10 '2190) ro"
+{"The doing as it occurs:"}
+Reckon with 365 to find 3200.
+  1      365
+  2      730
+  4      1460
+  [8]    [2920]     % Chace restores this row in brackets; Peet: "8  2920 has been omitted after 4  1460"
+  2/3    243 '3
+  '10    36 '2
+  '2190  '6
+{Result 8 2/3 '10 '2190.}   % the papyrus: {Total 8 2/3 '10 '2190} (red), the sum of the multipliers 8, 2/3, '10, '2190; no row is ticked
+"Shalt do thou according to the like in relation to what is said to thee, all, like example this."

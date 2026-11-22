@@ -1,0 +1,19 @@
+% Problem 53. Chace vol. II pl. 75 (photographs XX-XXI), PDF pp. 197-198; Peet pp. 95-96 (Pl. P).
+No. 53
+% No statement of the problem. A figure: a long triangle divided into three parts by two lines across it, with numbers in red
+% (Peet: the base of the apex part marked 2 '4 in red, its area 7 '2 '4 '8 in red, and a 7 along the lower side near the apex). The notation has no figure.
+% Chace: "For explanation and statement of numerical mistakes, see volume 1, page 94." Peet: "a problem which is clearly incomplete and incorrect".
+% Fractions of the setat are written with the special setat signs (Chace; Peet pp. 24-5).
+\ 1     4 '2 setat
+\ 2     9 setat
+  '2    2 '4 setat     % Chace n.1: "The scribe has here by mistake written the multiplier '2 in the special notation for '2 setat"; Peet likewise
+  '4    1 '8 setat     % Peet: ticked
+{Total} 5 '2 '8 setat.  % "Total" (dmd) in red. 5 '2 '8 is the 1 and '4 rows (4 '2 times 1 '4); Peet: correct "despite inaccurate ticking and the introduction of an unnecessary step"
+"'10 of it: 1 '4 '8 setat, cubit-strip 10."   % Chace n.2: cubit-strip 10 is written with a sign exactly like 30 (Peet: a special sign for 10 cubits-of-land; Griffith and Moeller suspected a mistake); Peet: these lines "are totally unconnected with this, and clearly come from some other reckoning"
+"'10 of it is: to be taken away; then this is: the amount."
+  1     7 setat
+\ 2     14 setat       % written 1 (thousand-of-land) 4 setat
+  '2    3 '2 setat     % Chace n.1: the multiplier '2 written in the special notation for '2 setat
+\ '4    1 '2 '4 setat
+{Total} 15 '2 '4 setat.  % "Total" in red. Written "setat 1 5 '2 '4": Chace n.4: "This should be 1 setat 5, etc. The setat sign is placed over the 1 instead of the 5 by mistake"; Peet: "1 thousand-of-land and (5 '2 '4) setat"
+\ '2    7 '2 '4 '8 setat   % half of the total 15 '2 '4, not of 7; Peet: no tick here

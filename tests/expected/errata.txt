@@ -1,0 +1,557 @@
+table-2n-a line 36 (2 ÷ 9): 6̅ of 9 is 1 2̅: the multiplier is written 6 for 6̅
+    could be part-sign: 6 written for 6̅: the part sign left off the multiplier
+    noted: Chace: "The fractional dot is omitted in the first term of the answer ... this term is '6 and not the whole number 6"
+table-2n-a line 54 (2 ÷ 11): 6̅6̅ of 11 is 6̅; the papyrus has 6
+    could be part-sign: 6 written for 6̅: the part sign left off
+    not pointed out by either edition, as transcribed
+table-2n-a line 83 (2 ÷ 17): 6̅ of 17 is 2 2̅ 3̅: the multiplier is written 6 for 6̅
+    could be part-sign: 6 written for 6̅: the part sign left off the multiplier
+    noted: Chace: "This number should be '6 and not 6"; Peet: '6 (dots corrected silently)
+table-2n-a line 113 (2 ÷ 21): 4̅2̅ of 21 is 2̅: the multiplier is written 42 for 4̅2̅
+    could be part-sign: 42 written for 4̅2̅: the part sign left off the multiplier
+    noted: Chace: "The fractional dot is omitted in the second term of the answer"; the number is '42
+table-2n-a line 154 (2 ÷ 29): 1 times 29 is 29; the papyrus has '24
+    could be one-sign: 4 written for 9
+    noted: Chace: "The scribe has been careless here ... it was natural to put '1' at the beginning of the first line"; Peet: "1 (sic)", "obviously an error"; Peet also prints a first row "1  29" which Chace does not have
+table-2n-a line 164 (2 ÷ 31): 1 times 31 is 31; the papyrus has '20
+    noted: Chace: "the scribe has by mistake put '1' at the top of the first column, opposite '20"; Peet: "1 (sic)", "The dot 1 in front of '20 is an error"
+table-2n-a line 177 (2 ÷ 35): 3̅0̅ of 35 is 1 6̅: the multiplier is written 30 for 3̅0̅
+    could be part-sign: 30 written for 3̅0̅: the part sign left off the multiplier
+    noted: Chace: the dot is omitted with this 30 on the plate, "possibly ... concealed under the patch"
+table-2n-a line 178 (2 ÷ 35): 4̅2̅ of 35 is ⅔ 6̅: the multiplier is written 42 for 4̅2̅
+    could be part-sign: 42 written for 4̅2̅: the part sign left off the multiplier
+    noted: Chace: dot omitted with the sign for 40, see the note to 2 ÷ 21
+table-2n-a line 181 (2 ÷ 35): 4̅2̅ of 35 is ⅔ 6̅: the multiplier is written 42 for 4̅2̅
+    could be part-sign: 42 written for 4̅2̅: the part sign left off the multiplier
+    noted: Chace: dot omitted with 42 (note to 2 ÷ 21); Peet: '42
+table-2n-a line 216 (2 ÷ 41): ⅔ of 41 is 27 3̅; the papyrus has 2̅7̅ 3̅
+    could be part-sign: 2̅7̅ written for 27: a part sign added
+    not pointed out by either edition, as transcribed
+table-2n-a line 231 (2 ÷ 43): 4̅2̅ of 43 is 1 4̅2̅: the papyrus has 42 and 1 42
+    could be part-sign: 42 written for 4̅2̅, and in the product 42 written for 4̅2̅: the part sign left off
+    not pointed out by either edition, as transcribed
+table-2n-a line 232 (2 ÷ 43): 6̅6̅ of 43 is 2̅ 1̅2̅ 2̅2̅ 4̅4̅; the papyrus has 2̅
+    could be multiplier: the multiplier: 60 written for 80 (so the product is that of 8̅6̅)
+    not pointed out by either edition, as transcribed
+table-2n-a line 236 (2 ÷ 43): 4̅2̅ of 43 is 1 4̅2̅: the multiplier is written 42 for 4̅2̅
+    could be part-sign: 42 written for 4̅2̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-a line 237 (2 ÷ 43): 2 times 43 is 86; the papyrus has '66
+    could be one-sign: 60 written for 80
+    not pointed out by either edition, as transcribed
+table-2n-a line 237 (2 ÷ 43): 6̅6̅ of 43 is 2̅ 1̅2̅ 2̅2̅ 4̅4̅; the papyrus has 2̅
+    not pointed out by either edition, as transcribed
+table-2n-b line 35 (2 ÷ 53): 3̅0̅ of 53 is 1 ⅔ 1̅0̅: the multiplier is written 30 for 3̅0̅
+    could be part-sign: 30 written for 3̅0̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 56 (2 ÷ 57): 3̅8̅ of 57 is 1 2̅: the multiplier is written 38 for 3̅8̅
+    could be part-sign: 38 written for 3̅8̅: the part sign left off the multiplier
+    noted: Chace: "Fractional dot omitted." (for '38)
+table-2n-b line 65 (2 ÷ 59): 2̅2̅6̅ of 59 is 4̅ 1̅1̅3̅ 4̅5̅2̅; the papyrus has 4̅
+    could be multiplier: the multiplier: 20 written for 30 (so the product is that of 2̅3̅6̅)
+    not pointed out by either edition, as transcribed
+table-2n-b line 80 (2 ÷ 61): 4̅0̅ of 61 is 1 2̅ 4̅0̅: the multiplier is written 40 for 4̅0̅
+    could be part-sign: 40 written for 4̅0̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 88 (2 ÷ 63): 4̅2̅ of 63 is 1 2̅: the multiplier is written 42 for 4̅2̅
+    could be part-sign: 42 written for 4̅2̅: the part sign left off the multiplier
+    noted: Chace: see note to 2 ÷ 21 (the fractional dot is omitted with the sign for 40)
+table-2n-b line 107 (2 ÷ 67): 4̅0̅ of 67 is 1 2̅ 8̅ 2̅0̅: the multiplier is written 40 for 4̅0̅
+    could be part-sign: 40 written for 4̅0̅: the part sign left off the multiplier
+    noted: Chace: see note to 2 ÷ 21 (fractional dot omitted with the sign for 40)
+table-2n-b line 111 (2 ÷ 67): 4̅0̅ of 67 is 1 2̅ 8̅ 2̅0̅: the multiplier is written 40 for 4̅0̅
+    could be part-sign: 40 written for 4̅0̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 118 (2 ÷ 69): 4̅6̅ of 69 is 1 2̅: the multiplier is written 46 for 4̅6̅
+    could be part-sign: 46 written for 4̅6̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 126 (2 ÷ 71): 4̅0̅ of 71 is 1 2̅ 4̅ 4̅0̅: the multiplier is written 40 for 4̅0̅
+    could be part-sign: 40 written for 4̅0̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 145 (2 ÷ 73): 3̅6̅5̅ of 73 is 5̅; the papyrus has 5
+    could be part-sign: 5 written for 5̅: the part sign left off
+    noted: Chace: "Photograph VI seems to show a crease or overlap in the papyrus here. It is possible that a fractional dot, now concealed, was written over this 5."; Peet: '365, '5
+table-2n-b line 175 (2 ÷ 79): 3 times 79 is 237; the papyrus has '233
+    could be one-sign: 3 written for 7
+    noted: Chace: "These numbers should be 237 and 316 as in the line at the top."; Peet: "In the working read '237 and '316."
+table-2n-b line 175 (2 ÷ 79): 2̅3̅3̅ of 79 is 3̅ 2̅3̅3̅ 6̅9̅9̅; the papyrus has 3̅
+    noted: Chace: "These numbers should be 237 and 316 as in the line at the top."; Peet: "In the working read '237 and '316."
+table-2n-b line 176 (2 ÷ 79): 4 times 79 is 316; the papyrus has '416
+    could be one-sign: 400 written for 300
+    noted: Chace: "should be ... 316"; Peet: "read ... '316"
+table-2n-b line 176 (2 ÷ 79): 4̅1̅6̅ of 79 is 6̅ 7̅8̅ 9̅6̅; the papyrus has 4̅
+    noted: Chace: "should be ... 316"; Peet: "read ... '316"
+table-2n-b line 182 (2 ÷ 81): 5̅4̅ of 81 is 1 2̅: the multiplier is written 54 for 5̅4̅
+    could be part-sign: 54 written for 5̅4̅: the part sign left off the multiplier
+    noted: Chace: "Fractional dot omitted."
+table-2n-b line 189 (2 ÷ 83): the divisor of this entry is 83; the papyrus has 63
+    could be one-sign: 60 written for 80
+    noted: Chace: "63 was written for 83. See note to 2 divided by 43."; Peet: 83 (in his "1 83" row; no remark)
+table-2n-b line 207 (2 ÷ 85): 5̅1̅ of 85 is 1 ⅔: the multiplier is written 51 for 5̅1̅
+    could be part-sign: 51 written for 5̅1̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 213 (2 ÷ 87): 5̅8̅ of 87 is 1 2̅: the multiplier is written 58 for 5̅8̅
+    could be part-sign: 58 written for 5̅8̅: the part sign left off the multiplier
+    noted: Chace: "Fractional dot omitted."
+table-2n-b line 228 (2 ÷ 89): 6̅0̅ of 89 is 1 3̅ 1̅0̅ 2̅0̅: the multiplier is written 60 for 6̅0̅
+    could be part-sign: 60 written for 6̅0̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 237 (2 ÷ 91): 1̅3̅0̅ of 91 is 2̅ 5̅; the papyrus has ⅔ 30
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    noted: Chace: "Fractional dot omitted." (30 for '30)
+table-2n-b line 241 (2 ÷ 91): 1̅3̅0̅ of 91 is 2̅ 5̅; the papyrus has ⅔ 30
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    noted: Chace: "Fractional dot omitted."; Peet: 2/3 '30; Peet: "The working is little more than a restatement of the answer."
+table-2n-b line 247 (2 ÷ 93): 1̅6̅6̅ of 93 is 2̅ 1̅8̅ 2̅4̅9̅ 1̅4̅9̅4̅; the papyrus has 2̅
+    could be multiplier: the multiplier: 60 written for 80 (so the product is that of 1̅8̅6̅)
+    noted: Chace: "166 was written for 186. See note to 2 divided by 43."; Peet: '186, no remark
+table-2n-b line 250 (2 ÷ 93): 2 times 93 is 186; the papyrus has 166
+    could be one-sign: 60 written for 80
+    noted: Chace: "166 was written for 186."; Peet: '186, no remark
+table-2n-b line 250 (2 ÷ 93): 1̅6̅6̅ of 93 is 2̅ 1̅8̅ 2̅4̅9̅ 1̅4̅9̅4̅; the papyrus has 2̅
+    noted: Chace: "166 was written for 186."; Peet: '186, no remark
+table-2n-b line 259 (2 ÷ 95): 6̅0̅ of 95 is 1 2̅ 1̅2̅: the multiplier is written 60 for 6̅0̅
+    could be part-sign: 60 written for 6̅0̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+table-2n-b line 270 (2 ÷ 97): 5̅6̅ of 97 is 1 2̅ 8̅ 1̅4̅ 2̅8̅: the multiplier is written 56 for 5̅6̅
+    could be part-sign: 56 written for 5̅6̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+no-01 line 9 (No. 1): 8 of 1̅0̅ is 2̅ 5̅ 1̅0̅; the papyrus has ⅔ 1̅0̅ 30
+    not carried: what follows is right
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    noted: Chace fn 6: "Fractional dot omitted." (30 for '30)
+no-02 line 10 (No. 2): the total is 1 2̅ 1̅0̅; the papyrus has 2
+    could be ticks: the total is right for the rows on line 7, line 9; a tick left off line 7
+    not pointed out by either edition, as transcribed
+no-04 line 9 (No. 4): 4 of 2̅ 5̅ is 2 2̅ 5̅ 1̅0̅; the papyrus has 2 ⅔ 1̅0̅ 30
+    not carried: what follows is right
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    noted: 30 for '30; Chace: "The scribe has omitted the fractional dot in the '30 in the multiplication."
+no-05 line 7 (No. 5): 1 of 2̅ 5̅ 1̅0̅ is 2̅ 5̅ 1̅0̅; the papyrus has ⅔ 1̅0̅ 30
+    not carried: what follows is right
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    noted: 30 for '30; Chace: "The scribe has omitted the fractional dot in the '30 in the multiplication."
+no-06 line 6 (No. 6): 1 of 2̅ 3̅ 1̅5̅ is 2̅ 3̅ 1̅5̅; the papyrus has ⅔ 5̅ 30
+    not carried: what follows is right
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    noted: 30 for '30; Chace: fractional dot omitted in the '30 "(twice)"
+no-06 line 7 (No. 6): 2 of 2̅ 3̅ 1̅5̅ is 1 2̅ 5̅ 1̅0̅; the papyrus has 1 ⅔ 1̅0̅ 30
+    not carried: what follows is right
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    noted: 30 for '30; Chace: fractional dot omitted (second of the two)
+no-07 line 6 (No. 7): 2̅ of 4̅ 2̅8̅ is 7̅; the papyrus has 8̅ 56
+    not carried: what follows is right
+    could be part-sign: 56 written for 5̅6̅: the part sign left off
+    noted: 56 for '56; Chace: "The scribe omitted the fractional dot in '56."
+no-07b line 5 (No. 7B): 2̅ of 4̅ 2̅8̅ is 7̅; the papyrus has 8̅ 56
+    not carried: what follows is right
+    could be part-sign: 56 written for 5̅6̅: the part sign left off
+    noted: Chace: fractional dot omitted (56 for '56)
+no-07b line 6 (No. 7B): 4̅ of 4̅ 2̅8̅ is 1̅4̅; the papyrus has 16 1̅1̅2̅
+    not carried: what follows is right
+    could be part-sign: 16 written for 1̅6̅: the part sign left off
+    noted: Chace: fractional dot omitted (16 for '16); Peet: "some of the red values are omitted"
+no-10 line 5 (No. 10): 4̅ of 4̅ 2̅8̅ is 1̅4̅; the papyrus has 9
+    not carried: what follows is right
+    noted: Chace: fractional dot omitted (9 for '9), and "'9 was written as a half of '7" (should be '14); Peet: reads 9, "a gross error in the halving of '7, the 2 and the 7 having been added instead of multiplied, giving 9 instead of '14"
+no-11 line 3 (No. 11): 1 of 6̅ 1̅8̅ is 6̅ 1̅8̅; the papyrus has 7̅
+    not carried: what follows is right
+    not pointed out by either edition, as transcribed
+no-11 line 6 (No. 11): the total is 3̅ 1̅8̅; the papyrus has 4̅
+    not pointed out by either edition, as transcribed
+no-12 line 4 (No. 12): 2̅ of 9 is 4 2̅; the papyrus has 2̅8̅
+    not carried: what follows is right
+    not pointed out by either edition, as transcribed
+no-12 line 5 (No. 12): 4̅ of 9 is 2 4̅; the papyrus has 36
+    not carried: what follows is right
+    noted: Chace: fractional dot omitted (36 for '36); Chace: "left the third line '36" (should be '56)
+no-12 line 6 (No. 12): the total is 15 2̅ 4̅; the papyrus has 8̅
+    not pointed out by either edition, as transcribed
+no-13 line 5 (No. 13): 2̅ of 1̅4̅ is 2̅8̅; the papyrus has 32 2̅2̅4̅
+    not carried: what follows is right
+    could be part-sign: 32 written for 3̅2̅: the part sign left off
+    noted: Chace: fractional dot omitted (32 for '32)
+no-13 line 6 (No. 13): 4̅ of 1̅4̅ is 5̅6̅; the papyrus has 64 4̅4̅8̅
+    not carried: what follows is right
+    could be part-sign: 64 written for 6̅4̅: the part sign left off
+    noted: Chace: fractional dot omitted (64 for '64)
+no-14 line 5 (No. 14): 2̅ of 18 is 9; the papyrus has 36
+    not carried: what follows is right
+    could be wrong-row: twice the row on line 4 (18)
+    noted: Chace: fractional dot omitted (36 for '36); Chace: intended '56
+no-14 line 6 (No. 14): 4̅ of 18 is 4 2̅; the papyrus has 7̅2̅
+    not carried: what follows is right
+    not pointed out by either edition, as transcribed
+no-14 line 7 (No. 14): the total is 31 2̅; the papyrus has 1̅6̅
+    noted: Peet: "This is manifestly false" (Peet puts the error in the total); Chace: total correct for '28 '56 '112
+no-15 line 5 (No. 15): 2̅ of 32 2̅2̅8̅ is 16 4̅5̅6̅; the papyrus has 64 4̅5̅6̅
+    not carried: what follows is right
+    noted: Chace: fractional dot omitted (64 for '64)
+no-15 line 6 (No. 15): 4̅ of 32 2̅2̅8̅ is 8 9̅1̅2̅; the papyrus has 1̅2̅8̅ 9̅1̅2̅
+    not carried: what follows is right
+    noted: Chace: fractional dots omitted in red 16 and both red 32s (16 for '16, 32 for '32)
+no-15 line 8 (No. 15): the total is 56 2̅4̅0̅ 2̅8̅5̅; the papyrus has 1̅6̅
+    noted: Peet: "This is untrue, but the answer would have been correct had the original quantity read '32 '224."
+no-17 line 5 (No. 17): 3̅ of 3̅ is 9̅; the papyrus has 9
+    not carried: what follows is right
+    could be part-sign: 9 written for 9̅: the part sign left off
+    noted: Chace: fractional dot omitted (9 for '9)
+no-18 line 4 (No. 18): ⅔ of 6 is 4; the papyrus has 9
+    not carried: what follows is right
+    could be one-sign: 9 written for 4
+    noted: Chace: fractional dot omitted (9 for '9)
+no-18 line 5 (No. 18): 3̅ of 6 is 2; the papyrus has 1̅8̅
+    not carried: what follows is right
+    not pointed out by either edition, as transcribed
+no-18 line 6 (No. 18): the total is 12; the papyrus has 3̅
+    not pointed out by either edition, as transcribed
+no-19 line 4 (No. 19): 1 of 1̅2̅ is 1̅2̅; the papyrus has 12
+    not carried: what follows is right
+    could be part-sign: 12 written for 1̅2̅: the part sign left off
+    noted: Chace: fractional dot omitted (12 for '12)
+no-20 line 6 (No. 20): 3̅ of 2̅4̅ is 7̅2̅; the papyrus has 72
+    not carried: what follows is right
+    could be part-sign: 72 written for 7̅2̅: the part sign left off
+    noted: Chace: fractional dot omitted (72 for '72)
+no-22 line 9 (No. 22): 5̅ of 30 is 6: the multiplier is written 5 for 5̅
+    carried into what follows
+    could be part-sign: 5 written for 5̅: the part sign left off the multiplier
+    noted: 5 for '5; Chace fn 2: "The scribe omitted the fractional dot."
+no-22 line 9 (No. 22): the ticked rows make 153, not 9
+    noted: 5 for '5; Chace fn 2: "The scribe omitted the fractional dot."
+no-22 line 10 (No. 22): the total is 153; the papyrus has 9, carrying the error above
+    not pointed out by either edition, as transcribed
+no-27 line 15 (No. 27): 4 of 3 2̅ is 14; the papyrus has 15
+    could be one-sign: 5 written for 4
+    noted: Peet: "15 (sic)", "15 has been erroneously written for 14"; Chace prints 15 without comment
+no-30 line 6 (No. 30): 2 of ⅔ 1̅0̅ is 1 3̅ 5̅; the papyrus has 1 3̅ 5
+    could be part-sign: 5 written for 5̅: the part sign left off
+    noted: 5 for '5: Chace fn 2: "The scribe omitted the fractional dots in these places." Peet prints '5 without comment
+no-30 line 8 (No. 30): 8 of ⅔ 1̅0̅ is 6 1̅0̅ 3̅0̅; the papyrus has 6 1̅0̅ 30
+    could be part-sign: 30 written for 3̅0̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-30 line 14 (No. 30): 1̅0̅ of 13 2̅3̅ is 1 4̅ 2̅3̅ 9̅2̅; the papyrus has 1 5 1̅0̅ 2̅3̅0̅
+    not carried: what follows is right
+    could be part-sign: 5 written for 5̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-31 line 7 (No. 31): 4 of 2 6̅ 7̅ is 9 6̅ 1̅4̅; the papyrus has 9 6 1̅8̅
+    noted: 6 for '6: Chace fn 1: "The scribe omitted the fractional dots in these places."; Peet: "'18 (read '14)"; Chace prints '18 without comment
+no-31 line 10 (No. 31): 4̅ of 2 6̅ 7̅ is 2̅ 2̅4̅ 2̅8̅; the papyrus has 4̅ 6 8̅ 2̅8̅
+    could be part-sign: 6 written for 6̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-31 line 17 (No. 31): the total is 97; the papyrus has 99
+    could be one-sign: 9 written for 7
+    noted: Chace: "incorrectly written 99" (for 97); Peet: "99 (read 97)"
+no-31 line 20 (No. 31): 5̅6̅ 6̅7̅9̅ 7̅7̅6̅ of 2 6̅ 7̅ is 2̅1̅; the papyrus has 21
+    could be part-sign: 21 written for 2̅1̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-32 line 7 (No. 32): 3̅ of 1 3̅ 4̅ is 2̅ 3̅6̅; the papyrus has 2̅ 36
+    could be part-sign: 36 written for 3̅6̅: the part sign left off
+    noted: 36 for '36: Chace fn 1: "The scribe omitted the fractional dots in these places."
+no-32 line 8 (No. 32): 6̅ of 1 3̅ 4̅ is 4̅ 7̅2̅: the papyrus has 6 and 4̅ 72
+    could be part-sign: 6 written for 6̅, and in the product 72 written for 7̅2̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-32 line 11 (No. 32): 1̅1̅4̅ of 1 3̅ 4̅ is 7̅2̅; the papyrus has 72
+    could be part-sign: 72 written for 7̅2̅: the part sign left off
+    noted: 72 for '72 (Chace fn 1); no tick; Peet: "(sic) '114"
+no-32 line 15 (No. 32): 3̅ of 1 4̅ 7̅6̅ is 3̅ 1̅2̅ 2̅2̅8̅; the papyrus has 3̅ 1̅8̅ 36 3̅4̅2̅ 6̅8̅4̅
+    could be part-sign: 36 written for 3̅6̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-32 line 30 (No. 32): 1 of 1 4̅ 7̅6̅ is 1 4̅ 7̅6̅; the papyrus has 1 6 1̅2̅ 1̅1̅4̅ 2̅2̅8̅
+    could be part-sign: 6 written for 6̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-33 line 6 (No. 33): 4 of 2 6̅ 7̅ is 9 6̅ 1̅4̅; the papyrus has 9 6 1̅4̅
+    could be part-sign: 6 written for 6̅: the part sign left off
+    noted: 6 for '6: Chace fn 1: "The fractional dots in these places are omitted in the original."
+no-33 line 17 (No. 33): 5̅6̅ 6̅7̅9̅ 7̅7̅6̅ of 3̅ 1̅1̅ 1̅1̅5̅ 1̅9̅3̅7̅5̅ 7̅1̅3̅2̅2̅2̅8̅1̅3̅ 1̅0̅1̅7̅3̅7̅3̅5̅6̅1̅2̅5̅4̅0̅4̅3̅1̅2̅5̅ is 1̅1̅3̅ 1̅2̅8̅1̅0̅ 1̅0̅4̅7̅6̅7̅7̅6̅7̅5̅ 2̅8̅5̅3̅8̅3̅4̅1̅2̅6̅7̅5̅5̅1̅7̅6̅9̅5̅0̅; the papyrus has 2̅1̅
+    not pointed out by either edition, as transcribed
+no-33 line 22 (No. 33): ⅔ of 16 5̅6̅ 6̅7̅9̅ 7̅7̅6̅ is 10 ⅔ 9̅7̅ 2̅9̅1̅; the papyrus has 10 ⅔ 8̅4̅ 1̅3̅5̅8̅ 4̅0̅7̅4̅ 1̅1̅8̅4̅
+    noted: Peet: "'1184 (read '1164)"; Chace prints '1184 without comment (his red value 4 2/3 under it is that of '1164)
+no-35 line 13 (No. 35): the total is 4 3̅; the papyrus has 1
+    could be ticks: the total is right for the rows on line 11, line 12; a tick left off line 11, line 12
+    noted: no tick; Peet: (sic)
+no-35 line 18 (No. 35): the total is 2̅ 3̅ 1̅5̅; the papyrus has 1
+    could be ticks: the total is right for the rows on line 15, line 16, line 17; a tick left off line 17
+    noted: no tick; Peet: (sic), "A tick is omitted before '3"
+no-36 line 16 (No. 36): the total is 30; the papyrus has 1
+    could be ticks: the total is right for the rows on line 13; a tick wrongly on line 12, line 14, line 15
+    noted: the ticked products add to 30; Peet: "the scribe, instead of giving the total of the products as 30, gives it as 1. This must not be regarded as a mere error"; Chace prints dmd 1 without comment
+no-36 line 18 (No. 36): 1 of 4̅ 3̅1̅ 1̅3̅1̅5̅ 2̅8̅8̅0̅7̅2̅7̅ 2̅4̅8̅9̅5̅7̅6̅1̅2̅6̅4̅8̅6̅0̅ is 4̅ 3̅1̅ 1̅3̅1̅5̅ 2̅8̅8̅0̅7̅2̅7̅ 2̅4̅8̅9̅5̅7̅6̅1̅2̅6̅4̅8̅6̅0̅; the papyrus has 4̅ 53 1̅0̅6̅ 2̅1̅2̅
+    could be part-sign: 53 written for 5̅3̅: the part sign left off
+    noted: 53 for '53: Chace fn 1: "The scribe omitted the fractional dots in these places."
+no-37 line 14 (No. 37): 2̅ of 3 2̅ 1̅8̅ is 1 ⅔ 9̅; the papyrus has 1 2̅ 4̅ 36
+    not carried: what follows is right
+    could be part-sign: 36 written for 3̅6̅: the part sign left off
+    noted: 36 for '36: Chace fn 2: "The scribe omitted the fractional dots in these places."
+no-37 line 17 (No. 37): 1̅6̅ of 3 2̅ 1̅8̅ is 6̅ 1̅8̅; the papyrus has 8̅ 1̅6̅ 32 2̅8̅8̅
+    not carried: what follows is right
+    could be part-sign: 32 written for 3̅2̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-37 line 52 (No. 37): 1̅6̅ of 320 is 20: the multiplier is written 16 for 1̅6̅
+    carried into what follows
+    could be part-sign: 16 written for 1̅6̅: the part sign left off the multiplier
+    noted: 16 for '16: Chace fn 2: fractional dots omitted
+no-37 line 53 (No. 37): 3̅2̅ of 320 is 10: the multiplier is written 32 for 3̅2̅
+    carried into what follows
+    could be part-sign: 32 written for 3̅2̅: the part sign left off the multiplier
+    not pointed out by either edition, as transcribed
+no-37 line 54 (No. 37): the total is 10320; the papyrus has 90, carrying the error above
+    not pointed out by either edition, as transcribed
+no-38 line 11 (No. 38): 1̅1̅ of 3 7̅ is 4̅ 2̅8̅; the papyrus has 4̅ 28
+    not carried: what follows is right
+    could be part-sign: 28 written for 2̅8̅: the part sign left off
+    noted: 28 for '28: Chace fn 2: "The scribe omitted the fractional dots in these places."
+no-38 line 13 (No. 38): the total is 4 7̅; the papyrus has 1
+    could be ticks: the total is right for the rows on line 10, line 11, line 12; a tick left off line 10, line 11, line 12
+    noted: 28 for '28: Chace fn 2: "The scribe omitted the fractional dots in these places."
+no-38 line 17 (No. 38): 2 of 4̅ 2̅2̅ 4̅4̅ is 2̅ 1̅1̅ 2̅2̅; the papyrus has 2̅ 1̅1̅ 33 6̅6̅
+    not carried: what follows is right
+    could be part-sign: 33 written for 3̅3̅: the part sign left off
+    not pointed out by either edition, as transcribed
+no-42 line 11 (No. 42): 2 of 8 2̅ 3̅ 1̅8̅ is 17 ⅔ 9̅; the papyrus has 17 ⅔ 9
+    not carried: what follows is right
+    could be part-sign: 9 written for 9̅: the part sign left off
+    noted: Chace n.3: scribe omitted the fraction dot on the 9
+no-42 line 14 (No. 42): ⅔ of 8 2̅ 3̅ 1̅8̅ is 5 ⅔ 4̅ 1̅0̅8̅; the papyrus has 5 ⅔ 6 1̅8̅ 2̅7̅
+    not carried: what follows is right
+    could be part-sign: 6 written for 6̅: the part sign left off
+    noted: Chace n.3: scribe omitted the fraction dot on the 6
+no-42 line 15 (No. 42): 3̅ of 8 2̅ 3̅ 1̅8̅ is 2 2̅ 3̅ 9̅ 5̅4̅; the papyrus has 2 ⅔ 6̅ 1̅2̅ 36 5̅4̅
+    not carried: what follows is right
+    could be part-sign: 36 written for 3̅6̅: the part sign left off
+    noted: Chace n.3: scribe omitted the fraction dot on the 36
+no-42 line 16 (No. 42): 6̅ of 8 2̅ 3̅ 1̅8̅ is 1 3̅ 1̅2̅ 2̅4̅ 7̅2̅ 1̅0̅8̅: the multiplier is written 6 for 6̅
+    not carried: what follows is right
+    could be part-sign: 6 written for 6̅: the part sign left off the multiplier
+    noted: Chace n.3: scribe omitted the fraction dot on the multiplier 6
+no-42 line 18 (No. 42): the total is 130 2̅ 3̅ 5̅4̅ 8̅1̅; the papyrus has 79 1̅0̅8̅ 3̅2̅4̅
+    could be neighbour: the row below has 79 8̅1̅
+    not pointed out by either edition, as transcribed
+no-42 line 20 (No. 42): 10 of 79 8̅1̅ is 790 9̅ 8̅1̅; the papyrus has 790 1̅8̅ 2̅7̅ 5̅4̅
+    not carried: what follows is right
+    could be one-part: 8̅1̅ left out
+    could be wrong-row: twice the row on line 21 (395 1̅8̅)
+    noted: Peet: error, should be 790 10/81 (a difference of '81)
+no-42 line 21 (No. 42): 2̅ of 79 8̅1̅ is 39 2̅ 1̅6̅2̅; the papyrus has 395 3̅6̅ 5̅4̅ 1̅0̅8̅
+    not carried: what follows is right
+    could be wrong-row: half the row on line 20 (790 9̅)
+    noted: half of the 10 row (790 '18 '27 '54), not of 79 '108 '324; Chace n.3: dot omitted on 36
+no-42 line 22 (No. 42): the total is 908 2̅ 9̅ 5̅4̅ 8̅1̅; the papyrus has 1185
+    not pointed out by either edition, as transcribed
+no-43 line 25 (No. 43): 2̅0̅ of 455 9̅ is 22 2̅ 5̅ 1̅8̅; the papyrus has 22 2̅ 4̅ 4̅5̅
+    noted: Chace n.4: "This should be '180"; Peet: (sic), read '180
+no-53 line 11 (No. 53): the total is 13 2̅ setat; the papyrus has 5 2̅ 8̅ setat
+    could be ticks: the total is right for the rows on line 7, line 10; a tick left off line 10; a tick wrongly on line 8
+    not pointed out by either edition, as transcribed
+no-54 line 12 (No. 54): 4 of 2̅ 5̅ setat is 2 2̅ 5̅ 1̅0̅ setat; the papyrus has 2 2̅ setat 5 cubit
+    noted: Chace n.2: "There should be a '4 here also"; Peet restores it: "(2 '2 + ['4]) setat"
+no-55 line 8 (No. 55): the result is 0; the papyrus has 2̅ 1̅0̅
+    not pointed out by either edition, as transcribed
+no-56 line 11 (No. 56): 5̅ of 7 is 1 3̅ 1̅5̅: the multiplier is written 5 for 5̅
+    could be part-sign: 5 written for 5̅: the part sign left off the multiplier
+    noted: Chace n.4: "Fractional dot omitted" on the multiplier 5
+no-58 line 16 (No. 58): 4̅ of 7 is 1 2̅ 4̅; the papyrus has 1 4̅
+    could be one-part: 2̅ left out
+    noted: Peet: "1 '4 (read 1 '2 '4)"; Chace prints 1 '4 without comment (the text above has 1 '2 '4)
+no-61 line 9 (No. 61): the result is 3̅ 9̅; the papyrus has 3̅ 9
+    could be part-sign: 9 written for 9̅: the part sign left off
+    noted: Chace: the scribe omitted the fractional dot (9 for '9); Peet: '3 + '9
+no-61 line 18 (No. 61): the result is 9̅; the papyrus has 1̅2̅ 36
+    could be part-sign: 36 written for 3̅6̅: the part sign left off
+    noted: Chace: the scribe omitted the fractional dot (36 for '36); Peet: '12 + '36
+no-61 line 30 (No. 61): the result is 2̅4̅; the papyrus has 24
+    could be part-sign: 24 written for 2̅4̅: the part sign left off
+    noted: Chace: the scribe omitted the fractional dot (24 for '24); Peet: '24
+no-61 line 34 (No. 61): the result is 1̅8̅ 5̅4̅; the papyrus has 18 5̅4̅
+    could be part-sign: 18 written for 1̅8̅: the part sign left off
+    noted: Chace: the scribe omitted the fractional dot (18 for '18); '54 restored; Peet: '18 [+ '54]
+no-61 line 44 (No. 61): the result is 1̅4̅ 4̅2̅; the papyrus has 1̅4̅ 42
+    could be part-sign: 42 written for 4̅2̅: the part sign left off
+    noted: Chace: the scribe omitted the fractional dot (42 for '42); Peet: '14 + '4[2] (the 2 restored)
+no-61 line 58 (No. 61): the result is 4̅4̅; the papyrus has 44
+    could be part-sign: 44 written for 4̅4̅: the part sign left off
+    noted: Chace: the scribe omitted the fractional dot (44 for '44); Peet: '44
+no-63 line 33 (No. 63): the sum of the figures above is 680; the papyrus has 700
+    could be in-the-list: line 31: 10 written for 30 (113 3̅ for 133 3̅); with 133 3̅ the total is right, and 133 3̅ is what line 23 has
+    noted: Chace: "Mistake for 133"; Peet prints 133 '3 without remark
+no-65 line 20 (No. 65): the sum of the figures above is 138 ⅔ 4̅ 2̅6̅ 5̅2̅; the papyrus has 100
+    could be in-the-list: line 11: 39 written for 3̅9̅: the part sign left off (7 ⅔ 39 for 7 ⅔ 3̅9̅); with 7 ⅔ 3̅9̅ the total is right, and 7 ⅔ 3̅9̅ is what line 7 has
+    noted: Chace: "The scribe omitted the fractional dot" (39 for '39); Peet: 7 2/3 + '39
+no-66 line 16 (No. 66): the result is 0; the papyrus has 8 ⅔ 1̅0̅ 2̅1̅9̅0̅
+    not pointed out by either edition, as transcribed
+no-67 line 15 (No. 67): 2 of 6̅ 1̅8̅ is 3̅ 9̅; the papyrus has 3̅ 9
+    not carried: what follows is right
+    could be part-sign: 9 written for 9̅: the part sign left off
+    noted: Chace: "Fractional dot omitted" (9 for '9); Peet: '3 + '9
+no-70 line 10 (No. 70): the ticked rows make 99 2̅ 4̅, not 100
+    not pointed out by either edition, as transcribed
+no-70 line 12 (No. 70): the remainder is 12 ⅔; the papyrus has 4̅
+    could be wrong-row: twice the row on line 13 (8̅)
+    not pointed out by either edition, as transcribed
+no-70 line 17 (No. 70): the result is 4̅; the papyrus has 12 ⅔ 4̅2̅ 1̅2̅6̅
+    could be neighbour: the row below has 12 2̅ 7̅ 1̅8̅
+    could be wrong-row: half the row on line 19 (25 4̅ 9̅ 2̅8̅)
+    could be wrong-row: twice the row on line 21 (6 3̅ 6̅3̅)
+    not pointed out by either edition, as transcribed
+no-79 line 13 (No. 79): the sum of the figures above is 19507; the papyrus has 19607
+    could be in-the-list: line 8: the sign for 100 left out (7 for 107); with 107 the total is right
+    could be in-the-list: line 9: the sign for 100 left out (49 for 149); with 149 the total is right
+    could be in-the-list: line 10: 300 written for 400 (343 for 443); with 443 the total is right
+    could be in-the-list: line 11: 300 written for 400 (2301 for 2401); with 2401 the total is right
+    could be in-the-list: line 12: 800 written for 900 (16807 for 16907); with 16907 the total is right
+    noted: spelt. Chace: "Mistake for 2,401"; Peet: "2301 (sic)"
+no-81 line 19 (No. 81): 2̅ 8̅ 3̅2̅ hekat 3 3̅ ro of 10 is 6 ⅔; the papyrus has 6 2̅ 1̅6̅
+    noted: "2/3 this is of a hekat"; Peet: 6 '2 '16 (sic)
+no-81 line 22 (No. 81): 2̅ 3̅2̅ 6̅4̅ hekat 1 ⅔ ro of 10 is 5 2̅ 4̅8̅; the papyrus has 3 4̅ 8̅ ⅔
+    noted: Chace: the scribe "clearly" wrote the sign for '2 hekat, not a "hybrid between '4 and '2" (Peet, Plate W note d); Peet: '4 '32 '64 hekat; hinu "(3 '4 '8) + 2/3 (sic)"; "That is '7 (sic)"
+no-81 line 32 (No. 81): 3̅2̅ hekat 1 ⅔ ro of 10 is 3̅ 3̅2̅; the papyrus has 3̅
+    could be multiplier: the multiplier: a sign for 2 added (so the product is that of 3̅0̅)
+    noted: "of a hinu '3 this is"; Peet: "1 2/3 ro (sic)", "The 1 is certain, though wrong"; "'60 (sic)"
+no-81 line 33 (No. 81): 6̅4̅ hekat of 10 is 8̅ 3̅2̅; the papyrus has 5̅
+    noted: Chace: after '64 the scribe first wrote ro '3 and crossed it out; Peet prints "'64 + 1 '3 ro (sic)", "The scribe wrote 1 '3 and then crossed it out. Read 1 2/3"
+
+Pointed out by an edition, on a line rhind checks and finds right:
+table-2n-a line 21 (2 ÷ 5): Peet: 1 2/3, with the footnote "Wrongly given as 1 '3 in the plate" (Peet's own plate)
+table-2n-a line 184 (2 ÷ 37): Chace prints a small stroke above and below the '2; read as '2 (so Peet)
+table-2n-a line 193 (2 ÷ 37): ḏꜣ·t; Chace prints a small stroke above the '3 and below; read as '3 (so Peet)
+table-2n-b line 267 (2 ÷ 97): Chace: "The 9 and the portions of figures that follow are on the New York fragments. The 670 is on a fragment that is incorrectly placed at the edge of B. M. 10058, in register 4"
+no-08 line 7 (No. 8): beneath it in red: 9 (the sum of the red values, in 18ths); Chace's note lists "'9 in Problems 8 and 10" among omitted dots, but the only 9 in No. 8 is this red total (Peet: "The three values add up to 9")
+no-09 line 3 (No. 9): Peet: '2 '10 (Chace fn 1: unit figures 4, 8, 6 are on the papyrus but omitted in the B.M. Facsimile, which Peet followed)
+no-09 line 6 (No. 9): Peet (reading '10 '20 '50): "This is clearly incorrect."
+no-11 line 4 (No. 11): '9 is the scribe's error for '14; the '14 is a later correction (Peet: "placed after it in much lighter ink"; Chace: "In Problem 11 he put in the correction '14 but did not erase the '9")
+no-11 line 5 (No. 11): Chace: "left the '18 unchanged" (should be '28); Peet: "we find '18 for '28"
+no-12 line 3 (No. 12): Chace: fractional dot omitted (9 for '9); '14 is the correction in lighter ink (Peet); Chace: "he started with both '9 and '14"
+no-15 line 4 (No. 15): Chace: fractional dot omitted (32 for '32); Peet: '228 where '224 would make the sum right
+no-18 line 3 (No. 18): Chace: fractional dot omitted (6 for '6)
+no-32 line 10 (No. 32): no tick in Chace or Peet; Peet: "(sic) '228"
+no-33 line 10 (No. 33): no tick; Peet: "sic 2/3" (it is one of the three to be added)
+no-39 line 7 (No. 39): no tick in either edition; Peet: (sic)
+no-46 line 9 (No. 46): Chace n.2: the photograph "seems to show a fractional dot written here by mistake"
+no-53 line 9 (No. 53): Chace n.1: "The scribe has here by mistake written the multiplier '2 in the special notation for '2 setat"; Peet likewise
+no-53 line 18 (No. 53): "Total" in red. Written "setat 1 5 '2 '4": Chace n.4: "This should be 1 setat 5, etc. The setat sign is placed over the 1 instead of the 5 by mistake"; Peet: "1 thousand-of-land and (5 '2 '4) setat"
+no-55 line 6 (No. 55): Peet: (sic) on the multiplier '2
+no-55 line 7 (No. 55): Peet: (sic) on the multiplier '10
+no-81 line 31 (No. 81): Chace: traces of '16 hekat and '3 below at the edge (Peet p. 123 n. 2); 30 of peculiar form, perhaps 20 corrected to 30. Peet: "'30 (? sic)"
+no-81 line 44 (No. 81): "'4 '16 this is of a hinu"; Chace: "The scribe omitted the fractional dot" (32 for '32); Peet: '32
+
+Pointed out by an edition, on a line rhind does not check:
+table-2n-b line 2 (): Read from page images by a coding agent's sub-agent; no person checked it. See sources/notes/table-2n-b.md.
+table-2n-b line 15 (): ("% Peet: '40"), but Peet says (p. 38) that "the incorrect omission or insertion of the fractional dot ... has been
+table-2n-b line 22 (2 ÷ 51): Peet: <'2>, "never stood in the papyrus", omitted by the scribe (Peet's pointed brackets); Chace restores it as damage
+table-2n-b line 223 (2 ÷ 89): Chace: "An error has crept into Peet's Plate D, where '336 occurs in his hieroglyphic transcription." (Peet's text has '356)
+table-2n-b line 292 (2 ÷ 101): Peet: [1  101], with "This step was perhaps omitted."; Peet has no third figure
+table-2n-b line 293 (2 ÷ 101): Chace: "This fraction has been omitted in Peet's text, page 47, but it appears on his Plates D and E."
+table-n10 line 2 (): Read from page images by a coding agent's sub-agent; no person checked it. See sources/notes/table-2n-b.md.
+table-n10 line 32 (9 ÷ 10): Chace n. 4: "The same fraction in line 3 appears correctly on Peet's Plate F, where he has restored the fractional dot omitted by the scribe, and in his text, but his Plate E shows '10."; Peet p. 50: 2/3 '5 '30
+no-03 line 9 (No. 3): 30 for '30; Chace fn 4: "The scribe omitted the fractional dot."
+no-15 line 7 (No. 15): i͗ṯ; Chace fn 1: "This notation, made by some ancient scribe (perhaps the copyist of the Rhind himself), shows that the errors of Problem 15, at least, were recognized."; Peet: "WRONG", "an abbreviated form of the verb tht 'to be wrong'"
+no-21 line 19 (No. 21): Chace fn 4: "These words and numbers have crept in through error. See Peet, pages 58-59"; Peet: borrowed partly from No. 35 (and perhaps No. 22)
+no-22 line 12 (No. 22): 5 for '5 here too; Chace fn 2: "The scribe omitted the fractional dot."
+no-23 line 6 (No. 23): 30 for '30; Chace fn 2: "The scribe omitted the fractional dot."
+no-23 line 7 (No. 23): beneath each fraction (values in 45ths), no total written; 11 '4 is black (Peet fn: "11'4 erroneously in black"); Chace fn 3: the '8 after 5 '2 "appears as '4 on Peet's Plate H but is correct in his text"
+no-28 line 4 (No. 28): Peet fn 1: "The B.M.Facs. has, erroneously, 20" (for the second 10); not a reading of the papyrus
+no-28 line 6 (No. 28): Chace fn 4: "The scribe has omitted the proof here and the statement of the next problem"; Peet: "There has been a considerable error in copying at this point"
+no-29 line 2 (): The beginning of the problem is lost in copying: Chace fn 4 to No. 28: "The scribe has omitted the proof here and the statement of the next problem"; Peet: the copyist "has evidently missed out both the end of 28 and the beginning of 29"
+no-30 line 9 (No. 30): "dmd 13 ... '30": 13 is the sum of the ticked multipliers; '30 stands apart, the shortfall from 10 (Peet: the scribe "has further omitted to mark the '30 as d:t or 'remainder' as he should have done")
+no-30 line 10 (No. 30): Peet: "'30 is multiplied 23 times to find 2/3 + '10"; the step showing 2/3 '10 is 23/30 "is completely omitted" (Peet)
+no-31 line 12 (No. 31): beside it, on the right: 1 2/3 '2 '7 in 42nds. Chace: "The calculation of 97 (incorrectly written 99) is placed in the papyrus at the end of Problem 38, but belongs here"; Peet sets it here too, and again in No. 33
+no-32 line 19 (No. 32): written beside "'3" (Chace prints the multiplier '3); Peet: "'3 (sic)", "for '3 in the first line read 1"
+no-32 line 33 (No. 32): 1, '3 and '4 (with the 6 read as '6) only; the other fractions are added below
+no-33 line 15 (No. 33): the remainder divided (the 1 2/3 '2 '7 in 42nds, Total 97, is not here: Chace fn 1: "The calculation of 97 may be found with Problem 31"; Peet supplies it from No. 38: "<1 42 / 2/3 28 / '2 21 / '7 6 / Total 99 (sic: read 97)>")
+no-34 line 16 (No. 34): the fractions right of the line; 56 for '56: Chace fn 1: "The scribe omitted the fractional dot in this place."
+no-35 line 29 (No. 35): Peet: "amounting in corn to"; Chace fn 4: the word (ss) "may have originally read ssr"
+no-36 line 34 (No. 36): Chace fn 4: "Mistake for 60"; Peet: "80 (read 60)"
+no-37 line 56 (No. 37): ticks in the papyrus (Chace and Peet agree): \1 90, \2 180, '3 30 (no tick; Peet: sic), "'3 of '3" 10 (no tick; Peet: sic), \ "'9 of it" 10
+no-38 line 34 (No. 38): "dmd" black, "1." red: 1 hekat, for the 320 ro the three rows add to; quoted, since the rows carry no unit and the notation would read the 1 as 1 ro
+no-40 line 26 (No. 40): under the multipliers 23 ... 1, which add to 60; Peet: "The papyrus here has 'Total 60,' erroneously repeated from above" (placed at the 1 row)
+no-42 line 6 (No. 42): Peet: "slight error", 79 '108 '324 times 10 is 790 10/81, not 790 '9; a difference of '81
+no-42 line 23 (No. 42): Chace n.3: scribe omitted the fraction dot on the 10; '10 and '20 are of 1185
+no-43 line 3 (No. 43): Chace: "In the statement of the problem the given dimensions are transposed"; Peet: statement incorrect, 9 is really the diameter and 6 the height
+no-43 line 7 (No. 43): Chace n.2: the scribe first omitted the word tp (multiply) and later inserted it above the line
+no-43 line 9 (No. 43): Chace n.4: "This should be '180"; Peet: (sic), read '180
+no-43 line 10 (No. 43): Chace n.5: the words in parenthesis "crept in through an error of the ancient copyist"; Peet: "clearly a scribe's error and to be omitted"
+no-49 line 3 (No. 49): Chace n.4: "The solution is for 1 khet instead of 2"; Peet: "If we read 1 khet instead of 2 for the shorter side the working will be correct"
+no-50 line 6 (No. 50): Chace n.2: "The scribe has by mistake written here either the number 60 or the special form for 6 used in Problem 48"; Peet: 6 thousands-of-land "(written like 60)", "as in No. 48 definitely 60"
+no-52 line 3 (No. 52): Chace n.2: "The scribe has repeated the word n.t by mistake"
+no-52 line 7 (No. 52): Peet: "result 10 (sic)"; Chace n.5: 100 setat, "which the Egyptian would write simply 10"
+no-52 line 15 (No. 52): papyrus writes 20 (Chace translates "200 setat"); Chace n.5: "The answer should be 100 setat, which the Egyptian would write simply 10 ... by mistake he wrote 20 instead of 10"; Peet: "20 (read 10)"
+no-53 line 5 (No. 53): Chace: "For explanation and statement of numerical mistakes, see volume 1, page 94." Peet: "a problem which is clearly incomplete and incorrect".
+no-53 line 12 (No. 53): Chace n.2: cubit-strip 10 is written with a sign exactly like 30 (Peet: a special sign for 10 cubits-of-land; Griffith and Moeller suspected a mistake); Peet: these lines "are totally unconnected with this, and clearly come from some other reckoning"
+no-54 line 3 (No. 54): Chace n.1: "setat 7" "Omitted by the scribe"; Peet: "<7 setat>", "unfortunately omitted by the scribe"
+no-55 line 4 (No. 55): papyrus: "Make thou the operation on setat 5 for the finding of the area setat 3."; Peet: "5 setat (sic)"
+no-57 line 8 (No. 57): Chace n.2: "The scribe first omitted pw and then added it above the line"
+no-59 line 3 (No. 59): Chace n.1: "In Problem 59 the given dimensions were transposed"; Peet: "the vertical height (sic) whereof is 12 and the side (sic) 8"; it is the height which must be 8 and the side 12
+no-59 line 13 (No. 59): Chace n.2: the 2 is a "Mistake for 1"; Peet translates "5 palms 1 finger" without comment
+no-59b line 4 (No. 59B): Chace n.1: "In 59B ... wha-thebet was omitted in connection with 12, perhaps intentionally"; Peet: "a pyramid of 12 (sic)"; Chace restores the [y] of rh.y (Peet: "Let <me> know")
+no-59b line 8 (No. 59B): Chace n.6: "Mistake for 8"; Peet: "4 (read 8)"
+no-60 line 6 (No. 60): Chace n.5: "The scribe has by mistake inserted the result in the statement of the operation"; Peet: "Multiply 7 '2 four times (sic) to find 30", "the words spw 4 are not needed"
+no-60 line 7 (No. 60): Peet: the scribe divides 30 by 7 '2 where 7 '2 should be divided by 30 ('4 cubit, 1 3/4 palms): "a serious confusion has taken place"
+no-61 line 42 (No. 61): Peet: "2/3 <of it>" (words omitted by the scribe)
+no-62 line 6 (No. 62): Chace: "The scribe should have written dbn [deben] here, not š'ty"; Peet: "ring (sic, read deben)"
+no-63 line 5 (No. 63): Chace: the scribe who wrote on the patches omitted this '2; Peet: <'2> (omitted)
+no-64 line 4 (No. 64): Chace: "Mistake for 1"; Peet: "1/2 hekat (read 1 hekat)", "the scribe has here written 1/2 hekat instead of 1"
+no-66 line 4 (No. 66): Chace: the scribe first omitted "hekat 10" and added it above the line
+no-66 line 6 (No. 66): Chace: "m r'w [in ro] is not accurately used since we have first a fraction of a hekat"; Peet: "making in ro (sic) '64 hekat and (3 2/3 '10 '2190) ro"
+no-66 line 12 (No. 66): Chace restores this row in brackets; Peet: "8  2920 has been omitted after 4  1460"
+no-67 line 19 (No. 67): Chace: "The making of 70" may be a false start, or read "one multiplies 70"
+no-68 line 6 (No. 68): Chace: this hekat-sign is superfluous, and should precede, not follow, the numeral; Peet: 100 quadruple-hekat written with the wrong sign
+no-68 line 30 (No. 68): Chace: the ro (ditto) mark restored ["]; Peet: "sic 4" (no tick) and "+ <1> 2/3 ro"
+no-68 line 32 (No. 68): Chace: the scribe who wrote on the patch omitted 1 2/3 ro here; restored
+no-68 line 35 (No. 68): Chace: the ro (ditto) mark is there, the 2/3 omitted on the patch and restored; Peet: "[+ 1 2/3 ro]" (all restored), though his Plate T gives the sign for one ro
+no-68 line 41 (No. 68): Chace: the scribe should have omitted the hekat-sign in the last column, which is not in hekat; Peet agrees ("should of course be omitted")
+no-69 line 35 (No. 69): Chace: "The scribe omitted the word pw at the end of this sentence"
+no-70 line 24 (No. 70): Chace prints a line of dots here (see his vol. I note); Peet: the scribe omitted, by haplography, the reduction of 7 '2 '4 '8 hekat to ro
+no-70 line 25 (No. 70): red. Peet: "Total 2520 (read 100)"; 2520 is the next step's figure (7 '2 '4 '8 hekat in ro); Chace: see vol. I note; the 500 in 2520 is not clear on the photographs
+no-71 line 4 (No. 71): Chace (after Peet p. 117): the scribe forgot to repeat the hekat sign after the determinative of besha, and used the ordinary sign for '2 instead of the Horus-eye '2 hekat; Peet: "a scribe's error in the second line"
+no-72 line 18 (No. 72): Peet (p. 119): the plural strokes of wedyet omitted by confusion with the hekat sign; Chace disagrees (note 12)
+no-75 line 3 (No. 75): Chace: the plural strokes, omitted in the B.M. Facsimile, led Peet to omit them on his Plate V
+no-76 line 20 (No. 76): '4 of 100 and 15, i.e. 40; Peet: "40 hekat". Chace: "The diagonal stroke at the base of the sign for 5 hekat is a mistake"
+no-78 line 3 (No. 78): Chace: the scribe first omitted the word "exchanging" and added it above the line
+no-81 line 3 (): Chace: "There are many numerical mistakes in the original and they remain uncorrected here"
+no-81 line 4 (): (corrections in his vol. I, pp. 113-115); Peet: "The text is very incorrect."
+no-81 line 37 (No. 81): Peet: "8 '2 (sic)", not restored
+no-81 line 39 (No. 81): Peet: "('2 + '4) (sic)", not restored
+no-82 line 17 (No. 82): = 47 '2 '4 '64 hekat 3 '3 ro. Chace: "Mistakes ... are corrected in volume 1"; Peet: halving 93 '3 gives 46 2/3 double-hekat, "wrongly given as (47 '2 '4 '64) hekat + 3 '3 ro"
+no-82b line 4 (No. 82B): = 12 '4. Chace: a mistake, corrected in his vol. I; Peet: "12 '4 hekat (read 12 '2)"
+no-82b line 6 (No. 82B): = 23 '2 '4 '8 hekat 4 '4 '6 '6 ro. Chace: mistake, corrected in vol. I; Peet: "the answer is incorrect; it should be 23 '3 hekat, i.e. (23 '4 '16 '64) hekat + 1 2/3 ro"; "23 ... is written 10 + 13"; '6 '6 "is written for '3 simply" in M.K. hieratic
+no-83 line 3 (No. 83): Chace: "the writing of the compound word is evidently corrupt here. It is on a patch"; Peet: line 2 lost and incorrectly restored by the ancient mender; the feminine form "must be wrong"
+no-83 line 17 (No. 83): Chace: "A total, probably of hekat, has been omitted by the Rhind scribe, and perhaps was lacking also in the text from which he copied"; Peet: "Total" (sic)
+no-84 line 13 (No. 84): Chace: Peet seems to read "nn wnm" after "Total" in the next line
+no-84 line 14 (No. 84): Chace: "This 8 was obtained by mistakenly adding up the 10-hekat strokes as units", the units added separately and recorded with the special sign for 6 hekat; Peet: "8 (sic) 6 hekat"
+no-84 line 21 (No. 84): = 200 and 90 hekat. Chace: "The figures for a month and in the resolution into double hekat are obviously incorrect"; Peet: "three times 90 is given as 200 and three times 75 as 90"
+no-87 line 8 (No. 87): Peet: a sign "must have been omitted"
+
+The first slip that fits each wrong figure:
+  in-the-list  3
+  multiplier   4
+  neighbour    2
+  none         33
+  one-part     2
+  one-sign     9
+  part-sign    71
+  ticks        6
+  wrong-row    3
+
+One sign written for another:
+  60 written for 80      5x  2 ÷ 43, 2 ÷ 43, 2 ÷ 83, 2 ÷ 93, 2 ÷ 93
+  300 written for 400    2x  No. 79, No. 79
+  10 written for 30      1x  No. 63
+  20 written for 30      1x  2 ÷ 59
+  3 written for 7        1x  2 ÷ 79
+  4 written for 9        1x  2 ÷ 29
+  400 written for 300    1x  2 ÷ 79
+  5 written for 4        1x  No. 27
+  800 written for 900    1x  No. 79
+  9 written for 4        1x  No. 18
+  9 written for 7        1x  No. 31
+
+The models:
+  one-sign    the whole numbers differ in one decimal place only: one hieratic sign written for another (each of 1-9, 10-90, 100-900 has its own sign)
+  one-part    the whole numbers agree and one unit fraction is missing, extra, or a different one
+  part-sign   the sign for "part" over a number is left off, so n̅ is written n (or added where it does not belong)
+  in-the-list a total of a list is right, and one figure in the list is wrong by one of the slips above
+  neighbour   the figure is the one in the row above or below: the eye slipped a line
+  wrong-row   the figure is double or half of another row in the column: the wrong row was doubled or halved
+  whole-only  the figure is the right figure's whole part, or its fractions: half of it was left off
+  ticks       the total is right for other rows than those ticked: a tick left off, or put on the wrong row
+  carried     the row is right but a total or result after it is computed from a wrong row

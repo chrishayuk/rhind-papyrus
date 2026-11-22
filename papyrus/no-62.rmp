@@ -1,0 +1,13 @@
+% Problem 62. Chace vol. II pl. 84, PDF pp. 215-216; Peet pp. 104-107 (Pl. R).
+No. 62
+{"Example of making a bag under precious metals various."}
+"If is said to thee, A bag, gold in it, silver in it, lead in it; is bought bag this for sha'ty 84. What is that which there is to precious metal each?"
+"As for what is given for gold, a deben, sha'ty 12 this is; for silver sha'ty 6 this is; for lead, a deben, sha'ty 3 this is."
+"Add thou what is given for a sha'ty of precious metal each; there become 21."   % Chace: "The scribe should have written dbn [deben] here, not š'ty"; Peet: "ring (sic, read deben)"
+"Make thou the 21 for the finding of sha'ty 84; what was bought, this is, in bag this; there become: 4, which assignest thou to precious metal each."
+"The doing as it occurs:"
+"Multiplies one, this means, 4 up to times 12; there becomes gold: 48; the amount of it this is."
+  12   48      % gold; each row is 4 times the multiplier on the left
+  6    24      % silver
+  3    12      % lead
+Total 84.      % the papyrus writes "21  Total  84": the multipliers add to 21

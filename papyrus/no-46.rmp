@@ -1,0 +1,15 @@
+% Problem 46. Chace vol. II pl. 68, PDF pp. 183-184; Peet p. 87 (Pl. N).
+No. 46
+{"A granary,"} "has gone grain into it in quadruple hekat" {"2500 hekat."} "What are the dimensions of it?"
+"Make thou the multiplication: 25 up to times 20; becomes it: 500; the content of it this is."
+"Make thou the operation on 500; make thou '10 of it, namely, 50; '20 of it, namely, 25; '10 of '10 of it, namely, 5; 2/3 of '10 of '10 of it, namely, 3 '3; of, it is, 10 by 10 by 3 '3, the granary."
+"The working out of it:"
+  1     25
+  10    250
+  20    500       % Chace n.2: the photograph "seems to show a fractional dot written here by mistake"
+"The content of it this is."
+  1     500
+  '10   50
+"'10 of '10 of it: 5."             % a row of the column; the notation's multiplier cannot hold "'10 of '10"
+"2/3 of '10 of '10 of it: 3 '3."
+"Becomes granary this, in cubit, 10 by 10 by 3 '3; the same this is."

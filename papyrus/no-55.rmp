@@ -1,0 +1,14 @@
+% Problem 55. Chace vol. II pl. 77 (photographs XX-XXI), PDF pp. 201-202; Peet pp. 96-97 (Pl. P).
+No. 55
+{"The taking away"} "of the area setat 3 from fields, setat 1."   % Chace n.1: "This should have been simply the number 5 instead of setat 1"; Peet: the scribe "has written '1 setat' instead of the simple numeral 5, which it remotely resembles"
+Reckon with 5 to find 3.   % papyrus: "Make thou the operation on setat 5 for the finding of the area setat 3."; Peet: "5 setat (sic)"
+  1     5
+  '2    2 '2     % Peet: (sic) on the multiplier '2
+  '10   '2       % Peet: (sic) on the multiplier '10
+Result '2 '10.   % papyrus: "There becomes '2 '10."
+"Make thou '2 '10 times 5."
+% Below, "cubit" after setat is the cubit-strip or cubit-of-land (mh), 1/100 of a setat; the notation has no such unit.
+\ 1     '2 setat 10 cubit
+  2     1 '8 setat 7 '2 cubit
+\ 4     2 '4 '8 setat 2 '2 cubit
+"Thus findest thou the area, namely, setat 3."

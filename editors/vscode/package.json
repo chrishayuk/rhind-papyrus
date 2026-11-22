@@ -1,0 +1,163 @@
+{
+  "name": "rhind-language",
+  "displayName": "Rhind Mathematical Papyrus",
+  "description": "Syntax highlighting, a language server and a run button for pages of the Rhind Mathematical Papyrus (c. 1550 BCE): every figure of the scribe's working recomputed with the scribe's own operations.",
+  "version": "0.1.0",
+  "publisher": "chrishayuk",
+  "license": "Apache-2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrishayuk/rhind-papyrus"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters"
+  ],
+  "keywords": [
+    "rhind",
+    "papyrus",
+    "egyptian",
+    "fractions",
+    "ahmose",
+    "language server"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "languages": [
+      {
+        "id": "rhind",
+        "aliases": [
+          "Rhind Mathematical Papyrus",
+          "rhind",
+          "rmp"
+        ],
+        "extensions": [
+          ".rmp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rhind",
+        "scopeName": "source.rmp",
+        "path": "./syntaxes/rhind.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "rhind",
+        "path": "./snippets/rhind.code-snippets"
+      }
+    ],
+    "commands": [
+      {
+        "command": "rhind.run",
+        "title": "Run This Page",
+        "category": "Rhind",
+        "icon": "$(play)"
+      },
+      {
+        "command": "rhind.check",
+        "title": "Check This Page (a line for each problem)",
+        "category": "Rhind"
+      },
+      {
+        "command": "rhind.plain",
+        "title": "Show the Page in the Scribe's Figures, Without Marks",
+        "category": "Rhind"
+      },
+      {
+        "command": "rhind.restartServer",
+        "title": "Restart Language Server",
+        "category": "Rhind"
+      }
+    ],
+    "menus": {
+      "editor/title/run": [
+        {
+          "command": "rhind.run",
+          "when": "resourceLangId == rhind"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "rhind.run",
+          "when": "editorLangId == rhind"
+        },
+        {
+          "command": "rhind.check",
+          "when": "editorLangId == rhind"
+        },
+        {
+          "command": "rhind.plain",
+          "when": "editorLangId == rhind"
+        },
+        {
+          "command": "rhind.restartServer",
+          "when": "editorLangId == rhind"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "rhind.run",
+        "key": "ctrl+enter",
+        "mac": "cmd+enter",
+        "when": "editorTextFocus && editorLangId == rhind"
+      }
+    ],
+    "taskDefinitions": [
+      {
+        "type": "rhind"
+      }
+    ],
+    "configuration": {
+      "title": "Rhind Mathematical Papyrus",
+      "properties": {
+        "rhind.path": {
+          "type": "string",
+          "default": "",
+          "description": "Path to a rhind program to use as the language server (rhind lsp) and to run pages with. Leave empty to use the one built into the extension."
+        },
+        "rhind.trace.server": {
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "description": "Log the messages exchanged with the language server."
+        }
+      }
+    },
+    "configurationDefaults": {
+      "[rhind]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.wordBasedSuggestions": "off"
+      }
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:vscode": "node test/vscode/run.mjs",
+    "package": "node build.mjs && vsce package --no-dependencies"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^3.2.1",
+    "esbuild": "^0.24.0",
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.1.0"
+  }
+}

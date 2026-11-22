@@ -1,0 +1,22 @@
+% Problem 39. Chace vol. II pl. 61 (photographs XVI-XVII, register 1), PDF pp. 169-170; Peet p. 77 (Pl. M).
+No. 39
+"{Example of} making the difference of share. Loaves 100 for man 10, 50 to 6, 50 to 4. What is the difference of share?"   % "tp n" (Example of) in red; Chace fn 1: twnw, "difference of share", more literally "excess" (Gunn)
+% 50 loaves among 4 men: 4 is multiplied to find 50 (no sentence in the papyrus)
+  1      4
+\ 10     40
+  2      8            % no tick in either edition; Peet: (sic)
+\ '2     2
+% 50 loaves among 6 men
+  1      6
+  2      12
+  4      24
+\ 8      48
+\ '3     2
+% the shares set out: four of 12 '2 in one column, six of 8 '3 beside them
+"12 '2   8 '3"
+"12 '2   8 '3"
+"12 '2   8 '3"
+"12 '2   8 '3"
+"        8 '3"
+"        8 '3"
+"The difference of share is 4 '6."   % Peet: "No working of this step is shown" (12 '2 less 8 '3)

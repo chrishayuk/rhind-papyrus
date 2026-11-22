@@ -1,0 +1,12 @@
+% Problem 80. Chace vol. II pl. 102, PDF pp. 251-252; Peet pp. 122-123 (Pl. W).
+% A table of the hekat and its parts in hinu (10 hinu to a hekat), written as a column
+% multiplying 10 hinu; the left numbers are parts of a hekat, the right numbers hinu.
+No. 80
+{"As for the vessel,"} "it is measured with it for the functionaries of the granary, done in hinu:"   % Peet: "As for a vessel in which are corn-measures for the clerks of the slave-prison"
+  1     10      % "a hekat 10"
+  '2    5
+  '4    2 '2
+  '8    1 '4
+  '16   '2 '8
+  '32   '4 '16
+  '64   '8 '32

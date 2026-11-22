@@ -1,0 +1,13 @@
+% Problem 22. Chace vol. II pl. 45 (photograph XI, register 2), PDF pp. 137-138; Peet p. 59 (pl. H).
+No. 22
+"Complete 2/3 '30 as 1."
+"20 1"                  % beneath 2/3 and '30, their values in 30ths; no total written. Black in Chace; Peet prints them in italics (his sign for red)
+"The total of the excess of it is: 9."
+Reckon with 30 to find 9.   % "Operate on 30 for the finding of 9."
+  1     30
+\ '10   3
+\ 5     6               % 5 for '5; Chace fn 2: "The scribe omitted the fractional dot."
+Total 9.
+"Therefore '5 '10 is: to be added to it."
+"Therefore is complete 2/3 5 '10 '30 up to 1."   % 5 for '5 here too; Chace fn 2: "The scribe omitted the fractional dot."
+"20 6 3 1"              % beneath 2/3 '5 '10 '30, their values in 30ths; no total written. Black in Chace; Peet prints them in italics (his sign for red)

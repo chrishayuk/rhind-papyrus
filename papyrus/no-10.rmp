@@ -1,0 +1,6 @@
+% Problem 10. Chace vol. II pl. 40 (photograph X, register 3), PDF pp. 127-128; Peet p. 55 (pl. G).
+No. 10
+  1     '4 '28
+ '2     '7
+ '4     9      % Chace: fractional dot omitted (9 for '9), and "'9 was written as a half of '7" (should be '14); Peet: reads 9, "a gross error in the halving of '7, the 2 and the 7 having been added instead of multiplied, giving 9 instead of '14"
+Total '2.      % Peet: "The total is nevertheless correct"; Chace: total correct for the numbers obtained by halving from '7

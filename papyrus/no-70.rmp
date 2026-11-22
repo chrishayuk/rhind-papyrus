@@ -1,0 +1,36 @@
+% Problem 70. Chace vol. II pl. 92 (photographs XXIV-XXV), PDF pp. 231-232; Peet pp. 116-117 (Pl. U).
+No. 70
+{"Meal, hekat 7 '2 '4 '8,"} "made into loaves 100. What is the basis of a unit of the loaves therefrom in meal? What is the pefsu of them?"   % Chace: a special hieratic sign for 7 hekat; Peet: "the unusual hieratic form of the numeral 7"
+"Make thou the operation on 7 '2 '4 '8 for the finding of 100."
+Reckon with 7 '2 '4 '8 to find 100.
+  1        7 '2 '4 '8
+  2        15 '2 '4
+\ 4        31 '2
+\ 8        63
+\ 2/3      5 '4
+Total 99 '2 '4.          % "The total is 99 '2 '4, the remainder is '4."
+Remainder '4.
+  '63      '8
+"Double the fraction for '4."
+  '42 '126  '4           % Peet ticks this row; Chace does not
+"The pefsu is: 12 2/3 '42 '126."
+Result 12 2/3 '42 '126.
+\ 1        12 2/3 '42 '126
+\ 2        25 '3 '21 '63
+\ 4        50 2/3 '14 '21 '126
+\ '2       6 '3 '84 '252
+\ '4       3 '6 '168 '504          % '6: the special sign without its dot; Chace prints 6 (note 6); Peet: 3 '6
+\ '8       1 '2 '12 '336 '1008
+[...]                    % Chace prints a line of dots here (see his vol. I note); Peet: the scribe omitted, by haplography, the reduction of 7 '2 '4 '8 hekat to ro
+{Total 2520.}            % red. Peet: "Total 2520 (read 100)"; 2520 is the next step's figure (7 '2 '4 '8 hekat in ro); Chace: see vol. I note; the 500 in 2520 is not clear on the photographs
+"Make thou the operation on 100 for the finding of 2520."
+Reckon with 100 to find 2520.
+  1        100
+  10       1000
+\ 20       2000
+\ 5        500
+\ '5       20
+"As for the basis of a unit of the loaves in meal, '16 '64 '5 this is."   % = '16 '64 hekat '5 ro
+  1        '16 '64 hekat '5 ro
+  10       '2 '4 '32 hekat 2 ro
+  100      7 '2 '4 '8 hekat      % "meal, hekat 7 '2 '4 '8"

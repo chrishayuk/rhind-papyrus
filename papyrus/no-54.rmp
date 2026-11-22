@@ -1,0 +1,13 @@
+% Problem 54. Chace vol. II pl. 76, PDF pp. 199-200; Peet p. 96 (Pl. P).
+No. 54
+{"The taking away"} "of the area [setat 7] from fields 10."   % Chace n.1: "setat 7" "Omitted by the scribe"; Peet: "<7 setat>", "unfortunately omitted by the scribe"
+% Chace: "For an explanation of this problem and the next see note to Problem 55 in volume 1 (page 96)."
+  1     10
+\ '2    5
+\ '5    2
+% Below, "cubit" after setat is the cubit-strip or cubit-of-land (mh), 1/100 of a setat, as ro follows hekat; the notation has no such unit.
+% Fractions of the setat are written with the special setat signs.
+  1     '2 '8 setat 7 '2 cubit
+\ 2     1 '4 '8 setat 2 '2 cubit
+  4     2 '2 setat 5 cubit           % Chace n.2: "There should be a '4 here also"; Peet restores it: "(2 '2 + ['4]) setat"
+\ 8     5 '2 setat 10 cubit          % Chace n.3: the 10 cubit-strips are written "Like the numeral 30"; Peet: a special sign "precisely like the hieratic for 30"

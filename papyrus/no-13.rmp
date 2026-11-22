@@ -1,0 +1,7 @@
+% Problem 13. Chace vol. II pl. 41 (photograph X, register 4), PDF pp. 129-130; Peet p. 56 (pl. G).
+% Red figures beneath each fraction (its value in 28ths) are written after the row, in order, one per fraction.
+No. 13
+  1     '16 '112     {1 '2 '4}    {'4}
+ '2     32 '224      {'2 '4 '8}   {'8}     % Chace: fractional dot omitted (32 for '32)
+ '4     64 '448      {'4 '8 '16}  {'16}    % Chace: fractional dot omitted (64 for '64)
+Total '8.

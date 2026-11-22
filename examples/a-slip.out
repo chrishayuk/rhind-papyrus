@@ -1,0 +1,14 @@
+% A page with a mistake in it, as the scribe might have made one: the sign for 5 written for 4.
+% rhind finds it, says the working gives 14, and that the total after it is right, so the
+% slip was in the writing of the figure, not in the working. (This is Problem 27.)
+No. 2
+"A quantity whose fifth part is added to it becomes 21."
+\ 1   3 2̅                               ✓
+  2   7                                 ✓
+\ 4   15                                ✗ 14
+Total 17 2̅.                             ✓
+
+4 figures checked, 3 right, 1 wrong.
+line 8: 4 of 3 2̅ is 14; the papyrus has 15
+    what follows is right: the error is not carried
+    could be one-sign: 5 written for 4

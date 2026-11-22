@@ -1,0 +1,13 @@
+% Problem 60. Chace vol. II pl. 82 (photographs XXI-XXII), PDF pp. 211-212; Peet pp. 100-102 (Pl. R).
+No. 60
+{"A pillar (?)"} "of cubit 15 in the sentet of it, 30 in its kay-en-heru; cause thou that know I the seked of it."   % Chace: iwn, "column, pillar, or support"; Peet: "A cone (?)"
+% The papyrus draws a plain triangle with 30 beside it and 15 below it (Chace pl. 82). The notation has no figure.
+"Operate on 15; '2 of it is: 7 '2."
+"Operate on 7 '2 (times 4) for the finding of 30;"   % Chace n.5: "The scribe has by mistake inserted the result in the statement of the operation"; Peet: "Multiply 7 '2 four times (sic) to find 30", "the words spw 4 are not needed"
+"becomes the result of it: 4; that this is: the seked to it therein."   % Peet: the scribe divides 30 by 7 '2 where 7 '2 should be divided by 30 ('4 cubit, 1 3/4 palms): "a serious confusion has taken place"
+"Working-out:"
+  1     15
+\ '2    7 '2
+  1     7 '2
+  2     15
+\ 4     30

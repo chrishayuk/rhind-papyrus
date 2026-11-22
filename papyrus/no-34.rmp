@@ -1,0 +1,21 @@
+% Problem 34. Chace vol. II pl. 56 (photograph XV), PDF pp. 159-160; Peet p. 70 (Pl. L).
+No. 34
+{"A quantity, '2 of it, '4 of it, added to it, becomes it: 10."}
+\ 1      1 '2 '4
+  2      3 '2
+\ 4      7
+\ '7     '4
+  '4 '28   '2
+\ '2 '14   1
+Result 5 '2 '7 '14.     % "The total is the quantity 5 '2 '7 '14." (the sum of the ticked multipliers)
+{"Example of proof."}
+\ 1      5 '2 '7 '14
+\ '2     2 '2 '4 '14 '28
+\ '4     1 '4 '8 '28 '56
+"The total is 9 '2 '8, the remainder is: '4 '8."   % the whole numbers and larger fractions only (Peet: those left of a vertical line); quoted, since a Total would cover every part of the rows
+"'7 '14 '14 '28 '28 56"   % the fractions right of the line; 56 for '56: Chace fn 1: "The scribe omitted the fractional dot in this place."
+"{8 4 4 2 2 1}"           % red, beneath them: their values in 56ths (not added up in the papyrus)
+% "'4 is 14; '8 7": the remainder '4 '8 in 56ths, 14 and 7 in red
+{14}
+{7}
+{Total 21.}               % "dmd" and "Total 21" in red in Chace

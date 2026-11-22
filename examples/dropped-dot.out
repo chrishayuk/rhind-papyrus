@@ -1,0 +1,11 @@
+% The commonest slip in the papyrus: the sign for "part" left off, so 3̅0̅ is written 30.
+% Here 2̅ of 1̅5̅ is 3̅0̅, written without its sign.
+No. 3
+\ 1    1̅5̅                               ✓
+\ 2̅   30                                ✗ 3̅0̅
+Total 1̅0̅.                               ✓
+
+3 figures checked, 2 right, 1 wrong.
+line 5: 2̅ of 1̅5̅ is 3̅0̅; the papyrus has 30
+    what follows is right: the error is not carried
+    could be part-sign: 30 written for 3̅0̅: the part sign left off

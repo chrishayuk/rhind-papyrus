@@ -1,0 +1,18 @@
+% Problem 26. Chace vol. II pl. 49 (photograph XII, register 3), PDF pp. 145-146; Peet p. 62 (Pl. H).
+% This differs from the worked example in docs/notation.md: the papyrus writes the first step (4 and its quarter, total 5) in words only, with no column; it has no word "proof" (Peet: the proof "in neither case is it called irt mi hpr"); and the photograph is XII, not IX.
+No. 26
+"{A quantity, '4 of it added to it,} becomes it: 15."
+"Operate on 4; make thou '4 of them, namely, 1; the total is 5."   % Peet: "Reckon with 4: you are to make their quarter, namely 1. Total 5"
+Reckon with 5 to find 15.     % "Operate on 5 for the finding of 15."
+\ 1      5
+\ 2      10
+Result 3.                     % "There become 3." Chace fn 1: a redundant r in hpr(r) (see his Problem 4, fn 2)
+Multiply 3 by 4.              % "Multiply: 3 times 4."
+  1      3
+  2      6
+\ 4      12
+Result 12.                    % "There become 12."
+  1      12
+  '4     3
+Total 15.                     % "dmd 15", black
+"{The quantity is 12,} '4 of it is 3, {the total is 15.}"

@@ -1,0 +1,14 @@
+% A round granary, after Problem 41: diameter 9, height 10. Take away 9̅ of 9, square what
+% is left, multiply by the height, and add half for khar. The columns are rhind's.
+No. 4
+"A round granary of 9, 10."
+Multiply 9 by '9.
+Result 1.
+"Take away 1 from 9: remainder 8."
+Multiply 8 by 8.
+Result 64.
+Multiply 64 by 10.
+Result 640.
+"Add its half: 960 khar."
+Add 640 to 320.
+Total 960.

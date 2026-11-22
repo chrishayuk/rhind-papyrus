@@ -1,0 +1,12 @@
+% Problem 5. Chace vol. II pl. 37 (photograph X, register 6; photograph IX, N.Y. Historical Society fragments), PDF pp. 121-122; Peet p. 53 (pl. F).
+No. 5
+"{The making of loaves 8} for man 10."
+Multiply 2/3 '10 '30 by 10.  % "Make thou the multiplication: 2/3 '10 '30 times 10"; Peet: 2/3 '10 ['30] (restores '30)
+"there result 8."
+"[The producing] of the same:"
+  1     2/3 '10 30           % 30 for '30; Chace: "The scribe has omitted the fractional dot in the '30 in the multiplication."
+\ 2     1 '2 ['10]           % Chace fn 2: trace of the '2 on the N.Y. fragment; Peet: 1 ['2 '10]
+  4     [3 '5]               % Peet: [4 3 '5] (also restores the multiplier 4)
+\ 8     6 '3 '15
+Total 8.                     % "Total loaves 8; ..."
+"the same, this is."

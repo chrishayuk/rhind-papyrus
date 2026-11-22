@@ -1,0 +1,37 @@
+{
+  "Problem": {
+    "prefix": "no",
+    "body": ["No. ${1:26}", "\"${2:The scribe's words.}\"", "$0"],
+    "description": "A problem: its heading and the scribe's words"
+  },
+  "Multiply": {
+    "prefix": "multiply",
+    "body": ["Multiply ${1:3} by ${2:4}.", "$0"],
+    "description": "Multiply A by B. Leave the column out and rhind writes it in"
+  },
+  "Reckon": {
+    "prefix": "reckon",
+    "body": ["Reckon with ${1:5} to find ${2:15}.", "$0"],
+    "description": "Reckon with A to find B: what must A be multiplied by to make B?"
+  },
+  "Column": {
+    "prefix": "column",
+    "body": ["  1   ${1:5}", "\\ 2   ${2:10}", "Total ${3:15}.", "$0"],
+    "description": "A column of doubling, a row ticked, and its total"
+  },
+  "Proof": {
+    "prefix": "proof",
+    "body": ["Proof.", "  1   ${1:12}", " '4   ${2:3}", "Total ${3:15}.", "$0"],
+    "description": "Proof: the answer worked forward"
+  },
+  "Table entry": {
+    "prefix": "table",
+    "body": ["2 ÷ ${1:7}", "$0"],
+    "description": "An entry of the table of two divided by an odd number"
+  },
+  "Two-thirds": {
+    "prefix": "twothirds",
+    "body": ["⅔"],
+    "description": "⅔, two-thirds (2/3 is read too)"
+  }
+}

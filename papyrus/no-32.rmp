@@ -1,0 +1,39 @@
+% Problem 32. Chace vol. II pl. 54 (photograph XIII, registers 1-6), PDF pp. 155-156; Peet pp. 67-68 (Pl. K).
+No. 32
+{"A quantity, '3 of it, '4 of it, added to it, becomes it: 2."}
+% three numbers to a row: multiplier, product on 1 '3 '4, and the product in 144ths
+  1      1 '3 '4        228
+\ 2/3    1 '18          152
+\ '3     '2 36          76     % 36 for '36: Chace fn 1: "The scribe omitted the fractional dots in these places."
+\ 6      '4 72          38     % 6 for '6 and 72 for '72 (Chace fn 1)
+\ '12    '8 '144        19
+  '228   '144           1      % no tick in Chace or Peet; Peet: "(sic) '228"
+  '114   72             2      % 72 for '72 (Chace fn 1); no tick; Peet: "(sic) '114"
+"The total 1 '6 '12 '114 '228 is the quantity saying it."   % the ticked multipliers and the two unticked last ones
+% the quantity taken by 2/3, '3, '2 and '4 (no heading; Peet: the proof "now begins, with no heading")
+  2/3    2/3 '9 '18 '171 '342
+  '3     '3 '18 36 '342 '684           % 36 for '36 (Chace fn 1)
+  '2     ['2] '12 '24 '228 '456        % '2 restored by Chace (Peet the same)
+  '4     ['4 '24] 48 '456 '912         % Chace restores '4 and the '2 of '24 ("['4 '2]4"); Peet "['4] + '24"; 48 for '48 (Chace fn 1)
+% "Stand": the scribe breaks off for two pieces of working (Chace: "which here may mean 'stop,' as if for the insertion of something"; Peet: "Insert (?)"): 1 '3 '4 in 144ths, and 12 times 12
+144      % written beside "'3" (Chace prints the multiplier '3); Peet: "'3 (sic)", "for '3 in the first line read 1"
+48       % '3
+36       % '4
+Total 228.
+  1      12
+  2      24
+\ 4      48
+\ 8      96
+Total 144.
+{"Example of proof."}
+% the quantity, its third and its quarter, one to a row (multipliers 1, '3, '4)
+  1      1 6 '12 '114 '228       % 6 for '6 (Chace fn 1)
+  '3     '3 '18 '36 '342 '684
+  '4     '4 '24 '48 '456 '912
+"The total is 1 '2 '4, the remainder is: '4."   % 1, '3 and '4 (with the 6 read as '6) only; the other fractions are added below
+"'12 '114 '228 '18 '36 '342 '684 '24 '48 '456 '912"
+"{76 8 4 50 2/3 25 '3 2 2/3 1 '3 38 19 2 1}"   % red, beneath each: values in 912ths (Peet the same)
+  1      912       % written '912: Chace fn 2: "Here there is a fractional dot in the original to a whole number." The papyrus has no multiplier 1 on this row
+  '2     456
+  '4     228
+"{Total 228} namely '4."   % "dmd 228" red; the red values above add to 228, which is '4 of 912

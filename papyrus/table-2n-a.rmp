@@ -1,0 +1,264 @@
+% Table of 2 divided by the odd numbers, entries 2 ÷ 3 to 2 ÷ 49. Chace vol. II pl. 2-15 (photographs I-IV), PDF pp. 51-78; Peet pp. 38-43 (Pl. A-B), summary table p. 37.
+% Layout of each entry: the summary line at the top of the entry (red unit fraction of n, then in black what it gives) is
+% written one pair to a row, in the papyrus's left-to-right order; the working columns follow, one column after another
+% as Chace sets them out left to right. A row of three numbers "4  28  '4" is the scribe's double statement
+% (4 times n is 28; '28 of n is '4); see Chace's note to 2 ÷ 7.
+% Ticks: Chace prints the ticks of 2 ÷ 5, 2 ÷ 7 and 2 ÷ 9 in red; the notation does not colour a tick.
+% Peet says (p. 38) that he corrected the fractional dots "without further comment" in these sums, so a dot
+% that Peet has and Chace has not (or the reverse) is not listed below as a disagreement unless it matters; see the notes.
+
+2 ÷ 3
+{"Call"} "2 out of 3"
+{2/3}  2
+
+2 ÷ 5
+"5"                 % the divisor, written in black above the working
+{'3}  1 2/3
+{'15}  '3
+{"Working-out:"}
+  1    5
+  2/3  3 '3
+\ '3   1 2/3        % Peet: 1 2/3, with the footnote "Wrongly given as 1 '3 in the plate" (Peet's own plate)
+\ '15  '3
+
+2 ÷ 7
+{'4}  1 '2 '4
+{'28}  '4
+  1    7
+  '2   3 '2
+\ '4   1 '2 '4
+\ 4    28   '4      % Chace: 28 written without the dot (two multiplications: 4 × 7 = 28, '28 of 7 = '4); Peet prints '28, footnote "Actually 28"
+  1    7
+  2    14
+\ 4    28
+
+2 ÷ 9
+{6}  1 '2           % Chace: "The fractional dot is omitted in the first term of the answer ... this term is '6 and not the whole number 6"
+{'18}  '2
+  1    9
+  2/3  6
+  '3   3
+\ '6   1 '2
+\ [2]  [1]8  '2     % Chace: [2 1]8, only the 8 survives; Peet: \ '18  '2 ("The papyrus is damaged, but the reading certain")
+
+2 ÷ 11
+{'6}  1 2/3 '6
+{'66}  '6
+[1]     [11]        % Chace: the whole of this column is restored ("[1 ... 1 2/3 '6]"); the plate shows nothing of it
+[2/3]   [7 '3]
+['3]    [3 2/3]
+\ ['6]  [1 2/3 '6]  % the tick is inside Chace's restoration too
+[1]  11             % Peet: [1  1]1
+[2]  [2]2
+[4]  [4]4
+\ 6  66  6          % Chace: the third number is written without the dot ("there may have been a dot on the papyrus, obscured now by a crack or fold"); Peet: [6]6 (the first 6 of 66 restored) and '6
+
+2 ÷ 13
+{'8}  1 '2 '8
+{'52}  '4
+{'104}  '8
+  1    1[3]         % Peet: 13, unbracketed
+  '2   6 '2
+  '4   3 '4
+\ '8   1 '2 '8
+\ 4    '52   '4
+\ 8    '104  '8
+
+2 ÷ 15
+{'10}  1 '2
+{'30}  '2
+  1     15
+\ '10   1 '2
+\ '30   '2
+
+2 ÷ 17
+{"Call 2"} "out of 17"
+{'12}  1 '3 '12
+{'51}  '3
+{'68}  '4
+{"Working out:"}
+  1    17
+  2/3  11 '3
+  '3   5 2/3
+  6    2 '2 '3      % Chace: "This number should be '6 and not 6"; Peet: '6 (dots corrected silently)
+\ '12  1 '4 '6
+Remainder '3 '4.    % ticked in the papyrus: "\ ḏꜣ·t '3 '4", Remainder (2 less 1 '3 '12)
+  1    '17          % Chace: the middle numbers are dotted here (17 and 34 also); a double statement, not a column of '17
+  2    '34
+\ 3    '51   '3
+\ 4    '68   '4
+
+2 ÷ 19
+{'12}  1 '2 '12
+{'76}  '4           % Chace: "The dot before the red fraction '76 ... seems to have been made in black and then corrected to red"
+{'114}  '6
+  1    19           % no row of this column is ticked, in Chace or Peet
+  2/3  12 2/3
+  '3   6 '3
+  '6   3 '6
+  '12  1 '2 '12
+Remainder '4 '6.    % ḏꜣ·t
+  1    '19          % Peet: 19, 38, 76 without dots
+  2    '38
+\ 4    '76   '4
+Remainder '6.       % ḏꜣ·t
+  1    '19
+  2    '38
+  4    76           % Chace: "the 76 is written without a dot although the first two partial products are dotted"
+"Total"             % dmd, written in the papyrus on the same line as the next row, before its tick; Peet omits it
+\ 6    '114  '6     % Peet: \ 6  114  '6
+
+2 ÷ 21
+{'14}  1 '2
+{42}  '2            % Chace: "The fractional dot is omitted in the second term of the answer"; the number is '42
+  1     21
+\ 2/3   '14  1 '2   % Peet: 14 without the dot
+\ 2     42   '2
+
+2 ÷ 23
+{'12}  1 2/3 '4
+{'276}  '12
+  1    23
+  2/3  15 '3
+  '3   7 2/3
+  '6   3 '2 '3
+\ '12  1 '2 '4 '6
+Remainder '12.      % ḏꜣ·t, not ticked
+  1    23
+\ 10   230
+\ 2    46
+"Total"             % dmd, in the multiplier column; the next figures stand on the same line
+\ '276  '12         % Chace: the tick stands before '276, in the product column (10 and 2 make 12, 230 and 46 make 276); Peet: "Total '276 '12", no tick
+
+2 ÷ 25
+{'15}  1 2/3
+{'75}  '3
+  1     25
+\ '15   1 2/3
+\ 3     '75  '3
+
+2 ÷ 27
+{'18}  1 '2
+{'54}  '2
+  1     27
+\ 2/3   '18  1 '2
+\ 2     '54  '2
+
+2 ÷ 29
+{"Call 2"} "out of 29"
+{'24}  1 '6 '24
+{'58}  '2
+{'174}  '6
+{'232}  '8
+{"Working-out:"}
+\ 1    '24   1 '6 '24   % Chace: "The scribe has been careless here ... it was natural to put '1' at the beginning of the first line"; Peet: "1 (sic)", "obviously an error"; Peet also prints a first row "1  29" which Chace does not have
+\ 2    '58   '2
+\ 6    174   '6         % Chace: 174 without the dot; Peet: '174
+\ 8    '232  '8
+
+2 ÷ 31
+"31"                % the divisor, in black at the head of the entry; Peet prints it as the row "1  31"
+{'20}  1 '2 '20
+{'124}  '4
+{'155}  '5
+  1    '20   1 '2 '20   % Chace: "the scribe has by mistake put '1' at the top of the first column, opposite '20"; Peet: "1 (sic)", "The dot 1 in front of '20 is an error"
+\ 4    124   '4         % Chace: 124 without the dot; Peet: '124
+\ 5    '155  '5
+
+2 ÷ 33
+"33"                % the divisor, at the head; Peet prints it as the row "1  33"
+{'22}  1 '2
+{'66}  '2
+  2/3  22    1 '2       % not ticked (so also Peet); Chace: 22 without the dot, Peet: '22
+\ 2    '66   '2
+
+2 ÷ 35
+"35"                % the divisor, at the head; Peet prints it as the row "1  35"
+{30}  1 '6          % Chace: the dot is omitted with this 30 on the plate, "possibly ... concealed under the patch"
+{42}  2/3 '6        % Chace: dot omitted with the sign for 40, see the note to 2 ÷ 21
+{"6"} "7" "5"       % auxiliary figures on the line below: red 6 under the 35, black 7 under '30, black 5 under '42 (the sixths: 1 '6 is 7 sixths, 2/3 '6 is 5 sixths, Peet). Peet reads the 6 as standing at the beginning of the line, not under 35
+\ '30  1 '6
+\ 42   2/3 '6       % Chace: dot omitted with 42 (note to 2 ÷ 21); Peet: '42
+
+2 ÷ 37
+{'24}  1 '2 '24     % Chace prints a small stroke above and below the '2; read as '2 (so Peet)
+{'111}  '3
+{'296}  '8
+  1    37
+  2/3  24 2/3
+  '3   12 '3
+  '6   6 '6
+  '12  3 '12
+\ '24  1 '2 '24
+Remainder '3 '8.    % ḏꜣ·t; Chace prints a small stroke above the '3 and below; read as '3 (so Peet)
+  1    37
+  2    74
+\ 3    '111  '3
+Remainder '8.       % ḏꜣ·t
+  1    37
+  2    74
+  4    148
+\ 8    296   '8
+
+2 ÷ 39
+"39"                % the divisor, at the head; Peet prints it as the row "1  39"
+{'26}  1 '2
+{'78}  '2
+\ 2/3  26    1 '2   % Chace: 26 without the dot; Peet: '26
+  2    78    '2     % not ticked (so also Peet); Chace: 78 without the dot; Peet: '78
+
+2 ÷ 41
+{"Call 2"} "out of 41"
+{'24}  1 2/3 '24
+{'246}  '6
+{'328}  '8
+{"Working-out:"}
+  2/3  '27 '3       % Chace: "The scribe has carelessly added a fractional dot to the 27"; Peet: 27 '3, and Peet prints a first row "1  41" which Chace does not have
+  '3   13 2/3
+  '6   6 2/3 '6
+  '12  3 '3 '12
+\ '24  1 2/3 '24
+Remainder '6 '8.    % ḏꜣ·t
+  1    41
+\ 2    82
+\ 4    164
+"Total"             % dmd, on the same line as the next row, before its tick (so also Peet)
+\ 6    '246  '6
+\ 8    '328  '8
+
+2 ÷ 43
+"43"                % the divisor, at the head; Peet prints it as the row "1  43"
+{42}  1 42          % Chace: both without the dot (the sign for 40, see the note to 2 ÷ 21); the numbers are '42
+{'66}  '2           % Chace: "The sign for 60 is used here twice in what was intended to be '86"; Peet: '86, without comment
+{'129}  '3
+{'301}  '7
+"Find"              % gm, written in the multiplier column of the next row
+\ 42   1 '42        % Chace: the tick stands before the 42, in the middle column; Peet: "Found \ '42  1 '42"
+\ 2    '66   '2     % Chace: 60 for 80 again, intended '86; Peet: '86
+  3    '129  '3     % not ticked (so also Peet)
+\ 7    '301  '7
+
+2 ÷ 45
+"45"                % the divisor, at the head; Peet prints it as the row "1  45"
+{'30}  1 '2
+{'90}  '2
+\ 2/3  30    1 '2   % Chace: 30 without the dot; Peet: '30
+\ 2    '90   '2
+
+2 ÷ 47
+"47"                % the divisor, at the head; Peet prints it as the row "1  47"
+{'30}  1 '2 '15
+{'141}  '3
+{'470}  '10
+"Find"              % gm, in the multiplier column of the next row
+'30    1 '2 '15     % not ticked (so also Peet)
+\ 3    '141  '3
+\ 10   '470  '10
+
+2 ÷ 49
+"49"                % the divisor, at the head; Peet prints it as the row "1  49"
+{'28}  1 '2 '4
+{'196}  '4
+"Find"              % gm, in the multiplier column of the next row
+'28    1 '2 '4      % not ticked (so also Peet)
+\ 4    '196  '4

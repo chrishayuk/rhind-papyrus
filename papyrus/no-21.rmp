@@ -1,0 +1,19 @@
+% Problem 21. Chace vol. II pl. 44 (photograph XI, register 1), PDF pp. 135-136; Peet pp. 58-59 (pl. H).
+No. 21
+"{It is said to thee, Complete} 2/3 '15 as 1."
+% beneath 2/3 and '15 the papyrus writes 10 and 1 (their values in 15ths) side by side; set one to a line here
+10      % black in Chace; Peet prints it in italics (his sign for red)
+1
+Total 11.
+"Remainder 4."            % "Total 11, remainder: 4."  % quoted: the subtraction (15 - 11) it reports is not written out, so there is nothing to check it against
+Reckon with 15 to find 4.   % "Operate on 15 for the finding of 4."
+  1     15
+ '10    1 '2
+\ '5    3
+\ '15   1
+Total 4.
+"Therefore '5 '15 is: to be added to it."
+"Example of proof."     % Chace fn 3: "It is extremely doubtful whether this phrase belongs in this problem. See Peet, pages 58-59."
+"Therefore is complete 2/3 '5 '15 '15 up to 1."
+"10 3 1 1"              % beneath 2/3 '5 '15 '15, their values in 15ths; no total written. Black in Chace; Peet prints them in italics (his sign for red)
+"Another, '5 '10 is: to be added."   % Chace fn 4: "These words and numbers have crept in through error. See Peet, pages 58-59"; Peet: borrowed partly from No. 35 (and perhaps No. 22)

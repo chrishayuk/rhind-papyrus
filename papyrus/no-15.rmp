@@ -1,0 +1,8 @@
+% Problem 15. Chace vol. II pl. 42 (photograph X, registers 4-5), PDF pp. 131-132; Peet p. 56 (pl. G).
+% Red figures beneath each fraction are written after the row, in order, one per fraction.
+No. 15
+  1     32 '228      {'2 '4 '8}    {'8}     % Chace: fractional dot omitted (32 for '32); Peet: '228 where '224 would make the sum right
+ '2     64 '456      {'4 '8 '16}   {'16}    % Chace: fractional dot omitted (64 for '64)
+ '4     '128 '912    {'8 16 32}    {32}     % Chace: fractional dots omitted in red 16 and both red 32s (16 for '16, 32 for '32)
+"Erroneous."           % i͗ṯ; Chace fn 1: "This notation, made by some ancient scribe (perhaps the copyist of the Rhind himself), shows that the errors of Problem 15, at least, were recognized."; Peet: "WRONG", "an abbreviated form of the verb tht 'to be wrong'"
+Total '16.             % Peet: "This is untrue, but the answer would have been correct had the original quantity read '32 '224."

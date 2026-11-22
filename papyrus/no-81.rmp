@@ -1,0 +1,45 @@
+% Problem 81. Chace vol. II pl. 103 (photograph XXVI), PDF pp. 253-254; Peet pp. 123-124 (Pl. W).
+% A table converting hekat (with ro) to hinu (10 hinu to a hekat), and hinu back to a part of a hekat.
+% Chace: "There are many numerical mistakes in the original and they remain uncorrected here"
+% (corrections in his vol. I, pp. 113-115); Peet: "The text is very incorrect."
+% Rows of the second and third parts have three numbers: hekat (and ro) | hinu | "this is" so much of a hekat.
+% The ro sign standing alone means one ro (Chace, note to No. 47); ditto marks are not copied.
+No. 81
+{"Another reckoning of the hinu."}
+% Part A, as No. 80 without its first row
+'2 hekat    5           % "As for '2 hekat, this is 5 hinu" ("As for" in red; Chace note 1: an oblique pen-stroke after it on photograph XXVI)
+'4 hekat    2 '2
+'8 hekat    1 '4
+'16 hekat   '2 '8
+'32 hekat   '4 '16      % Peet: the B.M. Facsimile gives a vertical stroke instead of the ligature for '6 (in '16)
+'64 hekat   '8 '32
+% Part B. "As for hekat '2 '4 '8, in hinu 8 '2 '4 this is"; the "this is ... of a hekat" column stands on the left in the papyrus
+'2 '4 '8 hekat              8 '2 '4
+'2 '4 hekat                 7 '2
+'2 '8 '32 hekat 3 '3 ro     6 '2 '16       2/3     % "2/3 this is of a hekat"; Peet: 6 '2 '16 (sic)
+'2 '8 hekat                 6 '4           '5      % Peet: "That is '5 (? 5/8)"
+'4 '8 hekat                 3 '2 '4        3       % Peet: "That is 3 (? 3/8)"
+'2 '32 '64 hekat 1 2/3 ro   3 '4 '8 2/3    '7      % Chace: the scribe "clearly" wrote the sign for '2 hekat, not a "hybrid between '4 and '2" (Peet, Plate W note d); Peet: '4 '32 '64 hekat; hinu "(3 '4 '8) + 2/3 (sic)"; "That is '7 (sic)"
+'4 hekat                    2 '2           '4
+'8 '16 hekat 4 ro           2              '5
+['8] '32 hekat 3 '3 ro      1 [2/3]        ['6]    % restorations agree with Peet
+% Part C. "As for '8 '16 4 ro, hinu 2 this is, '5 this is of a hekat"; the last column is in red
+'8 '16 hekat 4 ro           2              {'5}
+'16 '32 hekat 2 ro          1              {'10}
+'32 '64 hekat 1 ro          '2             {'20}
+'64 hekat 3 ro              '4             {'40}
+'16 hekat 1 '3 ro           2/3            {'30}   % Chace: traces of '16 hekat and '3 below at the edge (Peet p. 123 n. 2); 30 of peculiar form, perhaps 20 corrected to 30. Peet: "'30 (? sic)"
+'32 hekat 1 2/3 ro          '3             {'60}   % "of a hinu '3 this is"; Peet: "1 2/3 ro (sic)", "The 1 is certain, though wrong"; "'60 (sic)"
+'64 hekat                   '5             {'50}   % Chace: after '64 the scribe first wrote ro '3 and crossed it out; Peet prints "'64 + 1 '3 ro (sic)", "The scribe wrote 1 '3 and then crossed it out. Read 1 2/3"
+'2 hekat                    5              {'2}
+'4 hekat                    2 '2           {'4}
+'2 '4 hekat                 7 '2           {'2 '4}
+'2 '4 '8 hekat              8 '2 ['4]      {'2 '4 '8}   % Peet: "8 '2 (sic)", not restored
+'2 '8 hekat                 6 '4           {'2 '8}
+'4 '8 hekat                 [3] '2 '4      {'4 '8}      % Peet: "('2 + '4) (sic)", not restored
+'2 '8 '32 hekat 3 '3 ro     6 2/3          {2/3}
+'4 '16 '64 hekat 1 2/3 ro   3 '3           {'3}
+'8 hekat                    1 '4           {'8}
+'16 hekat                   '2 '8          {'16}
+'32 hekat                   '4 '16         {32}    % "'4 '16 this is of a hinu"; Chace: "The scribe omitted the fractional dot" (32 for '32); Peet: '32
+'64 hekat                   '8 '32         {'64}

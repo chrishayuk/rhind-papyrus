@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Rhind Mathematical Papyrus",
+  "scopeName": "source.rmp",
+  "fileTypes": ["rmp"],
+  "patterns": [
+    { "include": "#note" },
+    { "include": "#heading" },
+    { "include": "#tick" },
+    { "include": "#line" }
+  ],
+  "repository": {
+    "note": {
+      "comment": "% to the end of the line: a note, not in the papyrus.",
+      "name": "comment.line.percentage.rhind",
+      "match": "%.*$"
+    },
+    "heading": {
+      "patterns": [
+        {
+          "comment": "No. 26, No. 7B: a problem.",
+          "match": "^\\s*(No\\.\\s*[0-9]+[A-Za-z]?)\\s*(?=%|$)",
+          "captures": { "1": { "name": "entity.name.section.problem.rhind" } }
+        },
+        {
+          "comment": "2 ÷ 7 (ASCII 2 : 7): an entry of the table of two divided by an odd number.",
+          "match": "^\\s*([0-9]+\\s*[÷:]\\s*[0-9]+)\\s*(?=%|$)",
+          "captures": { "1": { "name": "entity.name.section.table.rhind" } }
+        }
+      ]
+    },
+    "tick": {
+      "comment": "The scribe's tick: a row to be added in.",
+      "match": "^\\s*(\\\\)",
+      "captures": { "1": { "name": "keyword.operator.tick.rhind" } }
+    },
+    "line": {
+      "patterns": [
+        { "include": "#note" },
+        { "include": "#words" },
+        { "include": "#red" },
+        { "include": "#lost" },
+        { "include": "#restored" },
+        { "include": "#statement" },
+        { "include": "#unit" },
+        { "include": "#figure" },
+        { "include": "#uncertain" },
+        { "include": "#stop" },
+        { "include": "#invalid" }
+      ]
+    },
+    "words": {
+      "comment": "The scribe's words, in translation. Numbers in them are not computed.",
+      "name": "string.quoted.double.rhind",
+      "begin": "\"",
+      "end": "\"|$",
+      "beginCaptures": { "0": { "name": "punctuation.definition.string.begin.rhind" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.string.end.rhind" } },
+      "patterns": [{ "include": "#lost" }, { "include": "#restored-words" }]
+    },
+    "restored-words": {
+      "name": "meta.restored.rhind",
+      "begin": "\\[",
+      "end": "\\]|(?=\")|$",
+      "beginCaptures": { "0": { "name": "punctuation.definition.restored.begin.rhind" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.restored.end.rhind" } }
+    },
+    "red": {
+      "comment": "{…}: written in red ink. The colour does not change the value.",
+      "name": "meta.ink.red.rhind",
+      "begin": "\\{",
+      "end": "\\}|(?=%)|$",
+      "beginCaptures": { "0": { "name": "punctuation.definition.red.begin.rhind" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.red.end.rhind" } },
+      "patterns": [
+        { "include": "#words" },
+        { "include": "#lost" },
+        { "include": "#restored" },
+        { "include": "#statement" },
+        { "include": "#unit" },
+        { "include": "#figure" },
+        { "include": "#uncertain" },
+        { "include": "#stop" },
+        { "include": "#invalid" }
+      ]
+    },
+    "lost": {
+      "comment": "[...]: lost, and not restored.",
+      "name": "comment.block.lost.rhind",
+      "match": "\\[(?:\\.\\.\\.|…)\\]"
+    },
+    "restored": {
+      "comment": "[…]: restored by the edition where the papyrus is damaged.",
+      "name": "meta.restored.rhind",
+      "begin": "\\[",
+      "end": "\\]|(?=%)|$",
+      "beginCaptures": { "0": { "name": "punctuation.definition.restored.begin.rhind" } },
+      "endCaptures": { "0": { "name": "punctuation.definition.restored.end.rhind" } },
+      "patterns": [
+        { "include": "#statement" },
+        { "include": "#unit" },
+        { "include": "#figure" },
+        { "include": "#uncertain" },
+        { "include": "#stop" },
+        { "include": "#invalid" }
+      ]
+    },
+    "statement": {
+      "patterns": [
+        {
+          "comment": "The words a statement is made of.",
+          "name": "keyword.control.statement.rhind",
+          "match": "\\b(?:Multiply|Reckon\\s+with|Total|Result|Remainder|Add|Take|Proof)\\b"
+        },
+        {
+          "comment": "The words that join a statement's two figures.",
+          "name": "keyword.other.statement.rhind",
+          "match": "\\b(?:by|to\\s+find|to|from)\\b"
+        }
+      ]
+    },
+    "unit": {
+      "name": "support.type.unit.rhind",
+      "match": "\\b(?:hekat|ro|khar|cubits?|setat|deben|kite|loaf|loaves|pesu|hinu|days?|khet|palms?|fingers?)\\b"
+    },
+    "figure": {
+      "patterns": [
+        {
+          "comment": "Two-thirds: ⅔, 2/3 or ''3.",
+          "name": "constant.numeric.two-thirds.rhind",
+          "match": "⅔|(?<![0-9'/])2/3(?![0-9/])|''3(?![0-9])"
+        },
+        {
+          "comment": "A part, one in n: '15, or the digits overbarred (U+0305).",
+          "name": "constant.numeric.part.rhind",
+          "match": "'[0-9]+|(?:[0-9]\\x{0305})+"
+        },
+        {
+          "comment": "A whole number.",
+          "name": "constant.numeric.whole.rhind",
+          "match": "[0-9]+"
+        }
+      ]
+    },
+    "uncertain": {
+      "comment": "5?: read, but uncertain.",
+      "name": "keyword.operator.uncertain.rhind",
+      "match": "(?<=[0-9\\x{0305}\\]⅔])\\?"
+    },
+    "stop": {
+      "name": "punctuation.terminator.statement.rhind",
+      "match": "\\."
+    },
+    "invalid": {
+      "comment": "A word that is not a statement or a unit, outside quotes.",
+      "name": "invalid.illegal.rhind",
+      "match": "[A-Za-z]+|[^\\s]"
+    }
+  }
+}

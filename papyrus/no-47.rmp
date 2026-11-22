@@ -1,0 +1,16 @@
+% Problem 47. Chace vol. II pl. 69 (photographs XIX-XX), PDF pp. 185-186; Peet pp. 87-88 (Pl. O).
+No. 47
+{"If says to thee the scribe,"} "Cause thou that know I '10, when becomes it: a rectangular granary, a circular granary or."   % Chace n.2: the clause "when becomes it" is unnecessary (Griffith); Peet restores "Let me know <what> '10 becomes", supposing words lost by haplography
+"'10 is to be: grain, quadruple hekat 10"
+% A table of the parts of 100 quadruple hekat. "hekat" and "ro" here are quadruple hekat and quadruple ro (Peet p. 88); a ro is 1/320 of the hekat.
+% Each row: the part, then what it is "to be" (written "ditto" in the papyrus after the first).
+  '10    10 hekat
+  '20    5 hekat
+  '30    3 '4 '16 '64 hekat 1 2/3 ro       % written "ro 2/3": ro alone stands for 1 ro (Chace)
+  '40    2 '2 hekat
+  '50    2 hekat
+  '60    1 '2 '8 '32 hekat 3 '3 ro
+  '70    1 '4 '8 '32 '64 hekat 2 '14 '21 '42 ro
+  '80    1 '4 hekat
+  '90    1 '16 '32 '64 hekat '2 '18 ro     % the word ro is not written where there are only fractions of a ro (Chace); Chace prints a small mark over the '2 here, not explained
+  '100   1 hekat

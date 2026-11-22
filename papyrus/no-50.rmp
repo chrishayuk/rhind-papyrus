@@ -1,0 +1,16 @@
+% Problem 50. Chace vol. II pl. 72 (photographs XX-XXI), PDF pp. 191-192; Peet p. 90 (Pl. O).
+No. 50
+{"Example of making"} "a field round of khet 9. What is the amount of it in area?"
+"Take away thou '9 of it, namely, 1; the remainder is: 8."
+"Make thou the multiplication: 8 times 8; becomes it: 64;"
+"the amount of it, this is, in area, 60 setat 4."   % Chace n.2: "The scribe has by mistake written here either the number 60 or the special form for 6 used in Problem 48"; Peet: 6 thousands-of-land "(written like 60)", "as in No. 48 definitely 60"
+% The papyrus draws a circle with 9 in it (Chace pl. 72). The notation has no figure.
+"The doing as it occurs:"
+  1     9
+  '9    1
+"Take away from it; the remainder is 8."
+  1     8
+  2     16
+  4     32
+\ 8     64
+"The amount of it in area: 60 setat 4."   % Chace n.2 and Peet as above: 6 thousands-of-land and 4 setat, i.e. 64 setat, written with 60

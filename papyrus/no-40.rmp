@@ -1,0 +1,27 @@
+% Problem 40. Chace vol. II pl. 62 (photographs XVI-XVII, register 2), PDF pp. 171-172; Peet pp. 78-79 (Pl. M).
+No. 40
+"{Loaves 100} for man 5, '7 of the 3 above to man 2 those below. What is the difference of share?"   % "Loaves 100" in red
+"The doing as it occurs. The difference of share being 5 '2,"
+% each of these five rows is written "\ 1" and a share; the notation cannot hold a column whose multipliers are all 1 (they are not a multiplication), so the shares are written one to a line
+23           % \ 1
+17 '2        % \ 1
+12           % \ 1
+6 '2         % \ 1
+1            % \ 1
+Total 60.
+\ 1      60
+\ 2/3    40
+% no total is written here in Chace; Peet supplies "<Total 100>"
+"Make thou the multiplication: 1 2/3"
+Multiply 1 2/3 by 23.      % "up to times 23, becomes it: 38 '3"
+Result 38 '3.
+Multiply 1 2/3 by 17 '2.   % ditto marks for "up to times" and "becomes it" in this and the following rows
+Result 29 '6.
+Multiply 1 2/3 by 12.
+Result 20.
+Multiply 1 2/3 by 6 '2.
+Result 10 2/3 '6.
+Multiply 1 2/3 by 1.
+Result 1 2/3.
+"Total 60"     % under the multipliers 23 ... 1, which add to 60; Peet: "The papyrus here has 'Total 60,' erroneously repeated from above" (placed at the 1 row)
+"Total 100."   % under the products, which add to 100

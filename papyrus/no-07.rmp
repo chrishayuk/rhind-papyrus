@@ -1,0 +1,8 @@
+% Problem 7. Chace vol. II pl. 39 (photograph X, register 2), PDF pp. 125-126; Peet p. 54 (pl. G).
+% Red figures beneath each fraction (its value in 28ths) are written after the row, in order, one per fraction.
+No. 7
+"{Example of making complete.}"
+  1     '4 '28       {7}        {1}
+ '2     '8 56        {3 '2}     {'2}     % 56 for '56; Chace: "The scribe omitted the fractional dot in '56."
+ '4     '16 '112     {1 '2 '4}  {'4}
+Total '2.

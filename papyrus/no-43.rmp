@@ -1,0 +1,25 @@
+% Problem 43. Chace vol. II pl. 65, PDF pp. 177-178; Peet pp. 82-85 (Pl. N).
+No. 43
+{"A granary round of"} "cubit 9 in the height of it, 6 in the breadth of it; what is that which goes into it in grain?"   % Chace: "In the statement of the problem the given dimensions are transposed"; Peet: statement incorrect, 9 is really the diameter and 6 the height
+"The doing as it occurs:"
+"Take away thou 1 from 9; the remainder is 8."
+"Operate on 8, make thou '3 of it to it; becomes it:" {"10 2/3."}
+"Multiply: 10 2/3 times 10 2/3; becomes it: 113 2/3 '9."   % Chace n.2: the scribe first omitted the word tp (multiply) and later inserted it above the line
+"Make the multiplication: 113 2/3 '9 up to times 4; 2/3, this is, of the cubit 6, which is: the breadth; becomes it: 455 '9;" {"the content of it, this is, in khar."}
+"Find thou '20 of the content of it in khar; becomes it: 22 '2 '4 '45;"   % Chace n.4: "This should be '180"; Peet: (sic), read '180
+"what goes, this is, into it (in grain hekat) in quadruple hekat:" {"grain, 2200 hekat 50 25 '2 '32 '64 2 ro '2 '4 '36."}   % Chace n.5: the words in parenthesis "crept in through an error of the ancient copyist"; Peet: "clearly a scribe's error and to be omitted"
+"Manner of working out:"
+\ 1     8
+  2/3   5 '3
+\ '3    2 2/3
+Total 10 2/3.
+  1     10 2/3
+\ 10    106 2/3
+\ 2/3   7 '9
+Total 113 2/3 '9.
+  1     113 2/3 '9
+  2     227 '2 '18
+\ 4     455 '9
+  1     455 '9
+  '10   45 '2 '90
+\ '20   22 '2 '4 '45     % Chace n.4: "This should be '180"; Peet: (sic), read '180

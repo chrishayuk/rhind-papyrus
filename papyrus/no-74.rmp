@@ -1,0 +1,16 @@
+% Problem 74. Chace vol. II pl. 96, PDF pp. 239-240; Peet pp. 119-120 (Pl. V).
+% "Loaves of 5, 1000" means 1000 loaves of pefsu 5; "10 and 20" means loaves of pefsu 10 and 20 (Chace notes 1, 2).
+No. 74
+{"Another."} "Loaves of 5, 1000, exchanged with 10 and 20; what is the exchange of them?"   % "10 r 20": Chace: "evidently means loaves of pefsu 10 and 20"; Peet: the scribe "has evidently failed to see that the 10 and 20 are both pfsw", so the r-sign is not needed
+"Value thou the loaves of 5, 1000; there becomes, Upper Egyptian barley, 200 hekat. Say thou, The wedyet-flour this is."
+"Make thou '2 of 200 hekat, namely, 100 hekat."
+Multiply 200 by '2.
+Result 100.
+"Make thou 100 hekat times 10; there become 1000; the amount, this is, of pefsu 10."
+Multiply 100 by 10.
+Result 1000.
+"Make thou the 100 hekat up to times 20; there become 2000; the amount, this is, of pefsu 20."   % Chace: the scribe wrote the masculine article here, though numeral and noun are feminine
+Multiply 100 by 20.
+Result 2000.
+"The doing as it occurs: Loaves of 5, 1000, making in wedyet-flour 200 hekat;"
+"the exchange: 10, 1000, 100 (hekat); 20, 2000, 100 (hekat)."   % the papyrus sets these in columns, with ditto marks for "the exchange" and "hekat"

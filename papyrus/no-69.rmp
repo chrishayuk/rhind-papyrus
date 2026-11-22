@@ -1,0 +1,45 @@
+% Problem 69. Chace vol. II pl. 91, PDF pp. 229-230; Peet pp. 114-116 (Pl. U).
+% Chace prints the proof of the pefsu (plate operation d), the reduction to ro (e) and the final proof (f)
+% in a column on the right, and notes (note 3) that d and e belong after the statement of the pefsu;
+% they are written here in that order, as in Chace vol. I and Peet.
+No. 69
+{"Meal, hekat 3 '2,"} "made into loaves 80. Cause thou that know I the amount of a unit therefrom in meal, cause thou that know I the pefsu of them."
+"Make thou the operation on 3 '2 for the finding of 80."
+Reckon with 3 '2 to find 80.
+  1     3 '2
+  10    35
+\ 20    70
+\ 2     7
+\ 2/3   2 '3
+\ '21   '6
+\ '7    '2
+"The pefsu is 22 2/3 '7 '21."
+Result 22 2/3 '7 '21.
+% operation d: proof of the pefsu (the sum, 80, is not written)
+\ 1     22 2/3 '7 '21
+\ 2     45 '3 '4 '14 '28 '42
+\ '2    11 '3 '14 '42
+% operation e
+\ 1     320
+\ 2     640
+\ '2    160
+Total 1120.     % "Total 1120 in ro"
+"Make thou the operation on 80 for the finding of 1120."
+Reckon with 80 to find 1120.
+"The doing as it occurs:"
+  1     80
+\ 10    800
+  2     160
+\ 4     320
+Total 1120.
+"As for the amount of a unit of the loaves in meal, '32 4 ro [this is]."   % Chace: "The scribe omitted the word pw at the end of this sentence"
+% operation f: proof; a ditto mark alone under "ro" stands for one ro
+  1     '32 hekat 4 ro
+  2     '16 '64 hekat 3 ro
+  4     '8 '32 '64 hekat 1 ro
+  8     '4 '16 '32 hekat 2 ro
+\ 16    '2 '8 '16 hekat 4 ro
+  32    1 '4 '8 '64 hekat 3 ro
+\ 64    2 '2 '4 '32 '64 hekat 1 ro
+"There becomes meal: hekat 3 '2."
+Total 3 '2 hekat.   % the papyrus: "There becomes", not "Total"

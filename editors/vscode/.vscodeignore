@@ -1,0 +1,11 @@
+**
+!package.json
+!README.md
+!CHANGELOG.md
+!language-configuration.json
+!syntaxes/**
+!snippets/**
+!dist/extension.js
+!server/*.js
+!server/*.wasm
+!LICENSE

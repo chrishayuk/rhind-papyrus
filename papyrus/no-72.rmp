@@ -1,0 +1,18 @@
+% Problem 72. Chace vol. II pl. 94, PDF pp. 235-236; Peet pp. 118-119 (Pl. V).
+% "Loaves of 10, 100" means 100 loaves of pefsu 10 (Chace note 4).
+No. 72
+{"Example of exchanging"} "loaves with loaves. If is said to thee, Loaves of 10, 100, exchanged with a number of loaves of 45."
+"Make thou the excess of 45 as to 10; there become 35."
+Take 10 from 45.
+Remainder 35.
+"Make thou 10 for the finding of 35; there become 3 '2."
+Reckon with 10 to find 35.
+Result 3 '2.
+"Make thou 100 up to times 3 '2; there become 350."   % Chace: there may be an erased vertical stroke after sp (Peet, Plate V, note b)
+Multiply 100 by 3 '2.
+Result 350.
+"Add thou 100 to it; there become 450."
+350
+100
+Total 450.
+"Say thou, The exchange this is: the loaves of 10, 100, with loaves of 45, 450, making in wedyet-flour 10 hekat."   % Peet (p. 119): the plural strokes of wedyet omitted by confusion with the hekat sign; Chace disagrees (note 12)

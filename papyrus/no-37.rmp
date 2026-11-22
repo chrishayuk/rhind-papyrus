@@ -1,0 +1,69 @@
+% Problem 37. Chace vol. II pl. 59 (photographs XIV-XV, register 3), PDF pp. 165-166; Peet pp. 74-75 (Pl. M).
+No. 37
+{"Go down I times 3 into the hekat-measure, '3 of me is added to me, '3 of '3 of me is added to me, '9 of me is added to me; return I, filled am I."}
+{"Then what says it?"} {"Shall hear it:"}   % Chace fn 1: "That is, Let it hear"; Peet: "Let it hear"
+% the first column: the papyrus's multipliers are 1, 2, '3, "'3 of '3 of it" and "'9 of it", which last two the notation cannot hold as multipliers; so the products are written one to a line and the multipliers kept in notes
+1         % 1
+2         % 2
+'3        % '3
+'9        % "'3 of '3 of it"
+'9        % "'9 of it"
+{Total 3 '2 '18.}
+Reckon with 3 '2 '18 to find 1.     % "Call 1 out of 3 '2 '18." (Peet: "Divide 1 by 3 '2 '18")
+  1      3 '2 '18
+  '2     1 '2 '4 36             % 36 for '36: Chace fn 2: "The scribe omitted the fractional dots in these places."
+\ '4     '2 '4 '8 '72
+  '8     '4 '8 '16 '144
+  '16    '8 '16 32 '288         % 32 for '32 (Chace fn 2)
+\ '32    '16 '32 '64 '576
+{Total 1.}
+"Add '2 '4 '8 '72 '16 '32 '64 '576"   % "km" (Peet: "Addition", literally "completion"); '2 '4 '8 are left out of the sum, which is of the last five
+"{8 36 18 9 1}"                       % red, beneath '72 '16 '32 '64 '576: values in 576ths. Chace's translation page prints the second as what looks like 35 (a broken 6); Chace's plate glosses the hieratic as 36 (written 63, right to left), and Peet has 36
+'72
+'16
+'32
+'64
+'576
+Total '8.                 % "dmd '8"; beneath it in red 72 (the five red values add to 72)
+{"Example of proof."}
+% the multipliers again 1, 2, "'3 of it", "'3 of '3 of it", "'9 of it"
+'4 '32       % 1
+'2 '16       % 2
+'12 '96      % "'3 of it"
+'36 '288     % "'3 of '3 of it"
+'36 '288     % "'9 of it"
+{Total 1.}
+"{Add} '2 '4 '32 '16 '12 '96 '36 '288 '36 '288"   % "km" in red; '2 '4 left out of the sum
+"{9 18 24 3 8 1 8 1}"                             % red, beneath the eight others: values in 288ths
+'32
+'16
+'12
+'96
+'36
+'288
+'36
+'288
+Total '4.                 % "dmd '4"; beneath it in red 72
+% the answer in ro, and the proof in ro beside the proof in hekat parts ("Making of grain")
+"Total 320."              % "dmd 320" heading the column: the hekat, 320 ro
+  '2     160
+\ '4     80
+  '8     40
+  16     20               % 16 for '16: Chace fn 2: fractional dots omitted
+\ 32     10               % 32 for '32 (Chace fn 2)
+Total 90.
+{"Example of proof."}
+% ticks in the papyrus (Chace and Peet agree): \1 90, \2 180, '3 30 (no tick; Peet: sic), "'3 of '3" 10 (no tick; Peet: sic), \ "'9 of it" 10
+90           % \ 1
+180          % \ 2
+30           % '3
+10           % "'3 of '3"
+10           % \ "'9 of it"
+Total 320.
+"Making of grain:"        % Peet: "amounting in corn to"; all five rows ticked
+'4 '32 hekat     % \ 1
+'2 '16 hekat     % \ 2
+'16 '32 hekat    % \ '3
+'32 hekat        % \ "'3 of '3"
+'32 hekat        % \ "'9 of it"
+Total '2 '8 '4 '8 hekat.  % written so, not largest first (Peet the same)

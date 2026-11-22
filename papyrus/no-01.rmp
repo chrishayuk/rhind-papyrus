@@ -1,0 +1,11 @@
+% Problem 1. Chace vol. II pl. 34 (photograph X, registers 2-3; photograph IX, N.Y. Historical Society fragments), PDF pp. 115-116; Peet p. 51 (pl. F).
+No. 1
+"{Example of dividing} loaf 1 for man 10."
+Multiply '10 by 10.          % "Make [thou] the multiplication: '10 times 10."
+"The doing as [it occurs]:"
+  [1]   ['10]                % Chace restores; Peet omits this row
+\ [2]   ['5]                 % Chace and Peet both restore row and tick
+  [4]   ['3 '15]
+\ 8     2/3 '10 30           % Chace fn 6: "Fractional dot omitted." (30 for '30)
+Total 1.
+"the same, this is."

@@ -1,0 +1,58 @@
+% Problem 61. Chace vol. II pl. 83 (photograph XXIII, right half), PDF pp. 213-214; Peet pp. 103-104 (Pl. R).
+% A table of fractions of fractions, jotted in a blank margin. Each line "a of b is c" is written as
+% Multiply b by a. Result c.  Where the scribe left the fractional dot off a numeral, Chace prints a
+% whole number, and so does this file (Peet prints them all as fractions). The special ligature sign for
+% '6 written without its dot (Chace prints it "6", note 2) is written '6 here, since the sign is not the numeral 6.
+No. 61
+"2/3 of 2/3 is '3 9."
+Multiply 2/3 by 2/3.
+Result '3 9.            % Chace: the scribe omitted the fractional dot (9 for '9); Peet: '3 + '9
+"'3 of 2/3 is '6 '18."
+Multiply 2/3 by '3.
+Result '6 '18.          % '6: the special sign for '6 written without its dot; Chace prints it as 6 (note 2); Peet: '6 + '18
+"2/3 of '3 is '6 '18."
+Multiply '3 by 2/3.
+Result '6 '18.          % '6: the special sign without its dot; Chace prints 6 (note 2); Peet: '6 + '18
+"2/3 of '6 is '12 36."
+Multiply '6 by 2/3.     % '6: the special sign without its dot; Chace prints 6 (note 2); Peet: '6
+Result '12 36.          % Chace: the scribe omitted the fractional dot (36 for '36); Peet: '12 + '36
+"2/3 of '2 is '3."
+Multiply '2 by 2/3.
+Result '3.
+"'3 of '2 is '6."
+Multiply '2 by '3.
+Result '6.
+"'6 of '2 is '12."
+Multiply '2 by '6.      % Chace note 4: this '6 is an unusual sign, like the 6 of 2 ÷ 37; the apparent stroke may be a crack or a pen slip
+Result '12.
+"'12 of '2 is 24."
+Multiply '2 by '12.
+Result 24.              % Chace: the scribe omitted the fractional dot (24 for '24); Peet: '24
+% lines 5-8 were first written in the form of line 9 ("'3, '2 of it is ...") and altered to the form of lines 1-4 (Chace note 3; Peet p. 103)
+"'9, 2/3 of it is 18 ['54]."
+Multiply '9 by 2/3.
+Result 18 ['54].        % Chace: the scribe omitted the fractional dot (18 for '18); '54 restored; Peet: '18 [+ '54]
+"'9 of 2/3 is '18 '54,"  % written again in the margin, in the form of lines 1-4 (Chace note 5)
+Multiply 2/3 by '9.
+Result '18 '54.
+[...]                   % Chace: lost lines, about five, "fractions of '9 and '5"; not restored. Peet restores line 10 ['9 ?], line 11 ['9 ?], line 12 ['5, 2/3 of it is '10 + '30]?, line 13 ['5, '3 of it is '15]?, line 14 ['5, '2 of it is '10]?
+"['5], '4 of it is '20."
+Multiply ['5] by '4.
+Result '20.
+"'7, 2/3 of it is '14 42."   % Peet: "2/3 <of it>" (words omitted by the scribe)
+Multiply '7 by 2/3.
+Result '14 42.          % Chace: the scribe omitted the fractional dot (42 for '42); Peet: '14 + '4[2] (the 2 restored)
+                        % Peet restores beside this line ['3 of it is '21]?; Chace has nothing here
+"'7, '2 of it is '14."
+Multiply '7 by '2.
+Result '14.             % Peet restores beside this line ['4 of it is '28]?; Chace has nothing here
+"'11, 2/3 of it is '22 '66; '3 of it is '33."
+Multiply '11 by 2/3.
+Result '22 '66.
+Multiply '11 by '3.
+Result '33.
+"'11, '2 of it is '22; '4 of it is 44."
+Multiply '11 by '2.
+Result '22.
+Multiply '11 by '4.
+Result 44.              % Chace: the scribe omitted the fractional dot (44 for '44); Peet: '44

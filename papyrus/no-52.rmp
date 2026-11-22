@@ -1,0 +1,15 @@
+% Problem 52. Chace vol. II pl. 74 (photographs XX-XXI), PDF pp. 195-196; Peet pp. 94-95 (Pl. P).
+No. 52
+{"Example of making a cut-off triangle of land."} "If is said to thee, A cut-off triangle of land of (n.t) khet 20 on the side of it, khet 6 in the base of it, khet 4 on the cut-off; what is the area of it?"   % Chace n.2: "The scribe has repeated the word n.t by mistake"
+% The papyrus draws a trapezoid, 20 khet along its long side, 6 khet at one end and 4 khet at the other (Chace pl. 74). The notation has no figure.
+"Add thou the base of it to the cut-off; there become 10."
+"Make thou '2 of 10, namely, 5, for the giving of the rectangle of it."
+"Make thou the multiplication: 20 up to times 5; there become 10; the area of it this is."   % Peet: "result 10 (sic)"; Chace n.5: 100 setat, "which the Egyptian would write simply 10"
+"The doing as it occurs:"
+  1     1000
+  '2    500
+\ 1     2000
+  2     4000
+\ 4     8000
+Total 10000.
+"making in area 20; the amount of it, this is, in area."   % papyrus writes 20 (Chace translates "200 setat"); Chace n.5: "The answer should be 100 setat, which the Egyptian would write simply 10 ... by mistake he wrote 20 instead of 10"; Peet: "20 (read 10)"

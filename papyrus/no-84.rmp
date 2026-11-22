@@ -1,0 +1,22 @@
+% Problem 84. Chace vol. II pl. 106 (photograph XXVI), PDF pp. 259-260; Peet p. 127 (Pl. X).
+% Chace agrees with Peet that "with this problem the papyrus reaches its limit of unintelligibility and
+% inaccuracy"; Chace follows Peet's readings in the main. Two kinds of food are reckoned side by side;
+% each line of the table gives the number of oxen, the first food and the second food, in hekat.
+% Large amounts are in the hundred-hekat notation as Chace prints them; values are in the notes.
+No. 84
+{"Estimate of the food of a stable of oxen."}
+"Put down (?), loaves of a hekat."   % heading of the first food column (Peet: "... food")
+"Put down common food by the hekat." % heading of the second food column (Peet: "ordinary ... food (?)")
+"Ox, that which eat 4 fine one, Upper Egyptian ox: 24 hekat; 2 hekat."
+"2 fine one, Upper Egyptian ox: 22 hekat; 6 hekat."   % Chace: the special sign for 6 hekat
+"3 common one, foreign (?) ox: 20 hekat; 2 hekat."
+"That which eats 1 foreign (?) ox: 20 hekat."           % Chace: Peet seems to read "nn wnm" after "Total" in the next line
+"Total: 8 6 hekat; 10 hekat."   % Chace: "This 8 was obtained by mistakenly adding up the 10-hekat strokes as units", the units added separately and recorded with the special sign for 6 hekat; Peet: "8 (sic) 6 hekat"
+2
+6
+2
+Total 10.      % the second food column, in hekat
+"Making in spelt: hekat 9; 7 '2."   % Chace: the special signs for 9 hekat and 7 hekat; Peet: "9 (?)"
+"Making for days 10: '2 '4 10 5; '2 '4."   % = 90 and 75 hekat
+"Making for a month: 200 hekat; '2 '4 10 5."   % = 200 and 90 hekat. Chace: "The figures for a month and in the resolution into double hekat are obviously incorrect"; Peet: "three times 90 is given as 200 and three times 75 as 90"
+"Making in double hekat: '2 10 1 '2 '8 3 ro; '4 5."   % = 61 '2 '8 hekat 3 ro and 30 hekat; Peet: "half of 200 hekat being given as (61 '2 '8) hekat + 3 ro, and half of 90 hekat as 30"

@@ -1,0 +1,24 @@
+% Problem 42. Chace vol. II pl. 64 (photographs XVIII-XIX), PDF pp. 175-176; Peet pp. 81-82 (Pl. N).
+No. 42
+{"A granary round,"} "of 10 by 10."
+"Take away thou '9 of 10, namely 1 '9; the remainder is: 8 2/3 '6 '18."
+"Make thou the multiplication: 8 2/3 '6 '18 up to times 8 2/3 '6 '18; there become 79 '108 '324."
+"Make thou the multiplication: 79 '108 '324 times 10; becomes it: 790 '18 '27 '54."   % Peet: "slight error", 79 '108 '324 times 10 is 790 10/81, not 790 '9; a difference of '81
+"Put '2 of it to it; becomes it: 1185."
+"Operate on 1185, '20 is: 59 '4; what goes, this is, into it in quadruple hekat:" {"grain, 5900 hekat 25."}   % hieratic writes 5900 hekat '4; Chace: the '4 here means 25 hekat
+"Manner of the reckoning of it."
+  1     8 2/3 '6 '18
+  2     17 2/3 9           % Chace n.3: scribe omitted the fraction dot on the 9
+  4     35 '2 '18
+\ 8     71 '9
+\ 2/3   5 2/3 6 '18 '27   % Chace n.3: scribe omitted the fraction dot on the 6
+  '3    2 2/3 '6 '12 36 '54   % Chace n.3: scribe omitted the fraction dot on the 36
+\ 6     1 '3 '12 '24 '72 '108  % Chace n.3: scribe omitted the fraction dot on the multiplier 6
+\ '18   '3 '9 '27 '108 '324
+Total 79 '108 '324.
+  1     79 '108 '324
+  10    790 '18 '27 '54    % Peet: error, should be 790 10/81 (a difference of '81)
+  '2    395 '36 '54 '108   % half of the 10 row (790 '18 '27 '54), not of 79 '108 '324; Chace n.3: dot omitted on 36
+Total 1185.
+  '10   118 '2             % Chace n.3: scribe omitted the fraction dot on the 10; '10 and '20 are of 1185
+\ '20   59 '4

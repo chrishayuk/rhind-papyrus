@@ -1,0 +1,14 @@
+% Problem 45. Chace vol. II pl. 67, PDF pp. 181-182; Peet p. 85 (Pl. N).
+No. 45
+{"A granary,"} "has gone grain into it in quadruple hekat 75[00 hekat]. Of, it is, how much by how much?"   % Chace n.1: "The scribe, as Peet indicates, forgot to write the hekat-sign after the number 75"; Peet: "75 (hundreds of) quadruple-hekat"
+"Make thou the multiplication: 75 up to times 20; becomes it: 1500."
+"Make thou the operation on 1500, make thou '10 of it, namely, 150; '10 of '10 of it, 15; 2/3 of '10 of '10 of it, namely, 10."
+"Therefore of, it is, 10 by 10 by 10."
+  1     75
+  10    750
+  20    1500
+"Behold the content of it this is."
+  1     1500
+  '10   150
+"'10 of '10 of it: 15."            % a row of the column; the notation's multiplier cannot hold "'10 of '10"
+"2/3 of '10 of '10 of it: 10."

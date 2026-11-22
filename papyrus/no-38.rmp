@@ -1,0 +1,41 @@
+% Problem 38. Chace vol. II pl. 60 (photographs XIV-XV, register 4), PDF pp. 167-168; Peet pp. 75-77 (Pl. M).
+No. 38
+{"Go down I times 3 into the hekat-measure, '7 of me is added to me; return I, filled am I."}
+\ 1      1
+\ 2      2
+\ '7     '7
+{Total 3 '7.}
+Reckon with 3 '7 to find 1.     % "Call 1 out of 3 '7." (Peet: "Divide 1 by 3 '7")
+  1      3 '7
+  '22    '7
+  '11    '4 28        % 28 for '28: Chace fn 2: "The scribe omitted the fractional dots in these places."
+  '6 '66   '2 '14     % Peet: 2 x '11 resolved into '6 '66
+{Total 1.}            % no row ticked in either edition; the last three rows make 1
+"Is multiplied, this means, '7 [times] 22 for the finding of 3 '7."   % written in black beside the '22 row ('22  '7), before the total; Chace's [times] is supplied; Peet: "since '7 is multiplied 22 (times) to make 3 '7"
+"Example of proof."   % black in Chace
+  1      '6 '11 '22 '66
+  2      '2 '11 33 '66      % 33 for '33 (Chace fn 2)
+  '7     '22
+{Total 1.}            % "dmd" black, "Total" and "1." red in Chace; no row ticked in either edition
+"{Is multiplied, this means,} '22 times 7 for the finding of the series of fractions above."   % written beside the '7 row ('7  '22); Peet: "since '22 is multiplied 7 times to find the top group of fractions"
+% on the right of the page: the answer in ro
+  1      320
+  2/3    213 '3
+  '3     106 2/3
+\ '6     53 '3        % 6 for '6 (Chace fn 2)
+\ '11    29 '11
+\ '22    14 '2 '22
+\ '66    4 2/3 '6 '66
+Total 101 2/3 '11 '22 '66.
+{"Example of proof."}
+\ 1      101 2/3 '11 '22 '66
+\ 2      203 '2 '11 '33 '66
+\ '7     14 '2 '22
+"Total {1}."          % "dmd" black, "1." red: 1 hekat, for the 320 ro the three rows add to; quoted, since the rows carry no unit and the notation would read the 1 as 1 ro
+{"Making of grain,"}
+  1      '4 '16 hekat 1 2/3 '11 '22 '66 ro  % the 1 ro is the word ro (r3) alone, with no numeral: Chace prints "r3 2/3 '11 '22 '66" with "ro" beneath, as "a hekat" is written with the hekat sign alone in No. 35; Peet: "(1 2/3 + '11 + '22 + '66) ro"; the total below needs the 1
+  2      '2 '8 hekat 3 '2 '11 '33 '66 ro    % ro written as a ditto mark under the ro above
+  '7     '32 hekat 4 '2 '22 ro              % ditto mark for ro
+"Total 319 2/3 '11 '11 '22 '22 '33 '66 '66."  % "dmd" black; the papyrus writes no unit. It is the ro of the three rows with their hekat parts turned into ro ('4 '16 + '2 '8 + '32 hekat = 310 ro, plus 9 2/3 ro), so not the sum the notation would check; quoted
+"{6 6 3 3 2 1 1}"     % red, beneath '11 '11 '22 '22 '33 '66 '66: values in 66ths
+"'3 {'22}"            % '3 (black), the sum of those seven fractions, at the end of the total line; beneath it in red 22 (their sum in 66ths), written '22: Chace fn 4: "This is a whole number but is marked with a fractional dot in the original"; Peet: "Total 22 / '3"

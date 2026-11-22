@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Rhind Papyrus, run</title>
+<meta name="description" content="The Rhind Mathematical Papyrus (c. 1550 BCE), every figure of the scribe's working recomputed with the scribe's own operations, in the page.">
+<style>
+  :root {
+    --bg: #f4efe4; --card: #fbf8f1; --papyrus: #efe3c6; --papyrus-edge: #d9c69b;
+    --ink: #1f1a14; --soft: #6b6152; --rule: #d8ccb4; --red: #b3261e; --right: #2f6b3a;
+    --wrong-bg: rgba(179, 38, 30, .09); --accent: #8a5a1c; --mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16130f; --card: #1f1b16; --papyrus: #2a241b; --papyrus-edge: #3d3427;
+      --ink: #efe6d4; --soft: #a99d88; --rule: #3a3226; --red: #ef7a6c; --right: #8cc79a;
+      --wrong-bg: rgba(239, 122, 108, .12); --accent: #d9a45a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 var(--serif); }
+  header, main, footer { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+  header { padding-top: 28px; }
+  .kicker { font: 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-size: clamp(28px, 4vw, 40px); margin: 8px 0 6px; font-weight: 600; }
+  .dek { color: var(--soft); max-width: 62ch; margin: 0 0 18px; }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0 16px; }
+  select, button, input { font: 14px var(--mono); color: var(--ink); background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 6px 10px; }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  .stat { font: 13px var(--mono); color: var(--soft); margin-left: auto; }
+  .stat b { color: var(--ink); font-weight: 600; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 18px; align-items: start; }
+  @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+  .panel h2 { font: 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--soft); margin: 0 0 8px; font-weight: 500; }
+  .papyrus { background: var(--papyrus); border: 1px solid var(--papyrus-edge); border-radius: 4px; padding: 16px 0; overflow-x: auto;
+    box-shadow: inset 0 0 40px rgba(120, 90, 40, .12); }
+  .line { display: grid; grid-template-columns: 2.6em minmax(0, 1fr) auto; gap: 0 10px; padding: 0 14px 0 0; font: 14px/1.75 var(--mono); white-space: pre; cursor: default; }
+  .line .no { color: var(--soft); opacity: .55; text-align: right; font-size: 11px; }
+  .line .mark { font-size: 13px; padding-left: 12px; }
+  .line.red .txt, .line .red-ink { color: var(--red); }
+  .line.words .txt { font-family: var(--serif); font-style: italic; white-space: pre-wrap; color: var(--ink); }
+  .line.heading .txt { font-weight: 700; letter-spacing: .02em; }
+  .line.wrong { background: var(--wrong-bg); cursor: pointer; }
+  .line.wrong .mark { color: var(--red); font-weight: 600; }
+  .line.right .mark { color: var(--right); }
+  .line.unchecked .mark { color: var(--soft); }
+  .line.written { color: var(--soft); font-style: italic; }
+  .line.written .mark { color: var(--accent); }
+  .line.selected { outline: 2px solid var(--red); outline-offset: -2px; }
+  .note { color: var(--soft); font-size: 12px; }
+  .detail { margin-top: 12px; background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--red); border-radius: 6px; padding: 12px 14px; font-size: 15px; }
+  .detail:empty { display: none; }
+  .detail .msg { font-family: var(--mono); font-size: 14px; }
+  .detail ul { margin: 6px 0 0; padding-left: 18px; }
+  .detail .ed { color: var(--soft); font-size: 14px; margin-top: 6px; }
+  textarea, .rh-editor { width: 100%; min-height: 420px; font: 14px/1.6 var(--mono); background: var(--card); color: var(--ink); border: 1px solid var(--rule); border-radius: 6px; padding: 10px; }
+  .rh-editor { padding: 0; }
+  .cm-editor { min-height: 420px; font: 14px/1.6 var(--mono); }
+  .cm-editor.cm-focused { outline: none; }
+  .cm-tooltip { background: var(--card) !important; color: var(--ink); border: 1px solid var(--rule) !important; max-width: 46ch; font: 13px/1.45 var(--serif); }
+  .rh-hover { padding: 6px 10px; } .rh-hover p { margin: 4px 0; }
+  .rh-token-comment { color: var(--soft); font-style: italic; }
+  .rh-token-string { color: #6f5a2a; font-style: italic; }
+  .rh-token-keyword { color: var(--accent); font-weight: 600; }
+  .rh-token-number { color: var(--ink); }
+  .rh-token-operator { color: var(--right); font-weight: 700; }
+  .rh-token-namespace { color: var(--ink); font-weight: 700; }
+  .rh-token-macro { color: var(--red); }
+  .rh-token-parameter { color: var(--soft); text-decoration: underline dotted; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rh-token-string { color: #cdb57e; } }
+  .calc { margin-top: 26px; }
+  .calc form { display: flex; gap: 8px; flex-wrap: wrap; }
+  .calc input { flex: 1 1 260px; }
+  .working { margin-top: 10px; }
+  .working .row { font: 15px/1.8 var(--mono); white-space: pre; opacity: 0; transform: translateY(4px); transition: opacity .25s, transform .25s; }
+  .working .row.on { opacity: 1; transform: none; }
+  .working .how { color: var(--soft); font-size: 12px; margin-left: 2em; }
+  .prose { max-width: 70ch; color: var(--ink); }
+  .prose p { margin: 10px 0; }
+  .prose code { font: 13px var(--mono); }
+  footer { color: var(--soft); font-size: 13px; padding: 40px 16px 60px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Executable archaeology · c. 1550 BCE</div>
+  <h1>The Rhind Papyrus, run</h1>
+  <p class="dek">Every figure the scribe Ahmose wrote, worked again with the operations he had: doubling, halving, two-thirds, tenths, and the table of 2 divided by odd numbers at the head of the papyrus. Where his figure and the working disagree, the page says so, and says what slip would have made it.</p>
+</header>
+<main>
+  <div class="bar">
+    <button id="prev" title="previous page">‹</button>
+    <select id="pick" aria-label="choose a page of the papyrus"></select>
+    <button id="next" title="next page">›</button>
+    <button id="mine">Write your own</button>
+    <span class="stat" id="stat"></span>
+  </div>
+  <div class="grid">
+    <section class="panel">
+      <h2>The page, checked</h2>
+      <div class="papyrus" id="page" aria-live="polite"></div>
+      <div class="detail" id="detail"></div>
+    </section>
+    <section class="panel">
+      <h2>The transcription</h2>
+      <textarea id="src" spellcheck="false" aria-label="the page in the notation"></textarea>
+      <p class="note">Edit it and the page is checked again. <code>'5</code> is one fifth, <code>2/3</code> two-thirds, <code>\</code> the scribe's tick, <code>{…}</code> red ink, <code>[…]</code> restored, <code>%</code> a note. A <code>Multiply</code> or <code>Reckon</code> with no working under it is worked by rhind.</p>
+    </section>
+  </div>
+  <section class="calc panel">
+    <h2>Work it the scribe's way</h2>
+    <form id="calc">
+      <input id="ask" value="reckon with 6 to find 21" aria-label="multiply A by B, or reckon with A to find B">
+      <button>Work</button>
+    </form>
+    <div class="working papyrus" id="working"></div>
+  </section>
+  <section class="prose">
+    <h2 class="kicker" style="margin-top:28px">What this is</h2>
+    <p>The Rhind Mathematical Papyrus was copied by the scribe Ahmose around 1550 BCE from an older original. It opens with a table of 2 divided by every odd number from 3 to 101, written as sums of unit fractions, and goes on to 87 problems: loaves shared among men, quantities and their parts, granaries, fields, pyramids. The working is set out in columns of doublings, with a tick against the rows to be added.</p>
+    <p>Here each problem is transcribed from two editions, Chace (1929) and Peet (1923), in a notation that keeps the papyrus's layout, and run. rhind has no division: it divides as the scribe did, by doubling the divisor; it doubles an odd unit fraction only through the papyrus's own table. Each wrong figure is matched against models of slips: a hieratic sign written for another, the sign for "part" left off, a fraction dropped, the eye slipping a line.</p>
+    <p>Everything was read by a coding agent and its sub-agents, not by a person, and nothing is claimed as new until it has been checked against the photographs.</p>
+  </section>
+</main>
+<footer>rhind is open source, Apache 2.0. Built with no dependencies and compiled for WASI; the editor is CodeMirror, and its colours, problems and hover help come from rhind's own language server running in the page.</footer>
+
+<script type="module">
+const wasmUrl = new URL("rhind.wasm", import.meta.url).href;
+let worker, nextId = 0;
+const waiting = new Map();
+function rhind(args, text = "") {
+  worker ??= new Worker(new URL("worker.js", import.meta.url), { type: "module" });
+  worker.onmessage = ({ data }) => { waiting.get(data.id)?.(data); waiting.delete(data.id); };
+  const id = nextId++;
+  return new Promise((resolve) => { waiting.set(id, resolve); worker.postMessage({ id, wasmUrl, args, text }); });
+}
+
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+let pages = [], current = 0, editor = null, own = false;
+
+async function check(text) {
+  const result = await rhind(["json", "-"], text);
+  if (result.error || result.code !== 0 && !result.out) { $("page").textContent = result.error || result.err; return; }
+  draw(JSON.parse(result.out));
+}
+
+function draw(run) {
+  const page = $("page");
+  page.replaceChildren();
+  $("detail").replaceChildren();
+  const findings = new Map();
+  for (const f of run.findings) {
+    if (!findings.has(f.line)) findings.set(f.line, []);
+    findings.get(f.line).push(f);
+  }
+  run.lines.forEach((l, i) => {
+    if (l.kind === "blank" && !run.written.some((w) => w.after === i)) { page.appendChild(el("div", "line", " ")); return; }
+    const row = el("div", `line ${l.kind.split(" ")[0]} ${l.mark}${l.red ? " red" : ""}`);
+    const txt = el("span", "txt");
+    // red ink inside a line: {…} drawn in red, without the braces
+    for (const piece of (l.text || " ").split(/(\{[^}]*\})/)) {
+      if (piece.startsWith("{") && piece.endsWith("}")) txt.appendChild(el("span", "red-ink", piece.slice(1, -1)));
+      else if (piece) txt.appendChild(document.createTextNode(piece));
+    }
+    row.append(el("span", "no", String(i + 1)), txt);
+    const mark = l.mark === "right" ? "✓" : l.mark === "wrong" ? `✗ ${l.expected}` : l.mark === "unchecked" ? "?" : "";
+    row.append(el("span", "mark", mark));
+    if (l.how) row.title = l.how;
+    const wrong = (findings.get(i) || []).filter((f) => f.severity === "wrong");
+    if (wrong.length) {
+      row.classList.add("wrong");
+      row.tabIndex = 0;
+      const open = () => {
+        page.querySelectorAll(".selected").forEach((s) => s.classList.remove("selected"));
+        row.classList.add("selected");
+        show(wrong, l.note);
+      };
+      row.onclick = open;
+      row.onkeydown = (e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), open());
+    }
+    page.appendChild(row);
+    for (const w of run.written.filter((w) => w.after === i)) {
+      for (const r of w.rows) {
+        const g = el("div", "line written");
+        g.append(el("span", "no", ""), el("span", "txt", r), el("span", "mark", "· rhind"));
+        page.appendChild(g);
+      }
+    }
+  });
+  const wrongN = run.findings.filter((f) => f.severity === "wrong").length;
+  $("stat").innerHTML = `<b>${run.checked}</b> figures checked · <b>${run.right}</b> right · <b>${run.checked - run.right}</b> wrong`;
+  const first = page.querySelector(".line.wrong");
+  if (first && wrongN) first.click();
+}
+
+function show(found, note) {
+  const box = $("detail");
+  box.replaceChildren();
+  for (const f of found) {
+    box.appendChild(el("div", "msg", f.message));
+    if (f.carried != null) box.appendChild(el("div", "", f.carried ? "The error is carried into what follows." : "What follows is right: the error is not carried. The scribe worked from the right figure and wrote another."));
+    if (f.slips.length) {
+      const ul = el("ul");
+      for (const s of f.slips) {
+        const li = el("li");
+        li.append(el("b", "", s.model), document.createTextNode(": " + s.explanation));
+        ul.appendChild(li);
+      }
+      box.append(el("div", "", "A slip that would make it:"), ul);
+    } else box.appendChild(el("div", "", "No single slip of the kinds modelled turns the right figure into this one."));
+  }
+  if (note) box.appendChild(el("div", "ed", "Transcriber's note: " + note));
+}
+
+function pickPage(i) {
+  own = false;
+  current = (i + pages.length) % pages.length;
+  $("pick").value = String(current);
+  const text = pages[current].text;
+  if (editor) editor.set(text); else $("src").value = text;
+  check(text);
+  const url = new URL(location.href);
+  url.searchParams.set("page", pages[current].name.replace(/^no-0?/, ""));
+  history.replaceState(null, "", url);
+}
+
+async function work(e) {
+  e?.preventDefault();
+  const words = $("ask").value.trim().split(/\s+/);
+  const r = await rhind(words);
+  const box = $("working");
+  box.replaceChildren();
+  const lines = (r.out || r.err || "").trimEnd().split("\n");
+  lines.forEach((line, k) => {
+    const row = el("div", "row", line);
+    box.appendChild(row);
+    setTimeout(() => row.classList.add("on"), 220 * k);
+  });
+}
+
+let timer;
+function edited(text) {
+  clearTimeout(timer);
+  timer = setTimeout(() => check(text), 200);
+}
+
+(async () => {
+  pages = await (await fetch(new URL("papyrus.json", import.meta.url))).json();
+  const pick = $("pick");
+  pages.forEach((p, i) => pick.appendChild(el("option", "", `${p.label}${p.words ? " · " + p.words.slice(0, 48) + (p.words.length > 48 ? "…" : "") : ""}`)).setAttribute("value", String(i)));
+  pick.onchange = () => pickPage(Number(pick.value));
+  $("prev").onclick = () => pickPage(current - 1);
+  $("next").onclick = () => pickPage(current + 1);
+  $("mine").onclick = () => {
+    own = true;
+    const text = "% your own page\nNo. 1\n\"A quantity whose seventh part is added to it becomes 19.\"\nReckon with 8 to find 19.\nResult 2 '4 '8.\nMultiply 2 '4 '8 by 7.\n";
+    if (editor) editor.set(text); else $("src").value = text;
+    check(text);
+  };
+  $("src").addEventListener("input", (e) => edited(e.target.value));
+  $("calc").onsubmit = work;
+  const want = new URL(location.href).searchParams.get("page");
+  const start = want ? pages.findIndex((p) => p.name === `no-${want.padStart(2, "0").toLowerCase()}` || p.name === want) : pages.findIndex((p) => p.name === "no-27");
+  pickPage(start >= 0 ? start : 0);
+  work();
+  import("./editor.js").then(({ upgrade }) =>
+    upgrade($("src"), { onRun: () => check($("src").value) }).then((ed) => {
+      if (!ed) return;
+      editor = ed;
+    })
+  ).catch(() => {});
+})();
+</script>
+</body>
+</html>

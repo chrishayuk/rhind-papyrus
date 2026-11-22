@@ -1,0 +1,20 @@
+% Problem 76. Chace vol. II pl. 98, PDF pp. 243-244; Peet pp. 120-121 (Pl. V).
+No. 76
+{"Another."} "Loaves of 10, 1000, exchanged with a number of loaves of 20 and 30. Shall hear he."
+"'20 '30"          % heading of the two numbers below (Peet: '20 over 1 '2, '30 over 1)
+1 '2
+1
+Total 2 '2.
+"Make for the finding of 30."
+Reckon with 2 '2 to find 30.
+  1     2 '2
+\ 10    25
+\ 2     5
+Result 12.          % the papyrus: "Total 12"
+"Make thou the basis of the loaves 1000 in wedyet-flour, in hekat: 100 hekat. Make times 12; what results therefrom this is: 1200."
+Multiply 100 by 12.
+Result 1200.
+"The exchange of it is: 20 and 30."
+"Loaves of 10, 1000, making in wedyet-flour 100 hekat."
+"20: 1200, '2 10."  % hundred-quadruple-hekat notation: '2 of 100 and 10, i.e. 60 hekat; Peet: "60 hekat"
+"30: 1200, '4 15."  % '4 of 100 and 15, i.e. 40; Peet: "40 hekat". Chace: "The diagonal stroke at the base of the sign for 5 hekat is a mistake"

@@ -1,0 +1,15 @@
+% Problem 30. Chace vol. II pl. 52 (photograph XII, register 6), PDF pp. 151-152; Peet pp. 65-66 (Pl. J).
+No. 30
+"{If says to thee the scribe,} Has become '10: 2/3 '10 of what? Shall hear he:"   % Chace reads '10 (with the part sign) in "Has become '10"; Peet: "'10 has become 2/3 + '10 of what?" reads 10; Chace fn 1: the n of hpr.n is the n-form (past time)
+"Make thou 2/3 '10 for the finding of 10."   % Peet: "You are to multiply 2/3 + '10 to find 10"; quoted rather than a Reckon statement, since the column stops '30 short of 10 and the division is finished in words below
+\ 1      2/3 '10
+  2      1 '3 5          % 5 for '5: Chace fn 2: "The scribe omitted the fractional dots in these places." Peet prints '5 without comment
+\ 4      3 '15
+\ 8      6 '10 30        % 30 for '30 (Chace fn 2); Peet prints '30 without comment
+"Total 13   '30"         % "dmd 13 ... '30": 13 is the sum of the ticked multipliers; '30 stands apart, the shortfall from 10 (Peet: the scribe "has further omitted to mark the '30 as d:t or 'remainder' as he should have done")
+"The making of '30 times '23 for the finding of 2/3 '10."   % Peet: "'30 is multiplied 23 times to find 2/3 + '10"; the step showing 2/3 '10 is 23/30 "is completely omitted" (Peet)
+"{The total is the quantity saying it,} 13 '23."   % quoted, not a Result: the '23 comes from the step in words, not from the column; Chace: "The final sentence of this problem is inconsistent in its meaning with the setting-out"
+  1      13 '23
+\ 2/3    8 2/3 '46 '138
+\ '10    1 5 '10 '230    % 5 for '5 (Chace fn 2); Peet prints '5 without comment
+{Total 10.}

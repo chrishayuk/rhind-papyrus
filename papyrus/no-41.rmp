@@ -1,0 +1,19 @@
+% Problem 41. Chace vol. II pl. 63 (photograph XVIII), PDF pp. 173-174; Peet pp. 80-81 (Pl. M).
+No. 41
+{"Example of making a granary round, of 9"} "by 10."
+"Take away thou '9 of 9, namely 1; the remainder is 8."
+"Multiply 8 up to times 8; there become 64."
+"Make thou the multiplication 64 up to times 10; becomes it 640."
+"Add '2 of it to it; becomes it 960," {"the content of it in khar."}
+"Make thou '20 of 960, namely 48; what goes, this is, into it in quadruple hekat:" {"grain, 4800 hekat."}
+"Manner of the reckoning of it."
+  1   8
+  2   16
+  4   32
+\ 8   64
+  1   64
+\ 10  640
+\ '2  320     % the '2 is half of 640, not of 64 (the scribe adds half of 640 to it)
+Total 960.
+  '10  96     % '10 and '20 are of 960
+\ '20  48     % Peet: no tick on '20

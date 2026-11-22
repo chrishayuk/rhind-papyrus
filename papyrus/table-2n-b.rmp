@@ -1,0 +1,295 @@
+% Table of 2 divided by the odd numbers, entries 2 ÷ 51 to 2 ÷ 101. Chace vol. II pls. 15-33, PDF pp. 77-114 (literal translation on the odd page, plate on the even); Peet pp. 43-47 (Pls. B, C, D).
+% Read from page images by a coding agent's sub-agent; no person checked it. See sources/notes/table-2n-b.md.
+%
+% Layout, as Chace prints it. Each entry opens with the divisor standing alone, in black (written as a quoted line, "57"; Peet renders it as a row "1 57"),
+% or with a "Call 2 out of n" heading,
+% then the answer: each red part of n followed by what it gives, one pair to a row ({'30}  1 2/3 '10 = "'30 of 53 is 1 2/3 '10").
+% Then the working-out. A row of two figures is a part of n and what it gives. A row of three figures is the
+% scribe's side reckoning: the multiplier k written at the left (ticked), then k times n (the part 1/(kn) when
+% dotted), then the part of n it gives (\ 6  '318  '6 = "6 times 53 is 318; '318 of 53 is '6").
+% Dots are kept as Chace prints them. Chace (note to 2 ÷ 17): "in most of the multiplications carried through for
+% the purpose of obtaining fractional multipliers ... the partial products are written without dots", so a figure
+% written here without the part sign (34, 102, 536, ...) is the papyrus's bare number, not a correction.
+% Peet's answer lines are prose ("1 '2 is '34th") and his columns start with a "1 n" row of his own; neither is
+% compared figure by figure here except where the value or a restoration differs. Dot differences in the working are noted
+% ("% Peet: '40"), but Peet says (p. 38) that "the incorrect omission or insertion of the fractional dot ... has been
+% corrected without further comment in these division sums", so they are Peet's normalisations, not other readings.
+
+2 ÷ 51
+% Chace PDF p. 77 (pl. 15, p. 78); Peet p. 43 (Pl. B)
+"51"
+{'34}   1 '2
+{'102}  ['2]      % Peet: <'2>, "never stood in the papyrus", omitted by the scribe (Peet's pointed brackets); Chace restores it as damage
+\ 2/3   34    1 '2
+\ 2     102   '2
+
+2 ÷ 53
+% Chace PDF p. 79 (pl. 16, p. 80); Peet p. 43 (Pl. B)
+{"Call 2"}
+"out of 53"
+{'30}   1 2/3 '10
+{'318}  '6
+{'795}  '15
+{"Working-out:"}
+"Find"            % Peet: "There is a dot (= multiplier 1) after 'found' which should not be there. Cf. 2 ÷ 29 and 2 ÷ 31."
+\ 30    1 2/3 '10      % Chace prints 30 without the dot (see note to 2 ÷ 17); Peet: '30
+\ 6     '318  '6
+Remainder '15.
+  1     '53       % Chace: "In this multiplication we should expect dots with all the numbers of the second column, or with only the last, or not at all"; Peet: 53
+\ 10    530
+\ 5     265
+"Total"
+  15    '795  '15
+
+2 ÷ 55
+% Chace PDF p. 79 (pl. 16, p. 80); Peet p. 44 (Pl. B)
+"55"
+{'30}   1 2/3 '6
+{'330}  '6
+"Find"
+\ '30   1 2/3 '6
+\ 6     '330  '6
+
+2 ÷ 57
+% Chace PDF p. 81 (pl. 17, p. 82); Peet p. 44 (Pl. C)
+"57"
+{38}    1 '2      % Chace: "Fractional dot omitted." (for '38)
+{'114}  '2
+\ 2/3   38    1 '2
+\ 2     114   '2
+
+2 ÷ 59
+% Chace PDF p. 81 (pl. 17, p. 82); Peet p. 44 (Pl. C)
+"59"
+{'36}   1 '2 '12 '18
+{'226}  '4        % so in Chace's translation and plate (red 226; the working has 236); no comment by Chace; Peet: '236
+{'531}  '9
+"Find"
+\ '36   1 '2 '12 '18
+\ 4     '236  '4
+\ 9     531   '9       % Peet: '531
+
+2 ÷ 61
+% Chace PDF p. 83 (pl. 18, p. 84); Peet p. 44 (Pl. C)
+"61"
+{'40}   1 '2 '40
+{'244}  '4
+{'488}  '8
+{'610}  '10
+"Find"
+\ 40    1 '2 '40       % Chace prints 40 without the dot; Peet: '40
+\ 4     '244  '4
+\ 8     '488  '8
+\ 10    '610  '10
+
+2 ÷ 63
+% Chace PDF p. 85 (pl. 19, p. 86); Peet p. 44 (Pl. C)
+"63"
+{42}    1 '2      % Chace: see note to 2 ÷ 21 (the fractional dot is omitted with the sign for 40)
+{'126}  '2
+\ 2/3   42    1 '2     % Peet: '42
+\ 2     '126  '2
+
+2 ÷ 65
+% Chace PDF p. 87 (pl. 20, p. 88); Peet p. 44 (Pl. C)
+{"Call 2"}
+"out of 65"
+{'39}   1 2/3
+{'195}  '3
+{"Working-out:"}
+"Find"
+  '39   1 2/3          % no tick (so both editions)
+\ 3     '195  '3
+
+2 ÷ 67
+% Chace PDF p. 89 (pl. 21, p. 90); Peet p. 44 (Pl. C)
+"67"
+{40}    1 '2 '8 '20      % Chace: see note to 2 ÷ 21 (fractional dot omitted with the sign for 40)
+{'335}  '5
+{'536}  '8
+"Find"
+\ 40    1 '2 '8 '20      % Chace prints 40 without the dot; Peet: '40
+\ 5     '335  '5
+\ 8     536   '8         % Peet: '536
+
+2 ÷ 69
+% Chace PDF p. 89 (pl. 21, p. 90); Peet p. 45 (Pl. C)
+"69"
+{46}    1 '2      % Chace: see note to 2 ÷ 21
+{'138}  '2
+\ 2/3   46    1 '2     % Peet: '46
+\ 2     138   '2       % Peet: '138
+
+2 ÷ 71
+% Chace PDF p. 91 (pl. 22, p. 92); Peet p. 45 (Pl. C)
+"71"
+{40}    1 '2 '4 '40      % Chace: see note to 2 ÷ 21
+{'568}  '8
+{'710}  '10
+"Find"
+  '40   1 '2 '4 '40      % no tick (so both editions)
+\ 8     568   '8         % Peet: '568
+\ 10    710   '10        % Peet: '710
+
+2 ÷ 73
+% Chace PDF p. 93 (pl. 23, p. 94); Peet p. 45 (Pl. C)
+"73"
+{'60}   1 '6 '20
+{'219}  '3
+{'292}  '4
+{'365}  '5
+"Find"
+\ '60   1 '6 '20
+\ 3     '219  '3
+\ 4     '292  '4
+\ 5     365   5          % Chace: "Photograph VI seems to show a crease or overlap in the papyrus here. It is possible that a fractional dot, now concealed, was written over this 5."; Peet: '365, '5
+
+2 ÷ 75
+% Chace PDF p. 95 (pl. 24, p. 96); Peet p. 45 (Pl. C)
+"75"
+{'50}   1 '2
+{'150}  '2
+\ 2/3   50    1 '2     % Peet: '50
+\ 2     '150  '2
+
+2 ÷ 77
+% Chace PDF p. 97 (pl. 25, p. 98); Peet p. 45 (Pl. C)
+{"Call 2"}
+"out of 77"
+{'44}   1 '2 '4
+{'308}  '4
+{"Working-out:"}
+"Find"
+  '44   1 '2 '4          % no tick; Peet: '4[4] (second 4 restored)
+\ 4     '3[08]  '4
+
+2 ÷ 79
+% Chace PDF p. 99 (pl. 26, p. 100); Peet p. 45 (Pl. C)
+"79"
+{'60}   1 '4 '15
+{'237}  '3
+{'316}  '4
+{'790}  '10
+"Find"
+\ '60   1 '4 '15
+\ 3     '233  '3       % Chace: "These numbers should be 237 and 316 as in the line at the top."; Peet: "In the working read '237 and '316."
+\ 4     '416  '4       % Chace: "should be ... 316"; Peet: "read ... '316"
+\ 10    '790  '10
+
+2 ÷ 81
+% Chace PDF p. 101 (pl. 27, p. 102); Peet p. 45 (Pl. C)
+"81"
+{54}    1 '2      % Chace: "Fractional dot omitted."
+{'162}  '2
+\ 2/3   '54   1 '2
+\ 2     162   '2       % Peet: '162
+
+2 ÷ 83
+% Chace PDF p. 103 (pl. 28, p. 104); Peet p. 46 (Pl. C)
+"63"                % Chace: "63 was written for 83. See note to 2 divided by 43."; Peet: 83 (in his "1 83" row; no remark)
+{['60]}  1 '3 '20      % red '60 restored (so both editions)
+{'332}  '4
+{'415}  '5
+{'498}  '6
+"Find"
+\ '60   1 '3 '20
+\ 4     332   '4       % Peet: '332
+\ 5     '415  '5
+\ 6     '498  '6
+
+2 ÷ 85
+% Chace PDF p. 105 (pl. 29, p. 106); Peet p. 46 (Pl. C)
+"'85"               % Chace prints 85 with a dot over it (the plate's gloss is dotted too), without comment; Peet: 85
+{'51}   1 2/3
+{'255}  '3
+  1     85
+"Find"
+\ 51    1 2/3          % Peet: '51
+\ 3     255   '3       % Peet: '255
+
+2 ÷ 87
+% Chace PDF p. 105 (pl. 29, p. 106); Peet p. 46 (Pl. D)
+  1     87
+{58}    1 '2      % Chace: "Fractional dot omitted."
+{'174}  '2
+\ 2/3   58    [1] '2   % 1 restored (so both editions); Peet: '58
+\ 2     '174  '2
+
+2 ÷ 89
+% Chace PDF p. 107 (pl. 30, p. 108); Peet p. 46 (Pl. D)
+{"Call 2"}
+"out of 89"
+{'60}   [1 '3] '10 '20     % Peet: [1 '3] '10 '20, the same
+{'356}  ['4]               % Chace: "An error has crept into Peet's Plate D, where '336 occurs in his hieroglyphic transcription." (Peet's text has '356)
+{['53]4}  '6               % red '534 with '53 restored (Chace prints a black dot before it, inside the restoration); the red 4 and the black '6 are from the New York fragments (Chace n. 2); Peet: '[53]4, '6
+{'890}  ['10]              % red '890 from the New York fragments: "the fractional dot and part of the 90" survive (Chace n. 2); Peet: '890, ['10]
+{"Working-out:"}
+"Find"
+  60    1 '3 '10 '20       % no tick (so both editions); Chace prints 60 without the dot; Peet: '60
+\ 4     '356  '4
+\ 6     '534  '6
+\ 10    '890  '10
+
+2 ÷ 91
+% Chace PDF p. 107 (pl. 30, p. 108); Peet p. 46 (Pl. D)
+"91"
+{'70}   1 '5 '10
+{'130}  2/3 30     % Chace: "Fractional dot omitted." (30 for '30)
+"Find"
+  '70   1 '5 '10       % no tick in Chace; Peet: ticked
+"Find"
+  '130  2/3 30         % Chace: "Fractional dot omitted."; Peet: 2/3 '30; Peet: "The working is little more than a restatement of the answer."
+
+2 ÷ 93
+% Chace PDF p. 109 (pl. 31, p. 110); Peet p. 46 (Pl. D)
+"[9]3"              % Peet: 93, not marked restored (in his "1 93" row)
+{'62}   1 '2
+{'166}  '2        % Chace: "166 was written for 186. See note to 2 divided by 43."; Peet: '186, no remark
+"Find"
+\ '62   1 '2
+\ 2     166   '2       % Chace: "166 was written for 186."; Peet: '186, no remark
+
+2 ÷ 95
+% Chace PDF p. 109 (pl. 31, p. 110); Peet p. 46 (Pl. D)
+"95"
+{'60}   1 '2 ['12]     % Peet: 1 '2 '12, '12 not marked restored
+{380}   ['4]           % Chace: "The fractional dot may have existed on a missing fragment of papyrus."; Peet: '380, ['4]
+{'570}  '6             % Chace: '570 on a fragment now misplaced in register 3 (Chace n. 3); '6 on a New York fragment Chace places here (n. 4); Peet restores both: ['6 is '570]
+"Find"
+  60    1 '2 '12       % no tick (so both editions); Chace prints 60 without the dot; Peet: '60
+\ 4     '380  '4
+\ 6     '570  '6
+
+2 ÷ 97
+% Chace PDF p. 111 (pl. 32, p. 112); Peet p. 47 (Pl. D)
+"97"
+{'56}   1 '2 '8 '14 '28
+{'679}  '7             % Chace: "The 9 and the portions of figures that follow are on the New York fragments. The 670 is on a fragment that is incorrectly placed at the edge of B. M. 10058, in register 4"
+{'77[6]}  ['8]         % so both editions (Peet: '77[6], ['8])
+"Find"
+\ 56    1 '2 '8 '14 '28     % Chace prints 56 without the dot; Peet: '56
+\ 7     679   '7       % Peet: '679
+\ 8     776   '8       % Peet: '776
+
+2 ÷ 99
+% Chace PDF p. 111 (pl. 32, p. 112); Peet p. 47 (Pl. D)
+"99"
+{'66}   1 '2
+{'198}  '2        % Chace: three New York fragments placed in '198 "practically completing it", and another completing the following '2
+"Find"
+\ 2/3   66    1 '2     % Peet: '66
+  2     198   '2       % no tick (so both editions); Peet: '198
+
+2 ÷ 101
+% Chace PDF p. 113 (pl. 33, p. 114); Peet p. 47 (Pl. D). Chace: "The surviving portions of this example and table ... are all from the New York fragments."
+{"[Call 2]"}           % Chace n. 1: a stroke in black ink at the top of the fragment, "perhaps a low-placed dot between nys and 2 ... or possibly a stroke of the 2, although the 2 is everywhere red in these headings except in 2 divided by 3"
+"[out of 101]"
+{['101]}  1            % Peet: 1 is ['101]; Chace: "A similar minor slip on his Plate D makes the 1 in the line of answers at the top appear as restored."
+{'202}  '2
+{'3[03]}  ['3]         % Chace n. 2: Glanville reports part of a red stroke on B. M. 10057, "perhaps part of the last unit stroke of the 3 in '303"; Peet: '303 not restored, ['3]
+{['606]}  ['6]
+{"Working-out:"}
+  [1]   [101]   [1]    % Peet: [1  101], with "This step was perhaps omitted."; Peet has no third figure
+\ 2     [202]   '2     % Chace: "This fraction has been omitted in Peet's text, page 47, but it appears on his Plates D and E."
+\ 3     303     '3
+\ 6     606     '6

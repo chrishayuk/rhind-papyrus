@@ -1,0 +1,19 @@
+% Six loaves shared among ten men (Problem 6): each has ⅔ 1̅0̅. The proof multiplies the share by 10.
+No. 5
+Reckon with 10 to find 6.
+     1   10                             · rhind
+\   2̅   5                               · rhind
+\ 1̅0̅   1                                · rhind
+Result ⅔ 1̅0̅.                            ✗ 2̅ 1̅0̅
+Multiply ⅔ 1̅0̅ by 10.
+  1   ⅔ 1̅0̅                              · rhind
+\ 2   1 3̅ 5̅                             · rhind
+  4   3 1̅5̅                              · rhind
+\ 8   6 1̅0̅ 3̅0̅                           · rhind
+Total 7 ⅔.                              · rhind
+Result 6.                               ✗ 7 ⅔
+
+2 figures checked, 0 right, 2 wrong.
+line 4: the result is 2̅ 1̅0̅; the papyrus has ⅔ 1̅0̅
+    could be one-part: ⅔ written for 2̅
+line 6: the result is 7 ⅔; the papyrus has 6

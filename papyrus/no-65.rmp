@@ -1,0 +1,20 @@
+% Problem 65. Chace vol. II pl. 87, PDF pp. 221-222; Peet p. 109 (Pl. S).
+No. 65
+{"Example of making loaves 100 for man 10;"} "a boatman, a foreman, one at the door, with double."
+"The working-out of it: Add thou the people supplied; there become 13."
+"Operate on 13 for the finding of the loaves 100; there become 7 2/3 '39."
+Reckon with 13 to find 100.
+Result 7 2/3 '39.
+"Say thou, The eating, this is, of the man 7, and the boatman, the foreman, the one at the door, with double."
+% the papyrus sets the seven single shares in two columns (four, then three), and the three double shares beside them
+7 2/3 '39
+7 2/3 39        % Chace: "The scribe omitted the fractional dot" (39 for '39); Peet: 7 2/3 + '39
+7 2/3 '39
+7 2/3 '39
+7 2/3 '39
+7 2/3 '39
+7 2/3 '39
+15 '3 '26 '78   % the boatman
+15 '3 '26 '78   % the foreman
+15 '3 '26 '78   % the one at the door
+Total 100.

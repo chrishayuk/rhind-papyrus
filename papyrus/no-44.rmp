@@ -1,0 +1,24 @@
+% Problem 44. Chace vol. II pl. 66 (photographs XIX-XX), PDF pp. 179-180; Peet pp. 84-85 (Pl. N).
+No. 44
+{"Example of reckoning"} "a granary four-angled, (of 10 in) the length of it 10, the breadth of it 10, the height of it 10; what is that which goes into it in grain?"   % Chace n.3 and Peet: the scribe confused two ways of stating it; the words "of 10 in" are surplus (Peet: delete them, or else insert m twice and delete the fourth 10)
+"Multiply: 10 times 10; becomes it: 100."
+"Multiply: 100 times 10; becomes it: 1000."
+"Make thou '2 of 1000, namely, 500; becomes it: 1500; the content of it, this is, in khar."
+"Make thou '20 of 1500; becomes it: 75; what goes, this is, into it in quadruple hekat;" {"grain, (hekat) 7500 hekat."}   % Chace n.5: the first "hekat" is redundant
+"Example of working out:"
+% the papyrus also draws a square with 10 in it and 10 beside it (Peet p. 84; the hieratic on Chace pl. 66); the notation has no figure
+  1     10
+  10    100
+  1     100
+  10    1000
+  1     1000
+  '2    500
+  1     1500
+  '10   150
+  '20   75
+  1     75
+  10    750       % Chace n.6: "The scribe seems inadvertently to have put here what looks like a fractional dot"
+\ 20    1500
+  '10   150       % '10 of 1500
+"'10 of '10: 15."            % a row of the column above ('10 of '10 of 1500); the notation's multiplier cannot hold "'10 of '10"
+"2/3 of '10 of '10 of it: 10."   % likewise; Peet: these three lines are "a proof by continued division, if indeed they have not merely strayed hither from No. 45"

@@ -1,0 +1,33 @@
+% Problem 63. Chace vol. II pl. 85 (photographs XXIII-XXIV), PDF pp. 217-218; Peet p. 107 (Pl. S).
+% The first three lines were covered by ancient patches; a later hand rewrote what it thought stood there.
+No. 63
+"[Example of dividing] loaves 700 for man 4, 2/3 to 1, '2 to another ['3 to another, '4 to another]; cause thou that know I the share of one thereof each."
+"Add thou 2/3, ['2], '3, '4; there becomes 1 '2 '4."   % Chace: the scribe who wrote on the patches omitted this '2; Peet: <'2> (omitted)
+2/3
+['2]
+'3
+'4
+Total 1 '2 '4.
+"Call thou 1 out of 1 '2 '4; there becomes '2 '14."
+Reckon with 1 '2 '4 to find 1.
+Result '2 '14.
+"Make thou '2 '14 of 700, namely, 400."
+Multiply 700 by '2 '14.
+Result 400.
+"Make thou 2/3 of 400, namely, 266 2/3; '2 of 400, namely, 200; '3 of 400, namely, 133 '3; '4 of 400, namely, 100; the share of one thereof each."
+Multiply 400 by 2/3.
+Result 266 2/3.
+Multiply 400 by '2.
+Result 200.
+Multiply 400 by '3.
+Result 133 '3.
+Multiply 400 by '4.
+Result 100.
+{"The doing as it occurs:"} "The amount, 700."
+"'2 '14: 400."
+"2/3 of 400 to 1: 266 2/3; '2 of 400 to 1: 200; '3 of 400 to 1: 113 '3; '4 of 400 to 1: 100."
+266 2/3
+200
+113 '3         % Chace: "Mistake for 133"; Peet prints 133 '3 without remark
+100
+Total 700.

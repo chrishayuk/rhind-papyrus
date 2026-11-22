@@ -1,0 +1,7 @@
+% Problem 14. Chace vol. II pl. 42 (photograph X, registers 4-5), PDF pp. 131-132; Peet p. 56 (pl. G).
+% Red figures beneath each product (its value in 18ths) are written after the row.
+No. 14
+  1     18      {1}      % Chace: fractional dot omitted (18 for '18); Chace: should be '28 (the '9-for-'14 mistake of Nos. 10-12, not corrected here)
+ '2     36      {'2}     % Chace: fractional dot omitted (36 for '36); Chace: intended '56
+ '4     '72     {'4}     % Chace: intended '112
+Total '16.               % Peet: "This is manifestly false" (Peet puts the error in the total); Chace: total correct for '28 '56 '112

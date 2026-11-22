@@ -1,0 +1,17 @@
+% Problem 27. Chace vol. II pl. 50 (photograph XII, register 4), PDF pp. 147-148; Peet pp. 62-63 (Pl. J).
+No. 27
+"{A quantity, '5 of it added to it,} becomes it: 21."
+  1      5
+  '5     1
+Total 6.
+% 6 is then reckoned with to find 21, with no sentence
+\ 1      6
+\ 2      12
+\ '2     3
+Total 21.
+% the ticked multipliers give 3 '2, which is then multiplied by 5
+\ 1      3 '2
+  2      7
+\ 4      15             % Peet: "15 (sic)", "15 has been erroneously written for 14"; Chace prints 15 without comment
+% no total written
+"{The quantity is 17 '2,} '5 of it is 3 '2, {the total is 21.}"
