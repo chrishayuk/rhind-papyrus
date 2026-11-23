@@ -180,20 +180,36 @@ fn verify() -> i32 {
     );
     println!();
     let noted = report.wrong.iter().filter(|w| w.noted).count();
+    let of = |k: papyrus::Kind| report.wrong.iter().filter(|w| w.kind == k).count();
     println!(
-        "{} problems. {} lines checked: {} right, {} with something wrong. {} wrong figures found: {} pointed out by an edition, {} not.",
-        problems,
-        total.0,
-        total.1,
-        total.2,
-        report.wrong.len(),
+        "{} problems. {} lines checked: {} agree with the working, {} do not.",
+        problems, total.0, total.1, total.2
+    );
+    println!(
+        "{} diagnostic records on those lines (a written figure can give more than one):",
+        report.wrong.len()
+    );
+    println!(
+        "  {:>3}  differ only in a part sign: a notation the editions treat differently, not necessarily an error",
+        of(papyrus::Kind::Notation)
+    );
+    println!(
+        "  {:>3}  the ticked rows do not make the total",
+        of(papyrus::Kind::Selection)
+    );
+    println!(
+        "  {:>3}  a figure differs in more than its part sign",
+        of(papyrus::Kind::Figure)
+    );
+    println!(
+        "The transcribers' notes mention an edition's comment at {} of the {} (a keyword search of the notes, not a census of what the editions say).",
         noted,
-        report.wrong.len() - noted
+        report.wrong.len()
     );
     if !report.unmatched.is_empty() {
         let checked = report.unmatched.iter().filter(|u| u.4).count();
         println!(
-            "An edition says the scribe erred at {} more places: {} on lines rhind checks and finds right, {} on words, signs, units or figures rhind does not check (see `rhind errata`).",
+            "The notes mention an edition's comment at {} more places where rhind reports nothing: {} on lines it checks and finds right, {} on words, signs, units or figures it does not check (see `rhind errata`).",
             report.unmatched.len(),
             checked,
             report.unmatched.len() - checked
@@ -228,7 +244,18 @@ fn errata() {
     let report = papyrus::verify();
     for w in &report.wrong {
         let f = &w.finding;
-        println!("{} line {} ({}): {}", w.file, f.line + 1, w.heading, f.message);
+        println!(
+            "{} line {} ({}) [{}]: {}",
+            w.file,
+            f.line + 1,
+            w.heading,
+            match w.kind {
+                papyrus::Kind::Notation => "notation",
+                papyrus::Kind::Selection => "selection",
+                papyrus::Kind::Figure => "figure",
+            },
+            f.message
+        );
         if let Some(c) = f.carried {
             println!(
                 "    {}",
@@ -261,10 +288,18 @@ fn errata() {
     }
     // which signs are written for which: the slips as a table
     let mut pairs: std::collections::BTreeMap<String, Vec<String>> = Default::default();
-    let mut models: std::collections::BTreeMap<&str, usize> = Default::default();
+    // for each model: the figures it fits, and those it is the only fit for
+    let mut fits: std::collections::BTreeMap<&str, (usize, usize)> = Default::default();
+    let mut none = 0;
     for w in &report.wrong {
-        if let Some(s) = w.slips.first() {
-            *models.entry(s.model).or_default() += 1;
+        let mut seen: Vec<&str> = w.slips.iter().map(|s| s.model).collect();
+        seen.dedup();
+        for m in &seen {
+            let e = fits.entry(m).or_default();
+            e.0 += 1;
+            if seen.len() == 1 {
+                e.1 += 1;
+            }
         }
         for s in &w.slips {
             if s.model == "one-sign" || s.model == "multiplier" || s.model == "in-the-list" {
@@ -281,14 +316,22 @@ fn errata() {
             }
         }
         if w.slips.is_empty() {
-            *models.entry("none").or_default() += 1;
+            none += 1;
         }
     }
     println!();
-    println!("The first slip that fits each wrong figure:");
-    for (m, n) in &models {
-        println!("  {:<12} {}", m, n);
+    println!(
+        "The slips that fit the {} wrong figures: a figure can fit more than one, so the",
+        report.wrong.len()
+    );
+    println!("first column adds to more than the total. These are explanations that fit, not causes.");
+    println!("  {:<12} {:>5} {:>10}", "", "fits", "only fit");
+    let mut rows: Vec<_> = fits.into_iter().collect();
+    rows.sort_by_key(|r| std::cmp::Reverse(r.1 .0));
+    for (m, (n, only)) in rows {
+        println!("  {:<12} {:>5} {:>10}", m, n, only);
     }
+    println!("  {:<12} {:>5}", "none fits", none);
     println!();
     println!("One sign written for another:");
     let mut pairs: Vec<_> = pairs.into_iter().collect();
@@ -367,16 +410,38 @@ fn main() {
             println!("Result {}.", scribe::answer(&rows, true));
             0
         }
-        "double" => {
-            println!("{}", scribe::double(&eg(&rest.join(" "))));
-            0
-        }
-        "halve" => {
-            println!("{}", scribe::halve(&eg(&rest.join(" "))));
-            0
-        }
-        "thirds" => {
-            println!("{}", scribe::two_thirds(&eg(&rest.join(" "))));
+        "double" | "halve" | "thirds" => {
+            let x = eg(&rest.join(" "));
+            let (got, want) = match cmd.as_str() {
+                "double" => (scribe::double(&x), x.value() * rhind::rat::Rat::int(2)),
+                "halve" => (scribe::halve(&x), x.value() / rhind::rat::Rat::int(2)),
+                _ => (scribe::two_thirds(&x), x.value() * rhind::rat::Rat::new(2, 3)),
+            };
+            if got.value() != want {
+                eprintln!(
+                    "rhind: {} cannot be written exactly in parts here (it is {})",
+                    want, got
+                );
+                exit(1)
+            }
+            println!("{}", got);
+            if cmd == "double" {
+                let outside: Vec<u64> = x
+                    .parts()
+                    .into_iter()
+                    .filter(|n| n % 2 == 1 && *n > 3 && table::twice(*n).is_none())
+                    .collect();
+                if !outside.is_empty() {
+                    eprintln!(
+                        "note: twice {} is not in the papyrus's table (it stops at 101); rhind wrote it by value",
+                        outside
+                            .iter()
+                            .map(|n| number::overbar(*n))
+                            .collect::<Vec<_>>()
+                            .join(", ")
+                    );
+                }
+            }
             0
         }
         "lsp" => match rhind::lsp::serve(&mut std::io::stdin().lock(), &mut std::io::stdout()) {
@@ -406,7 +471,10 @@ fn main() {
                     .join(" ")
             };
             let count = |v: Verdict| all.iter().filter(|r| r.verdict == v).count();
-            println!("Every column the problems write in full, worked again by rhind's own route:\n");
+            let (all_cols, clean, eligible) = rhind::routes::census();
+            println!("The problems have {} columns of two rows or more; {} can be read in full (nothing lost, restored or doubtful);", all_cols, clean);
+            println!("{} of those begin with a row for 1, say what they multiply, and tick at least one row. Only those {} are compared.", eligible, eligible);
+            println!("A column that matches has the same multipliers and ticks as rhind's route; the products are checked elsewhere.\n");
             for (v, what) in [
                 (Verdict::Same, "the same rows and ticks, by doubling"),
                 (Verdict::SameTens, "the same, multiplying the tens by a row for 10"),
@@ -472,9 +540,17 @@ fn main() {
                     "  2 ÷ {:<3} papyrus {:<28} rule {}",
                     n,
                     show(table::twice(*n).unwrap()),
-                    show(got)
+                    if got.is_empty() {
+                        "(no candidate within the bounds)".to_string()
+                    } else {
+                        show(got)
+                    }
                 );
             }
+            println!("\nThe bounds: at most 4 parts, none past 1000; the divisor rules take m with n/2 < m ≤ n and at most 3 divisors.");
+            println!("The scores depend on them: raising the cap to 10000 changes `divisors` from 32 to 25 (`divisors-last` stays 34).");
+            println!("The targets are the table as rhind uses it, with 2 ÷ 43, 59 and 93 as the working, not the answers, give them.");
+            println!("A rule's agreement with the table describes it; it does not show the scribe used that rule.");
             let none = rhind::rules::unexplained();
             println!(
                 "\nNo rule here gives: {}",

@@ -306,14 +306,16 @@ pub fn explain(run: &Run, f: &Finding) -> Vec<Slip> {
     if !f.items.is_empty() {
         return in_the_list(run, f);
     }
+    // every model that fits, not only the first: the counts must not
+    // depend on the order the models are tried in
+    let mut out = Vec::new();
     if let Some((model, explanation)) = &f.hint {
-        return vec![Slip {
+        out.push(Slip {
             model,
             explanation: explanation.clone(),
             line: None,
-        }];
+        });
     }
-    let mut out = Vec::new();
     if f.severity != Severity::Wrong {
         return out;
     }
@@ -341,8 +343,8 @@ pub fn explain(run: &Run, f: &Finding) -> Vec<Slip> {
             }
         }));
         for (v, n) in with_part_signs(&written).into_iter().zip(nums) {
-            if v == e {
-                return vec![Slip {
+            if v == e && !out.iter().any(|s: &Slip| s.model == "part-sign") {
+                out.push(Slip {
                     model: "part-sign",
                     explanation: format!(
                         "{} written for {}: the part sign left off",
@@ -350,7 +352,7 @@ pub fn explain(run: &Run, f: &Finding) -> Vec<Slip> {
                         crate::number::overbar(n)
                     ),
                     line: None,
-                }];
+                });
             }
         }
     }
@@ -363,7 +365,7 @@ pub fn explain(run: &Run, f: &Finding) -> Vec<Slip> {
             });
         }
     }
-    if let Some(s) = part_sign(&ee, &we) {
+    if let Some(s) = part_sign(&ee, &we).filter(|_| !out.iter().any(|s| s.model == "part-sign")) {
         out.push(Slip {
             model: "part-sign",
             explanation: s,

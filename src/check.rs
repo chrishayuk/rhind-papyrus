@@ -99,6 +99,10 @@ pub fn show(v: Rat, u: Option<Unit>) -> String {
         return format!("-{}", show(-v, u));
     }
     let q = Quantity::of_in(v, u);
+    if q.value != v {
+        // too fine to write in parts exactly: say it as a fraction
+        return format!("{}{}", v, u.map(|u| format!(" {}", u.name())).unwrap_or_default());
+    }
     q.to_string()
 }
 
@@ -136,6 +140,12 @@ struct Pending {
     other: Option<(Rat, Rat)>,
     /// the column's rows: line, product as it should be, ticked
     rows: Vec<(usize, Rat, bool)>,
+    /// for a division: what is left of the number to find, as written and
+    /// as it should be
+    remainder: Option<(Rat, Rat)>,
+    /// a multiplication or division with nothing ticked: it does not say
+    /// which rows make the answer
+    no_result: bool,
 }
 
 impl Run {
@@ -180,6 +190,17 @@ impl Run {
     }
 }
 
+/// Can figures in these units be added or compared? A bare number goes with
+/// anything; hekat and ro convert; any other pair does not.
+fn compatible(a: Option<Unit>, b: Option<Unit>) -> bool {
+    match (a, b) {
+        (None, _) | (_, None) => true,
+        (Some(x), Some(y)) if x == y => true,
+        (Some(Unit::Hekat), Some(Unit::Ro)) | (Some(Unit::Ro), Some(Unit::Hekat)) => true,
+        _ => false,
+    }
+}
+
 /// Convert a value between hekat and ro; other units only to themselves.
 fn convert(v: Rat, from: Option<Unit>, to: Option<Unit>) -> Rat {
     match (from, to) {
@@ -205,61 +226,103 @@ fn check_column(
         .map(|f| (val(f).unwrap(), unit(f)));
     let mut base = stated;
     let mut first_defines = false;
-    // which number does the column multiply? Candidates: the statement's,
-    // the row for 1 as written, that row with a part sign put back, and the
-    // number each other row implies. The one that makes most rows right is
-    // taken, so that one slip in the row for 1 does not make every row look
-    // wrong (decision `outvote`). On a tie the earlier candidate wins.
-    let rows: Vec<(Rat, Rat)> = col
-        .iter()
-        .filter(|r| checkable(&r.left) && checkable(&r.right) && r.third.is_none())
-        .map(|r| (val(&r.left).unwrap(), val(&r.right).unwrap()))
-        .collect();
+    // which number does the column multiply? The statement's, if the page
+    // states one. Otherwise the row for 1 as written, or that row with a part
+    // sign put back on one of its numbers (9 for 9̅): whichever makes more of
+    // the other rows right, the written one on a tie. The row for 1 does not
+    // vote for itself, and no other row can propose a number (decision
+    // `base`). If there is a choice and neither makes any other row right,
+    // the column is ambiguous and is not checked.
+    let mut ambiguous = false;
     let one = col
         .iter()
-        .find(|r| checkable(&r.left) && val(&r.left) == Some(Rat::ONE) && checkable(&r.right));
-    let mut cands: Vec<(Rat, Option<Unit>)> = Vec::new();
-    if let Some(b) = stated {
-        cands.push(b);
-    }
-    if let Some(r) = one {
-        let u = unit(&r.right);
-        cands.push((val(&r.right).unwrap(), u));
-        if let Some(q) = r.right.value.as_ref() {
-            for v in crate::slips::with_part_signs(q.eg()) {
-                cands.push((v, u));
+        .position(|r| checkable(&r.left) && val(&r.left) == Some(Rat::ONE) && checkable(&r.right));
+    if stated.is_none() {
+        if let Some(k) = one {
+            let r = &col[k];
+            let u = unit(&r.right);
+            let mut cands: Vec<Rat> = vec![val(&r.right).unwrap()];
+            if let Some(q) = r.right.value.as_ref() {
+                cands.extend(crate::slips::with_part_signs(q.eg()));
             }
+            cands.retain(|c| !c.is_zero());
+            let others: Vec<(Rat, Rat)> = col
+                .iter()
+                .enumerate()
+                .filter(|(j, r)| {
+                    *j != k
+                        && checkable(&r.left)
+                        && checkable(&r.right)
+                        && r.third.is_none()
+                        && !r.left.restored
+                        && !r.right.restored
+                })
+                .map(|(_, r)| {
+                    (
+                        val(&r.left).unwrap(),
+                        convert(val(&r.right).unwrap(), unit(&r.right), u),
+                    )
+                })
+                .collect();
+            let score = |b: Rat| others.iter().filter(|(l, w)| *l * b == *w).count();
+            let top = cands.iter().map(|c| score(*c)).max().unwrap_or(0);
+            if top == 0 && others.len() >= 2 && cands.len() > 1 {
+                ambiguous = true;
+            }
+            base = cands.iter().copied().find(|c| score(*c) == top).map(|b| (b, u));
         }
     }
-    let implied: Vec<(Rat, Option<Unit>)> = col
-        .iter()
-        .filter(|r| checkable(&r.left) && checkable(&r.right) && r.third.is_none())
-        .filter(|r| !val(&r.left).unwrap().is_zero())
-        .map(|r| (val(&r.right).unwrap() / val(&r.left).unwrap(), unit(&r.right)))
-        .collect();
-    if stated.is_none() && one.is_some() {
-        cands.extend(implied.iter().cloned());
-    }
-    // a number the page states is what the column multiplies
-    if stated.is_some() {
-        cands.truncate(1);
-    }
-    cands.retain(|c| !c.0.is_zero());
-    let score = |b: Rat| rows.iter().filter(|(l, w)| *l * b == *w).count();
-    if let Some(best) = cands
-        .iter()
-        .copied()
-        .max_by(|a, b| score(a.0).cmp(&score(b.0)).then(std::cmp::Ordering::Greater))
-    {
-        // max_by keeps the last of equals; prefer the first
-        let top = score(best.0);
-        base = cands.iter().copied().find(|c| score(c.0) == top);
+    if ambiguous {
+        for r in col {
+            run.mark(r.line, Mark::Unchecked);
+            run.count(None);
+        }
+        let first = col.first().unwrap();
+        run.find(
+            first.line,
+            first.right.span,
+            Severity::Unchecked,
+            "not checked: no number makes this column's rows agree, neither the row for 1 as written nor with a part sign put back".into(),
+        );
+        return Pending {
+            total: None,
+            result: None,
+            unit: None,
+            wrong_rows: vec![],
+            other: None,
+            rows: vec![],
+            remainder: None,
+            no_result: false,
+        };
     }
     if base.is_none() {
         if let Some(r) = col.first().filter(|r| checkable(&r.left) && checkable(&r.right)) {
-            let l = val(&r.left).unwrap();
-            if !l.is_zero() {
-                base = Some((val(&r.right).unwrap() / l, unit(&r.right)));
+            // no row for 1: the first row says what the column multiplies,
+            // as written or with part signs put back on its figures, by the
+            // same vote as the row for 1 (`97  42` for 9̅7̅  4̅2̅, No. 33)
+            let (l0, r0) = (r.left.value.as_ref().unwrap(), r.right.value.as_ref().unwrap());
+            let mut lefts = vec![l0.value];
+            lefts.extend(crate::slips::with_part_signs(l0.eg()));
+            let mut rights = vec![r0.value];
+            rights.extend(crate::slips::with_part_signs(r0.eg()));
+            let others: Vec<(Rat, Rat)> = col
+                .iter()
+                .skip(1)
+                .filter(|r| checkable(&r.left) && checkable(&r.right) && r.third.is_none())
+                .map(|r| (val(&r.left).unwrap(), val(&r.right).unwrap()))
+                .collect();
+            let mut cands: Vec<Rat> = Vec::new();
+            for rv in &rights {
+                for lv in &lefts {
+                    if !lv.is_zero() && !rv.is_zero() {
+                        cands.push(*rv / *lv);
+                    }
+                }
+            }
+            let score = |b: Rat| others.iter().filter(|(l, w)| *l * b == *w).count();
+            let top = cands.iter().map(|c| score(*c)).max().unwrap_or(0);
+            if let Some(b) = cands.into_iter().find(|c| score(*c) == top) {
+                base = Some((b, unit(&r.right)));
                 first_defines = true;
             }
         }
@@ -273,7 +336,7 @@ fn check_column(
     let any_tick = col.iter().any(|r| r.tick);
     let mut wrong_rows = Vec::new();
     let mut complete = true;
-    let mut prev_true: Option<Rat> = None;
+    let mut prev_written: Option<Rat> = None;
     for (i, r) in col.iter().enumerate() {
         let ok_figs = checkable(&r.left) && checkable(&r.right);
         if !ok_figs {
@@ -316,7 +379,7 @@ fn check_column(
             let c = val(third).unwrap();
             let restored = r.left.restored || r.right.restored || third.restored;
             let mut ok = true;
-            for (fig, want, got, what) in [(&r.right, l * b, k, "times"), (third, b / k, c, "part")] {
+            for (fig, want, got, what) in [(&r.right, l * b, k, "times"), (third, Rat::ONE / l, c, "part")] {
                 if want != got {
                     ok = false;
                     let msg = if what == "times" {
@@ -372,7 +435,7 @@ fn check_column(
             }
             all_r_written = all_r_written + c;
             all_r_true = all_r_true + b / (l * b);
-            prev_true = None;
+            prev_written = None;
             continue;
         }
         // in the table, `2  3̅4̅` says 2 times 17 is 34, with the part sign
@@ -387,9 +450,25 @@ fn check_column(
             {
                 run.mark(r.line, Mark::Right);
                 run.count(Some(true));
-                prev_true = None;
+                prev_written = None;
                 continue;
             }
+        }
+        if !compatible(unit(&r.right), base.and_then(|b| b.1)) {
+            complete = false;
+            run.mark(r.line, Mark::Unchecked);
+            run.count(None);
+            run.find(
+                r.line,
+                r.right.span,
+                Severity::Unchecked,
+                format!(
+                    "not checked: {} and {} cannot be compared",
+                    unit(&r.right).map(|u| u.name()).unwrap_or(""),
+                    base.and_then(|b| b.1).map(|u| u.name()).unwrap_or("")
+                ),
+            );
+            continue;
         }
         let w = convert(val(&r.right).unwrap(), unit(&r.right), base.and_then(|b| b.1));
         let mut expected = match base {
@@ -399,18 +478,33 @@ fn check_column(
         // "add its half": a row of fractions only may be taken of the row
         // above rather than of the first row (decision `relative`)
         let mut relative = false;
-        if let (Some(e), Some(p)) = (expected, prev_true) {
+        if let (Some(e), Some(p), Op::Unknown) = (expected, prev_written, op) {
             if e != w && l < Rat::ONE && l * p == w {
                 expected = Some(w);
                 relative = true;
             }
         }
-        let t = expected.unwrap_or(w);
-        prev_true = Some(t);
+        // a slip in the multiplier, not the product: the product as written
+        // is right for the multiplier meant (`5` for 5̅ with 6 beside it, of
+        // 30), so the product is the true one and nothing is carried
+        let mut meant_l = l;
+        let mut t = expected.unwrap_or(w);
+        if let (Some(e), Some((b, _))) = (expected, base) {
+            if e != w && !b.is_zero() && !w.is_zero() {
+                let lw = w / b;
+                let left_eg = r.left.value.as_ref().map(|q| q.eg().clone()).unwrap_or_default();
+                let sign_off = l.is_int() && l > Rat::ONE && b / l == w;
+                if sign_off || crate::slips::multiplier_slip(&left_eg, lw).is_some() {
+                    meant_l = lw;
+                    t = w;
+                }
+            }
+        }
+        prev_written = Some(w);
         if r.tick {
             written_l = written_l + l;
             written_r = written_r + w;
-            true_l = true_l + l;
+            true_l = true_l + meant_l;
             true_r = true_r + t;
         }
         all_r_written = all_r_written + w;
@@ -504,7 +598,9 @@ fn check_column(
                 }
                 run.mark(r.line, Mark::Wrong(show(e, u)));
                 run.count(Some(false));
-                wrong_rows.push(k);
+                if r.tick || !any_tick {
+                    wrong_rows.push(k);
+                }
             }
             Some(_) => {
                 run.mark(r.line, Mark::Right);
@@ -577,7 +673,9 @@ fn check_column(
             Op::Divide => {
                 if let Some(target) = other_fig.as_ref().filter(|f| checkable(f)) {
                     let tv = val(target).unwrap();
-                    if true_r != tv {
+                    // short of the target is a reckoning that goes on, with a
+                    // remainder (No. 70); only past it is the selection wrong
+                    if true_r > tv {
                         let line = col.last().unwrap().line;
                         run.find(
                             line,
@@ -601,9 +699,14 @@ fn check_column(
         (all_r_written, all_r_true)
     };
     let result = match op {
+        _ if !any_tick => None,
         Op::Divide => Some((written_l, true_l)),
         Op::Multiply => Some((written_r, true_r)),
         Op::Unknown => None,
+    };
+    let remainder = match (op, other_fig.as_ref().filter(|f| checkable(f)).and_then(val)) {
+        (Op::Divide, Some(t)) if any_tick && complete => Some((t - written_r, t - true_r)),
+        _ => None,
     };
     Pending {
         total: if complete { Some((tw, tt)) } else { None },
@@ -615,6 +718,8 @@ fn check_column(
         } else {
             None
         },
+        remainder,
+        no_result: !any_tick && op != Op::Unknown,
         rows: col
             .iter()
             .filter(|r| checkable(&r.left) && checkable(&r.right) && r.third.is_none())
@@ -635,6 +740,17 @@ fn check_claim(run: &mut Run, line: usize, f: &Figure, what: &str, pending: &Opt
     let Some(p) = pending else {
         return;
     };
+    if result && p.no_result {
+        run.mark(line, Mark::Unchecked);
+        run.count(None);
+        run.find(
+            line,
+            f.span,
+            Severity::Unchecked,
+            "not checked: no row is ticked, so the column does not say which rows make the answer".into(),
+        );
+        return;
+    }
     let candidates: Vec<(Rat, Rat)> = if result {
         p.result
             .iter()
@@ -653,14 +769,38 @@ fn check_claim(run: &mut Run, line: usize, f: &Figure, what: &str, pending: &Opt
         run.count(None);
         return;
     }
+    if !compatible(unit(f), p.unit) {
+        run.mark(line, Mark::Unchecked);
+        run.count(None);
+        return;
+    }
     let v = convert(val(f).unwrap(), unit(f), p.unit);
+    if f.restored {
+        // the edition's restoration: it tests the edition, not the scribe
+        run.mark(line, Mark::Unchecked);
+        run.count(None);
+        if !candidates.iter().any(|(_, t)| *t == v) {
+            let (_, t) = candidates[0];
+            run.find(
+                line,
+                f.span,
+                Severity::Unchecked,
+                format!(
+                    "the edition's restoration disagrees with the working: the {} is {}",
+                    what,
+                    show(t, p.unit)
+                ),
+            );
+        }
+        return;
+    }
     let hit = candidates.iter().find(|(_, t)| *t == v);
     let carried_hit = candidates.iter().find(|(w, _)| *w == v);
     if hit.is_some() {
         run.mark(line, Mark::Right);
         run.count(Some(true));
-        for &k in &p.wrong_rows {
-            run.findings[k].carried = Some(false);
+        if p.wrong_rows.len() == 1 {
+            run.findings[p.wrong_rows[0]].carried = Some(false);
         }
     } else {
         let (_, t) = candidates[0];
@@ -727,8 +867,8 @@ fn check_claim(run: &mut Run, line: usize, f: &Figure, what: &str, pending: &Opt
         }
         run.mark(line, Mark::Wrong(show(t, p.unit)));
         run.count(Some(false));
-        for &j in &p.wrong_rows {
-            run.findings[j].carried = Some(carried);
+        if p.wrong_rows.len() == 1 {
+            run.findings[p.wrong_rows[0]].carried = Some(carried);
         }
     }
 }
@@ -773,6 +913,8 @@ pub fn run(text: &str) -> Run {
     let mut col: Vec<ColRow> = Vec::new();
     let mut list: Vec<(usize, Figure)> = Vec::new();
     let mut list_lines: Vec<usize> = Vec::new();
+    // a division stopped short with a remainder, until its result
+    let mut partial_division = false;
     // in an entry of the 2 ÷ n table, every column multiplies n
     let mut section_base: Option<Figure> = None;
     let mut section_num: Option<Rat> = None;
@@ -801,17 +943,33 @@ pub fn run(text: &str) -> Run {
         };
         if (!is_row || starts_again) && !col.is_empty() {
             let s = stmt.take().map(|(_, op, a, b)| (op, a, b));
-            pending = Some(check_column(&mut run, &col, s, section_base.as_ref()));
+            let p = check_column(&mut run, &col, s, section_base.as_ref());
+            if p.remainder.map(|r| r.1 > Rat::ZERO).unwrap_or(false) {
+                partial_division = true;
+            }
+            pending = Some(p);
             col.clear();
         }
         if !is_fig && !is_blank && !list.is_empty() {
-            let w: Option<Rat> = list.iter().map(|(_, f)| if checkable(f) { val(f) } else { None }).sum();
+            let lu = list.iter().find_map(|(_, f)| unit(f));
+            let w: Option<Rat> = list
+                .iter()
+                .map(|(_, f)| {
+                    if checkable(f) && !f.restored && compatible(unit(f), lu) {
+                        val(f).map(|v| convert(v, unit(f), lu))
+                    } else {
+                        None
+                    }
+                })
+                .sum();
             list_lines = list.iter().map(|(l, _)| *l).collect();
             pending = w.map(|w| Pending {
                 total: Some((w, w)),
                 result: None,
                 unit: list.iter().find_map(|(_, f)| unit(f)),
                 wrong_rows: vec![],
+                remainder: None,
+                no_result: false,
                 other: None,
                 rows: vec![],
             });
@@ -837,6 +995,8 @@ pub fn run(text: &str) -> Run {
                         result: Some((res, res)),
                         unit: None,
                         wrong_rows: vec![],
+                        remainder: None,
+                        no_result: false,
                         other: None,
                         rows: vec![],
                     });
@@ -895,9 +1055,41 @@ pub fn run(text: &str) -> Run {
                     }
                     list_lines.clear();
                 }
-                Statement::Result(f) => check_claim(&mut run, i, f, "result", &pending, true),
+                Statement::Result(f) => {
+                    if partial_division {
+                        // the division was finished in steps after its
+                        // remainder; rhind does not follow them
+                        let ok = pending
+                            .as_ref()
+                            .map(|p| p.result.iter().chain(p.total.iter()).any(|c| Some(c.1) == val(f)))
+                            .unwrap_or(false);
+                        if ok {
+                            check_claim(&mut run, i, f, "result", &pending, true);
+                        } else {
+                            run.mark(i, Mark::Unchecked);
+                            run.count(None);
+                            run.find(i, f.span, Severity::Unchecked, "not checked: the division is finished, after its remainder, in steps rhind does not follow".into());
+                        }
+                        partial_division = false;
+                    } else {
+                        check_claim(&mut run, i, f, "result", &pending, true)
+                    }
+                }
                 Statement::Remainder(f) => {
                     let mut p = pending.clone();
+                    if section_num.is_none() {
+                        // what is left of the number to find, after the ticked rows
+                        p = p.and_then(|pp| pp.remainder).map(|r| Pending {
+                            total: None,
+                            result: Some(r),
+                            unit: None,
+                            wrong_rows: vec![],
+                            other: None,
+                            rows: vec![],
+                            remainder: None,
+                            no_result: false,
+                        });
+                    }
                     if let Some(n) = section_num {
                         // in the table: what is left of the 2 once the
                         // parts at the head of the entry are taken, one, two
@@ -918,6 +1110,8 @@ pub fn run(text: &str) -> Run {
                             result: Some((c, c)),
                             unit: None,
                             wrong_rows: vec![],
+                            remainder: None,
+                            no_result: false,
                             other: None,
                             rows: vec![],
                         });
@@ -936,6 +1130,8 @@ pub fn run(text: &str) -> Run {
                             result: Some((v, v)),
                             unit: unit(a).or(unit(b)),
                             wrong_rows: vec![],
+                            remainder: None,
+                            no_result: false,
                             other: None,
                             rows: vec![],
                         });
@@ -958,6 +1154,33 @@ pub fn run(text: &str) -> Run {
                         right: cells[1].clone(),
                         third,
                     });
+                }
+            }
+            Kind::Figure(f) if section_num.is_some() && section_base.is_some() => {
+                // an entry of a table written as its value alone: a ÷ n
+                let want = section_num.unwrap() / val(section_base.as_ref().unwrap()).unwrap_or(Rat::ONE);
+                if !checkable(f) || f.restored {
+                    run.mark(i, Mark::Unchecked);
+                    run.count(None);
+                } else if val(f) == Some(want) {
+                    run.mark(i, Mark::Right);
+                    run.count(Some(true));
+                } else {
+                    let k = run.find(
+                        i,
+                        f.span,
+                        Severity::Wrong,
+                        format!(
+                            "{} is {}; the papyrus has {}",
+                            run.sections.last().map(|s| s.heading.clone()).unwrap_or_default(),
+                            show(want, None),
+                            f.value.as_ref().unwrap()
+                        ),
+                    );
+                    run.findings[k].expected = Some(want);
+                    run.findings[k].written = val(f);
+                    run.mark(i, Mark::Wrong(show(want, None)));
+                    run.count(Some(false));
                 }
             }
             Kind::Figure(f) => list.push((i, f.clone())),

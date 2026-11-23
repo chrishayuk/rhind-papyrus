@@ -31,7 +31,11 @@ pub fn get(name: &str) -> Option<&'static str> {
     PAPYRUS.iter().find(|(n, _)| *n == want || *n == alt).map(|(_, t)| *t)
 }
 
-/// Does a note say an edition thinks the scribe went wrong here?
+/// Does a transcriber's note mention an edition commenting on the scribe
+/// here? A keyword search over the notes, nothing more: it misses comments
+/// the notes do not quote, or quote in other words, and it can catch a
+/// comment about an edition rather than the papyrus. It is not a census of
+/// what Chace and Peet say.
 pub fn flagged(note: &str) -> bool {
     let n = note.to_lowercase();
     [
@@ -43,6 +47,10 @@ pub fn flagged(note: &str) -> bool {
         "erroneous",
         "incorrect",
         "blunder",
+        "careless",
+        "dot",
+        "used here",
+        "intended",
         "omitted",
         "written for",
         "was written",
@@ -54,7 +62,31 @@ pub fn flagged(note: &str) -> bool {
         && !n.contains("no error")
 }
 
+/// What kind of discrepancy a diagnostic record is. This sorts records by
+/// the explanations that fit; it says nothing about which is the cause.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Kind {
+    /// only a part sign differs (3̅0̅ written 30): Chace (vol. II p. xi) says
+    /// an omission clear from the context need not be an error
+    Notation,
+    /// the rows ticked do not make the total written
+    Selection,
+    /// anything else: a figure that differs in more than its part sign
+    Figure,
+}
+
+pub fn kind(slips: &[Slip]) -> Kind {
+    if !slips.is_empty() && slips.iter().all(|s| s.model == "part-sign") {
+        Kind::Notation
+    } else if !slips.is_empty() && slips.iter().all(|s| s.model == "ticks") {
+        Kind::Selection
+    } else {
+        Kind::Figure
+    }
+}
+
 pub struct Wrong {
+    pub kind: Kind,
     pub file: &'static str,
     pub heading: String,
     pub finding: Finding,
@@ -124,6 +156,7 @@ pub fn verify() -> Report {
             }
             let noted = note.is_some();
             wrong.push(Wrong {
+                kind: kind(&found),
                 file: name,
                 heading: heading_at(&run, f.line),
                 finding: f.clone(),

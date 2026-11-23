@@ -83,5 +83,20 @@ fn the_commands() {
     assert!(rhind(&["multiply", "3", "'2", "by", "5"]).contains("Total 17 2̅."));
     assert!(rhind(&["reckon", "with", "7", "to", "find", "2"]).contains("Result 4̅ 2̅8̅."));
     assert_eq!(rhind(&["double", "'7"]).trim(), "4̅ 2̅8̅");
-    assert!(rhind(&["decisions"]).contains("outvote"));
+    assert!(rhind(&["decisions"]).contains("base"));
+}
+
+/// The probes the independent review wrote (docs/independent-review.md):
+/// each is a page rhind once got wrong. What rhind says about them is kept.
+#[test]
+fn the_review_probes_print_as_before() {
+    let dir = Path::new(env!("CARGO_MANIFEST_DIR")).join("tests/review");
+    let mut names: Vec<_> = std::fs::read_dir(&dir).unwrap().map(|e| e.unwrap().path()).collect();
+    names.sort();
+    let mut out = String::new();
+    for path in names {
+        out.push_str(&format!("=== {}\n", path.file_name().unwrap().to_string_lossy()));
+        out.push_str(&rhind(&[path.to_str().unwrap()]));
+    }
+    same_as("review.txt", &out);
 }

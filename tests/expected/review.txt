@@ -1,0 +1,93 @@
+=== carried.rmp
+No. 1
+Reckon with 30 to find 9.
+  1  30                                 ✓
+\ 1̅0̅  3                                 ✓
+\ 5  6                                  ✗ 150
+Total 9.                                ✓
+
+4 figures checked, 3 right, 1 wrong.
+line 5: 5̅ of 30 is 6: the multiplier is written 5 for 5̅
+    what follows is right: the error is not carried
+    could be part-sign: 5 written for 5̅: the part sign left off the multiplier
+=== cubit.rmp
+No. 1
+  1  2̅ setat 10 cubit                   ✓
+  2  1 8̅ setat 7 2̅ cubit                ✓
+  4  2 4̅ 8̅ setat 2 2̅ cubit              ✓
+
+3 figures checked, 3 right, 0 wrong.
+=== duplicate.rmp
+2 ÷ 43
+\ 2  6̅6̅  2̅                              ✗ 86  2̅
+
+1 figures checked, 0 right, 1 wrong.
+line 2: 2 times 43 is 86; the papyrus has '66
+    could be one-sign: 60 written for 80
+=== list-incompatible.rmp
+No. 1
+1 hekat
+1 cubit
+Total 2 hekat.
+
+0 figures checked, 0 right, 0 wrong.
+=== list-units.rmp
+No. 1
+1 hekat
+320 ro
+Total 2 hekat.                          ✓
+
+1 figures checked, 1 right, 0 wrong.
+=== no-ticks.rmp
+No. 1
+Reckon with 5 to find 3.
+  1  5                                  ✓
+  2̅  2 2̅                                ✓
+  1̅0̅  2̅                                 ✓
+Result 2̅ 1̅0̅.                            ?
+
+3 figures checked, 3 right, 0 wrong.
+=== outvote.rmp
+No. 1
+  1  9                                  ?
+  2̅  4                                  ?
+  4̅  2                                  ?
+Total 14.
+
+0 figures checked, 0 right, 0 wrong.
+=== relative.rmp
+No. 1
+Multiply 10 by 2̅.
+  1  10                                 ✓
+  2  20                                 ✓
+\ 2̅  10                                 ✗ 5
+Result 10.                              ✗ 5
+
+4 figures checked, 2 right, 2 wrong.
+line 5: 2̅ of 10 is 5; the papyrus has 10
+    the error is carried into what follows
+    could be wrong-row: half the row on line 4 (20)
+    could be carried: the total after it is computed from this figure as written
+line 6: the result is 5; the papyrus has 10, carrying the error above
+    could be neighbour: the row above has 10
+    could be wrong-row: half the row on line 4 (20)
+=== restored-list.rmp
+No. 1
+[5]
+6
+Total 12.
+
+0 figures checked, 0 right, 0 wrong.
+=== restored-total.rmp
+No. 1
+  1  5                                  ✓
+\ 2  10                                 ✓
+Total [11].                             ?
+
+2 figures checked, 2 right, 0 wrong.
+=== row-units.rmp
+No. 1
+  1  1 hekat                            ✓
+  2  2 cubit                            ?
+
+1 figures checked, 1 right, 0 wrong.

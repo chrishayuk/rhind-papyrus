@@ -31,7 +31,7 @@ Files: `papyrus/no-41.rmp` to `papyrus/no-60.rmp` and `papyrus/no-59b.rmp`.
   the papyrus's bare "2" and "20" inside quotes.
 - **Cubit-strips / cubits-of-land (mh, 1/100 setat), Nos. 53-55.** There is
   no such unit. In Nos. 54 and 55 it is written as `cubit` after the setat
-  part (`'2 setat 10 cubit`); `rhind` will not know that 100 cubit = 1 setat.
+  part (`'2 setat 10 cubit`); `rhind` now reads a cubit after setat in one figure as a cubit-strip, 100 to the setat (added after this note was written; see `rhind decisions`, units).
   In No. 53 the one occurrence is kept in quotes.
 - **Palms and fingers (Nos. 56-59B).** The seked answers ("palm 5 finger 1")
   are kept in quotes; there is no palm or finger unit.

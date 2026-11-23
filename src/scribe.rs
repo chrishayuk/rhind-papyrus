@@ -560,23 +560,31 @@ pub const DECISIONS: &[(&str, &str)] = &[
     ),
     (
         "relative",
-        "A row of fractions only (2̅, 1̅0̅, ⅔) is right if it is that part of the first row or that part of the row just above it: the papyrus writes `10  640` then `2̅  320` for \"add its half\" (No. 41), and `1̅0̅  150` under `20  1500` (No. 44). rhind says which it took. Allowing it can hide an error that happens to equal a part of the row above; ours.",
+        "In a column the page gives no statement for, a row of fractions only (2̅, 1̅0̅, ⅔) is right if it is that part of the first row, or that part of the row just above it as written: the papyrus writes `10  640` then `2̅  320` for \"add its half\" (No. 41). rhind says which it took. Where the page states the multiplication, this is not allowed: the row must be that part of the number stated (independent review, finding 8). Ours.",
     ),
     (
-        "outvote",
-        "The number a column multiplies is chosen among the statement's, the row for 1 as written, that row with a part sign put back on one of its numbers, and the number each other row implies: the one that makes most rows right, the earlier on a tie. So one slip in the row for 1 (9 for 9̅, No. 12) shows as one wrong figure, not a column of them. Ours.",
+        "base",
+        "A column multiplies the number the page states, if it states one. Otherwise the row for 1 as written, or that row with a part sign put back on one of its numbers (9 for 9̅): whichever makes more of the other rows right, the written one on a tie; the row for 1 does not vote for itself, and no other row can propose a number. A column with no row for 1 is read the same way from its first row. If there is a choice and no candidate makes any other row right, the column is ambiguous and is not checked; with no choice, the row for 1 is what the page says the column multiplies. This replaces a vote in which any row could propose the number, which put the error on correct figures where the scribe's own error had been carried down a column (Nos. 11, 12, 18; independent review, finding 3). Ours.",
     ),
     (
         "table-rows",
-        "In the 2 ÷ n table a row `a  k  c` is the scribe's double statement: a times n is k, and k̅ of n is c. The part sign on k is optional, as the papyrus writes it both ways; a row `a  k̅` says the same without c. A `Remainder` in an entry is what is left of 2 once the parts at the head of the entry, one or more, are taken. Read from Chace's notes on 2 ÷ 7 and 2 ÷ 17.",
+        "In the 2 ÷ n table a row `a  k  c` is the scribe's double statement: a times n is k, and k̅ of n is c. The part sign on k is optional, as the papyrus writes it both ways; a row `a  k̅` says the same without c. c is checked against 1/a, so one wrong k is one finding, not two (independent review, finding 10). A `Remainder` in an entry is what is left of 2 once the parts at the head of the entry, one or more, are taken. Read from Chace's notes on 2 ÷ 7 and 2 ÷ 17.",
+    ),
+    (
+        "partial",
+        "A division may stop short of the number to find: the ticked rows make less, the page writes the remainder, and the division is finished in further steps (No. 70). Falling short is not reported; a `Remainder` is checked against what is left; the result the page then gives is checked only if it is the result of a column rhind has, and otherwise reported as not checked. A multiplication or division with nothing ticked does not say which rows make the answer, so its result is not checked.",
+    ),
+    (
+        "units",
+        "Figures are compared, and added in lists, only in units that agree: a bare number goes with anything, hekat and ro convert (320 ro to the hekat), and any other pair is not checked. Inside one figure, setat and cubit-strips convert (100 to the setat); a cubit on its own is a length and is not converted.",
     ),
     (
         "bare",
-        "A whole number standing among fractions (`7 ⅔ 39`) is read as written, a whole number, and its value counts as such. The papyrus means a part whose sign was left off; rhind finds that by checking, and names it, rather than by correcting the figure.",
+        "A whole number standing among fractions (`7 ⅔ 39`) is read as written, a whole number, and its value counts as such. The papyrus usually means a part whose sign was left off; rhind finds that by checking, and names it, rather than by correcting the figure. Chace (vol. II, p. xi) says such an omission, where the context makes it clear, need not be an error; rhind reports these as notation, apart from other differences.",
     ),
     (
         "restored",
-        "A figure an edition restores ([…]) is used to work out what follows, but a row containing one is never counted right or wrong: it tests the edition, not the scribe. Where a restoration disagrees with the working, rhind says so.",
+        "A figure an edition restores ([…]) is used to work out what follows, but a row, total or result containing one is never counted right or wrong, and a list with a restored member is not summed: it tests the edition, not the scribe. Where a restoration disagrees with the working, rhind says so.",
     ),
 ];
 

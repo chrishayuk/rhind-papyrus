@@ -1,8 +1,8 @@
 # rhind
 
-The Rhind Mathematical Papyrus, run. Every figure the scribe Ahmose wrote in
-its working, about 1550 BCE, worked again with the operations he had, and
-compared, exactly, with what he wrote.
+The Rhind Mathematical Papyrus, run. The scribe Ahmose's working, about
+1550 BCE, transcribed so that it can be computed, and every figure in it that
+the notation can hold worked again and compared, exactly, with what he wrote.
 
 ```
 $ rhind no 27
@@ -29,13 +29,22 @@ line 15: 4 of 3 2̅ is 14; the papyrus has 15
     could be one-sign: 5 written for 4
 ```
 
-The papyrus has no division and no fractions but parts of one. To divide,
-the scribe doubles the divisor until the rows can be picked to make the
-dividend. To double an odd part, he looks it up in the table of 2 divided by
-odd numbers at the head of the papyrus. `rhind` does the same, and has no
-other way to do it. So when it reaches a different figure from the scribe's,
-the difference is in the figure, not in the method. It then asks what slip
-of the pen would turn the right figure into the one written.
+The papyrus writes fractions only as parts of one, with two-thirds the one
+exception, and it divides by multiplying: to divide, the scribe doubles the
+divisor until the rows can be picked to make the dividend. To double an odd
+part, he looks it up in the table of 2 divided by odd numbers at the head of
+the papyrus.
+
+`rhind` does two separate things. It **checks**: each figure the scribe wrote
+is compared, as an exact fraction, with what the working above it gives. And
+it **works**: where a page asks for a multiplication or a division, it writes
+the working the scribe's way, by doubling, halving, two-thirds and the table
+(`rhind routes` compares that with the scribe's columns). The check is exact
+arithmetic under the interpretive choices listed by `rhind decisions`; it is
+not a trace of the scribe's operations, and a disagreement can come from the
+figure, the transcription or one of those choices. For each disagreement it
+lists the explanations that fit: a sign left off, one sign written for
+another, the wrong rows ticked, and others.
 
 This is not a calculator for Egyptian fractions. It is a reading of one
 document: what the scribe wrote, what his working gives, and where they part.
@@ -54,12 +63,12 @@ compiled into it:
 ```bash
 rhind no 26          # a problem of the papyrus, checked
 rhind verify         # the whole papyrus
-rhind errata         # every wrong figure, and the slips that would make it
+rhind errata         # every disagreement, and the explanations that fit it
 ```
 
-For Visual Studio Code, download `rhind-language-0.1.0.vsix` from the
+For Visual Studio Code, download `rhind-language-0.1.1.vsix` from the
 [latest release](https://github.com/chrishayuk/rhind-papyrus/releases/latest)
-and run `code --install-extension rhind-language-0.1.0.vsix`: colours, the
+and run `code --install-extension rhind-language-0.1.1.vsix`: colours, the
 scribe's wrong figures as problems while you type, hover help that says how
 each row is made, and a run button. The extension carries its own copy of
 `rhind`. For Neovim, Helix and
@@ -116,116 +125,125 @@ transcriber's.
 
 ## What running it found
 
-The papyrus as transcribed has 91 problem sections and the two tables.
-`rhind verify` checks 965 lines of working: 838 are right and 127 have
-something wrong. In those 127 lines are 133 wrong figures. Chace or Peet
-points out 87 of them; 46 are not pointed out by either edition, as
-transcribed here. Each of those 46 is a question for the photographs. Most
-will be things the editions corrected silently, or misreadings by this
-project, before any is something new.
+These are counts against this project's transcription, under the rules in
+`rhind decisions`. The transcription was made by a coding agent and its
+sub-agents and no person has checked it; an independent review by a second
+model checked 72 places against the scans
+([`docs/independent-review.md`](docs/independent-review.md)). Nothing here is
+claimed as new.
 
-These counts are against this project's transcription, not the papyrus, and
-the transcription was made by a coding agent and its sub-agents (see
-"Reading the papyrus").
+`rhind verify` checks 956 lines of working across 91 problem sections and the
+two tables: 845 agree with the working, 111 do not. Those 111 lines give 113
+diagnostic records (one written figure can give two). They are of three kinds:
 
-### The slips
-
-For each wrong figure `rhind errata` tries models of how a figure goes
-wrong, and reports every one that turns the right figure into the written
-one. The first that fits:
-
-| slip | figures | what it is |
+| | records | what they are |
 |---|---|---|
-| `part-sign` | 71 | the sign for "part" left off, so 3̅0̅ is written 30 |
-| `one-sign` | 9 | one hieratic number sign written for another: 15 for 14 |
-| `ticks` | 6 | the total is right for other rows than those ticked |
-| `multiplier` | 4 | the row is right for a multiplier one sign away from the one written |
-| `in-the-list` | 3 | a list's total is right and one figure in it is wrong |
-| `wrong-row`, `neighbour`, `one-part` | 7 | the wrong row doubled or halved; the next row's figure copied; a fraction dropped |
-| none | 33 | no single slip of these kinds |
+| a part sign | 75 | the figure differs from the working only by the sign for "part": 30 where 3̅0̅ is meant, or the reverse |
+| the ticks | 4 | the total written is right for other rows than those ticked |
+| a figure | 34 | a figure that differs in more than its part sign |
 
-The commonest slip, by far, is the sign for "part" left off a number. The
-editions say so case by case ("fractional dot omitted"); run as a whole, it
-is about half of everything that goes wrong.
+The first kind is not a count of errors. Chace (vol. II, p. xi) says the part
+sign is often left off where the context makes the fraction clear, and that
+its omission need not be an error; Peet (p. 38) counts wrong dots among the
+scribe's errors and corrects them silently. The editions disagree about what
+these are, and `rhind` reports them apart.
 
-The second is which signs are confused. In hieratic each of 1-9, 10-90 and
-100-900 has a sign of its own, so a one-sign slip is one sign written for
-another. The pair that recurs is 60 for 80: 6̅6̅ for 8̅6̅ in 2 ÷ 43, 63 for 83
-in 2 ÷ 83, and 1̅6̅6̅ for 1̅8̅6̅ in 2 ÷ 93, five places in all. Chace noticed
-this: his note to 2 ÷ 83 refers to the one on 2 ÷ 43. What `rhind` adds is
-that it finds all of them by working the rows, with no other help, and that
-the tally sets them beside every other slip in the papyrus: no other pair of
-signs is confused more than twice.
+Of the 113, the transcribers' notes quote an edition commenting at 97. That
+is a keyword search of the notes, not a census of what Chace and Peet say:
+the review found edition comments the search misses, so the 16 left over are
+not "unnoted". It also found no misreading of a digit at any of them.
 
-Whether an error is carried tells which figure the scribe was working from.
-Where a wrong row has a total or result after it, `rhind` can say whether the
-total was made from the wrong figure or from the right one. Of the 38 wrong
-rows where it can tell, 35 are not carried: the total is right, so the
-working was right and the figure was miswritten. In Problem 27 no total is
-written, but the answer the scribe gives in words, 17 2̅, is 3 2̅ and 14, not
-15. These are slips of the pen more than of the arithmetic, which fits
-Ahmose's own description of the papyrus as a copy.
+### What the 34 are
 
-Some places where the slip model and the editions meet:
+Most of the 34 are known: 2 ÷ 79 (2̅3̅3̅ and 4̅1̅6̅ for 2̅3̅7̅ and 3̅1̅6̅),
+No. 27 (4 times 3 2̅ written 15), No. 31 (total 99 for 97), No. 43
+(4̅5̅ for 1̅8̅0̅), No. 58 (1 4̅ for 1 2̅ 4̅), No. 63 (113 3̅ for 133 3̅ in a
+list totalled 700), No. 79 (2301 for 2401), and the 9̅-for-1̅4̅ sequence of
+Nos. 10-14, all pointed out by Chace or Peet.
 
-- **Problem 63.** Four shares are listed and totalled, 700. They add to 680.
-  `rhind` asks which one figure, changed by one slip, makes the total right.
-  Four could, but only one correction is written elsewhere on the page:
-  113 3̅ for 133 3̅, which is the result of `Multiply 400 by 3̅` a few lines
-  up. Chace: "Mistake for 133."
-- **Problem 65.** Ten shares totalled 100. The one that is wrong is 7 ⅔ 39
-  for 7 ⅔ 3̅9̅, which is again on the page, two lines up. Chace: "The scribe
-  omitted the fractional dot."
-- **Problem 35.** The scribe's total 1 is right for two rows he did not tick.
-  Peet: *(sic)*. `rhind` names the two rows.
-- **2 ÷ 59.** The red answer has 2̅2̅6̅; the working has 2̅3̅6̅, and 4 × 59 is
-  236. `rhind` says the figure is right for a multiplier one sign away: 20
-  written for 30. Neither edition comments. Chace prints 226; Peet prints
-  236, perhaps silently corrected. The transcriber of that range read 226 on
-  Chace's plate independently, at 400 dpi, before `rhind` could run. This is
-  the place most worth checking against the British Museum photograph.
+For each, `rhind errata` lists the explanations that fit, not the cause.
+
+| explanation | fits | the only fit |
+|---|---|---|
+| a part sign left off or added | 77 | 75 |
+| one hieratic number sign for another (the figures differ in one decimal place) | 8 | 8 |
+| the ticks | 5 | 4 |
+| the multiplier one sign away from the one written | 4 | 3 |
+| the row is twice or half another row | 6 | 0 |
+| one figure of a list, by one of the above | 3 | 3 |
+| a fraction left out or added | 4 | 1 |
+| none of these | 13 | |
+
+"One sign for another" is inferred from the decimal places of the numbers,
+not from the shapes of the hieratic signs. Among the candidates it emits, the
+pair that recurs is 60 for 80: 6̅6̅ for 8̅6̅ in 2 ÷ 43, 63 for 83 in 2 ÷ 83 and
+1̅6̅6̅ for 1̅8̅6̅ in 2 ÷ 93, five places. Chace saw this: his note to 2 ÷ 43
+names all five. No other pair is emitted more than twice.
+
+### Was the error carried?
+
+Where one wrong row stands behind a total or result, `rhind` can say whether
+the total was made from the figure as written or from the right one. After
+the review tightened this test, it applies at 12 places: 11 are a part sign,
+and 1 is a figure. At all 12 the total is the right one. With 11 of them
+notational, this says nothing general about how the scribe worked; an
+earlier version of this README drew a conclusion from it that it does not
+support (see the review, finding 4).
+
+### 2 ÷ 59
+
+The red answer at the head of the entry has 2̅2̅6̅; the working has 2̅3̅6̅, and
+4 × 59 is 236. Chace prints 226 and 236 as described; Peet prints 236 in
+both, without remark on this page. The transcriber read 226 on Chace's plate
+before `rhind` could run, and the review read it again. This is a
+discrepancy between the editions, and a question for the British Museum
+photograph. It is not shown to be an error of the scribe's.
 
 ### The routes
 
-Doing the arithmetic right is one thing; setting it out the scribe's way is
-another. For every column the problems write in full, `rhind routes`
-works the same multiplication or division by its own procedure and compares
-the rows:
+`rhind routes` asks whether the scribe sets out a column the way `rhind`
+would. The problems have 139 columns of two rows or more. 128 can be read in
+full, and 65 of those begin with a row for 1, say what they multiply and tick
+at least one row; only those 65 are compared, by their multipliers and ticks:
 
 | | columns |
 |---|---|
-| the same rows and ticks, by doubling | 40 |
+| the same multipliers and ticks, by doubling | 40 |
 | the same, with the tens done by a row for 10 | 3 |
 | the same, taking 3̅ straight from the first row | 2 |
-| the same, read as a division (halving down to the remainder) | 2 |
+| the same, read as a division | 2 |
 | the same, with rows written that are not used | 1 |
 | the scribe uses 10 another way | 5 |
 | the scribe goes by ⅔ where `rhind` halves, or the reverse | 6 |
 | another route | 6 |
-| **in all** | **65** |
 
-Doubling alone gives 40 of 65 columns row for row. Three more conventions,
-each visible in the papyrus, bring it to 47. The rest are where the scribe
-chose differently, and they are listed by `rhind routes --all`.
+So 47 of the 65 eligible columns match after trying these three
+conventions. The targets are often taken from the scribe's own ticks, so this
+describes the subset, and does not validate the procedure; the columns that
+differ may differ because of the transcription or the model as well as the
+scribe's choice. `rhind routes --all` lists them.
 
 ### The table of 2 ÷ n
 
 Why does the papyrus write 2/13 as 8̅ 5̅2̅ 1̅0̅4̅, when 7̅ 9̅1̅ has fewer
-parts? This has been asked since the 1870s. `rhind 2/n` runs candidate rules
-for every odd n from 5 to 101 and compares them with all 49 entries:
+parts? `rhind 2/n` runs candidate rules for every odd n from 5 to 101 against
+the 49 entries, with at most four parts and none past 1000:
 
 | rule | entries |
 |---|---|
 | the largest part that fits, again and again | 4 of 49 |
 | fewest parts, then the smallest last part | 25 |
 | fewest parts, then fewest odd parts | 29 |
-| 2/n = m̅ + (2m − n)/mn, with 2m − n made of divisors of m, fewest parts | 32 |
+| 2/n = m̅ + (2m − n)/mn, 2m − n made of up to three divisors of m (n/2 < m ≤ n), fewest parts | 32 |
 | the same divisor method, smallest last part first | 34 |
 
-The divisor method is what the scribe's red auxiliary numbers look like, and
-it reproduces most entries. No rule tried here gives 2 ÷ 13 or 2 ÷ 95. The
-rules are named for what they do. Scholars have proposed rules of this kind
-since the 1870s, and none here is claimed to be any one scholar's, or new.
+The scores depend on the bounds: with parts up to 10,000 the fewest-parts
+divisor rule falls to 25 (the review reproduced this with an independent
+program, and so did this project). The targets take 2 ÷ 43, 59 and 93 as the
+working, not the answers, gives them. No rule here gives 2 ÷ 13 or 2 ÷ 95.
+Agreement describes a rule; it does not show the scribe used it. Rules of
+these kinds have been proposed for a long time, and none here is claimed to
+be any one scholar's, or new.
 
 ## Reading the papyrus
 
@@ -241,8 +259,12 @@ on the Internet Archive:
   10058*, 1923: translation and commentary, with the working in columns and
   the scribe's errors marked *(sic)*. The second witness.
 
-Every page was read from images of both, not from OCR: the OCR destroys the
-fraction bars, and the bars are the point. Where the editions disagree, the
+Every figure was read from page images, not from OCR: the OCR destroys the
+fraction bars, and the bars are the point. For the problems, both Chace's
+literal translation and his plates were read; for most of the 2 ÷ n table
+the transcriber read Chace's translation pages, which print the red ink in
+red, and read the plates glyph by glyph only at a few entries (see
+`sources/notes/table-2n-a.md`). Where the editions disagree, the
 file follows Chace and has a note on the line. The notes on each range,
 with every disagreement, are in [`sources/notes/`](sources/notes/). The
 brief the transcribers worked to is
@@ -263,11 +285,14 @@ drawings, and some columns set side by side.
 
 `rhind decisions` lists every choice this reconstruction makes that the
 papyrus does not fix: how a value is written (only for printing; figures
-are compared by value), how a column is told from the next, that a row of
-fractions may be taken of the row above ("add its half"), that a column's
-own rows outvote one slip in its first row, how the table's three-figure
-rows are read, and that a restored figure is used but never counted for or
-against the scribe.
+are compared by value), how a column is told from the next, what number a
+column multiplies (the statement's, or its row for 1 with or without a part
+sign put back, and otherwise the column is left unchecked), that a row of
+fractions may be taken of the row above ("add its half") where no statement
+says otherwise, how the table's three-figure rows are read, how a division
+stopped short with a remainder is followed, which units can be compared, and
+that a restored figure is used but never counted for or against the scribe.
+Several of these were changed after the independent review.
 
 ## In the browser
 
@@ -291,6 +316,18 @@ multiplying, dividing, the table, false position, the scribe's mistakes,
 reading the papyrus, and a reference. Every page and command in it is run by
 `cargo test` and compared with what the chapter says it prints.
 
+## Independent review
+
+A second model, OpenAI's Codex, reviewed 0.1.0 independently: it checked 72
+places in the transcription against the scans, wrote probe pages to break the
+checker, and read the code. It found no misread digit, confirmed 2 ÷ 59 and
+the five 60-for-80 places, and found that the census and several of the
+checker's rules were unsound. Every finding was checked here and acted on;
+what was done about each is in
+[`docs/independent-review.md`](docs/independent-review.md), and its report is
+[`docs/independent-review-report.md`](docs/independent-review-report.md).
+The numbers in this README are after those changes.
+
 ## Tests
 
 ```bash
@@ -309,9 +346,12 @@ the tutorial.
 The papyrus has been edited and studied for 150 years: Eisenlohr (1877),
 Peet (1923), Chace (1927-29), Gillings (*Mathematics in the Time of the
 Pharaohs*, 1972), Robins and Shute (1987), and much since. Annette Imhausen's
-*Ägyptische Algorithmen* (2003) reads the problems as algorithms, which is
-the idea this project runs with, and is the scholarly work closest to it.
-This project has not read it. The 2 ÷ n table's rules have a literature of
+*Ägyptische Algorithmen* (2003) reads the problems as algorithms, the idea
+this project runs with; this project has not read it, and so does not say how
+close it is. Work on the problems continues: Luca Miatello's reconstructions
+of the geometric problems, for one. An outside reader pointed to a 2025
+paper of his on Problem 43, which this project has not been able to confirm
+or read. The 2 ÷ n table's rules have a literature of
 their own. Nothing here is claimed as new until it has been checked against
 that literature and the photographs.
 

@@ -193,6 +193,10 @@ impl Quantity {
     pub fn of(value: Rat) -> Quantity {
         Quantity::plain(crate::scribe::express(value))
     }
+    /// Is this the exact value it was made from?
+    pub fn exact(&self, value: Rat) -> bool {
+        self.segments[0].0.value() == value
+    }
     pub fn of_in(value: Rat, unit: Option<Unit>) -> Quantity {
         let mut q = Quantity::of(value);
         q.unit = unit;

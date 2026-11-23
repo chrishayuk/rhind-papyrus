@@ -1,9 +1,9 @@
                 checked   right   wrong  not checked
 table-2n-a          184     170      14            9
 table-2n-b          148     125      23           16
-table-n10             0       0       0            0
+table-n10             9       8       1            0
 1                     2       1       1            3
-2                     2       1       1            3
+2                     1       1       0            4
 3                     1       1       0            4
 4                     3       2       1            2
 5                     3       2       1            2
@@ -14,17 +14,17 @@ table-n10             0       0       0            0
 9                     4       4       0            0
 10                    4       3       1            0
 11                    4       2       2            0
-12                    4       1       3            0
+12                    0       0       0            3
 13                    4       2       2            0
 14                    4       1       3            0
 15                    4       1       3            0
 16                    4       4       0            0
 17                    4       3       1            0
-18                    4       1       3            0
+18                    4       2       2            0
 19                    4       3       1            0
 20                    4       3       1            0
 21                    6       6       0            0
-22                    4       2       2            0
+22                    4       3       1            0
 23                    0       0       0            0
 24                   11      11       0            0
 25                   10      10       0            0
@@ -35,16 +35,16 @@ table-n10             0       0       0            0
 30                    8       5       3            0
 31                   14      10       4            0
 32                   20      15       5            2
-33                   20      17       3            0
+33                   20      18       2            0
 34                   11      11       0            0
 35                   23      21       2            0
 36                   19      17       2            0
-37                   18      13       5            0
+37                   18      14       4            0
 38                   27      24       3            0
 39                    9       9       0            0
 40                    8       8       0            0
 41                    9       9       0            0
-42                   14       6       8            0
+42                   10       6       4            3
 43                   14      13       1            0
 44                   13      13       0            0
 45                    5       5       0            0
@@ -57,26 +57,26 @@ table-n10             0       0       0            0
 52                    6       6       0            0
 53                   10       9       1            0
 54                    7       6       1            0
-55                    7       6       1            0
+55                    6       6       0            1
 56                    4       3       1            0
 57                    0       0       0            0
 58                    6       5       1            0
 59                    6       6       0            0
 59b                   0       0       0            0
 60                    5       5       0            0
-61                   17      11       6            0
+61                   16      11       5            1
 61b                   0       0       0            0
 62                    3       3       0            0
-63                    8       7       1            0
-64                    4       4       0            0
+63                    7       6       1            0
+64                    3       3       0            0
 65                    2       1       1            0
-66                    7       6       1            1
+66                    6       6       0            1
 67                   14      13       1            0
 68                   15      15       0            2
 69                   28      28       0            0
-70                   22      20       2            0
-71                    3       3       0            0
-72                    4       4       0            0
+70                   21      21       0            1
+71                    2       2       0            0
+72                    3       3       0            0
 73                    1       1       0            0
 74                    3       3       0            0
 75                    1       1       0            0
@@ -86,17 +86,22 @@ table-n10             0       0       0            0
 79                    5       4       1            0
 80                    7       7       0            0
 81                   28      24       4            3
-82                    1       1       0            0
+82                    0       0       0            0
 82b                   0       0       0            0
 83                    0       0       0            0
 84                    1       1       0            0
 85                    0       0       0            0
 86                    0       0       0            0
 87                    0       0       0            0
-all                 965     838     127           47
+all                 956     845     111           57
 
-91 problems. 965 lines checked: 838 right, 127 with something wrong. 133 wrong figures found: 87 pointed out by an edition, 46 not.
-An edition says the scribe erred at 107 more places: 22 on lines rhind checks and finds right, 85 on words, signs, units or figures rhind does not check (see `rhind errata`).
+91 problems. 956 lines checked: 845 agree with the working, 111 do not.
+113 diagnostic records on those lines (a written figure can give more than one):
+   75  differ only in a part sign: a notation the editions treat differently, not necessarily an error
+    4  the ticked rows do not make the total
+   34  a figure differs in more than its part sign
+The transcribers' notes mention an edition's comment at 97 of the 113 (a keyword search of the notes, not a census of what the editions say).
+The notes mention an edition's comment at 150 more places where rhind reports nothing: 38 on lines it checks and finds right, 112 on words, signs, units or figures it does not check (see `rhind errata`).
 The 2 ÷ n table as transcribed differs from the table rhind doubles with at 3 entries:
   2 ÷ 43: [42, 86, 129, 301] in rhind, [42, 66, 129, 301] as transcribed
   2 ÷ 59: [36, 236, 531] in rhind, [36, 226, 531] as transcribed

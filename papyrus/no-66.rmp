@@ -13,5 +13,5 @@ Reckon with 365 to find 3200.
   2/3    243 '3
   '10    36 '2
   '2190  '6
-{Result 8 2/3 '10 '2190.}   % the papyrus: {Total 8 2/3 '10 '2190} (red), the sum of the multipliers 8, 2/3, '10, '2190; no row is ticked
+{"Total 8 2/3 '10 '2190."}   % red. A total of the multipliers 8, 2/3, '10, '2190, not of the products, and no row is ticked; the notation's Total adds products, so it is kept as words (independent review, finding 6)
 "Shalt do thou according to the like in relation to what is said to thee, all, like example this."

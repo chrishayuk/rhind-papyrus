@@ -104,6 +104,29 @@ fn judge(s: &[(Rat, Rat, bool)], r: &[(Rat, Rat, bool)]) -> Verdict {
     Verdict::Other
 }
 
+/// How many columns the problems have, how many could be read in full, and
+/// how many `routes` can compare: a first row multiplying by 1, a number it
+/// multiplies, and at least one tick. The others are left out.
+pub fn census() -> (usize, usize, usize) {
+    let (mut all, mut clean, mut eligible) = (0, 0, 0);
+    for (file, text) in papyrus::files() {
+        if file.starts_with("table-") {
+            continue;
+        }
+        let run = check::run(text);
+        for c in run.columns.iter().filter(|c| c.rows.len() >= 2) {
+            all += 1;
+            if c.clean {
+                clean += 1;
+                if rhind_rows(c, scribe::Style::default(), false).is_some() {
+                    eligible += 1;
+                }
+            }
+        }
+    }
+    (all, clean, eligible)
+}
+
 pub fn routes() -> Vec<Route> {
     let mut out = Vec::new();
     for (file, text) in papyrus::files() {

@@ -30,8 +30,8 @@ npm install
 npm run build        # compiles rhind to WebAssembly, bundles the extension
 npm test             # grammar, language server and runner tests
 npm run test:vscode  # opens a real VS Code and drives the extension
-npm run package      # writes rhind-language-0.1.0.vsix
-code --install-extension rhind-language-0.1.0.vsix
+npm run package      # writes rhind-language-0.1.1.vsix
+code --install-extension rhind-language-0.1.1.vsix
 ```
 
 To try it without installing, open this folder in VS Code and press F5.
