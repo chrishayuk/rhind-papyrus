@@ -175,7 +175,7 @@ no-15 line 4 (No. 15) [notation]: 1 of 3̅2̅ 2̅2̅8̅ is 3̅2̅ 2̅2̅8̅; the
 no-15 line 5 (No. 15) [notation]: 2̅ of 3̅2̅ 2̅2̅8̅ is 5̅7̅ 3̅6̅4̅8̅; the papyrus has 64 4̅5̅6̅
     could be part-sign: 64 written for 6̅4̅: the part sign left off
     noted: Chace: fractional dot omitted (64 for '64)
-no-15 line 8 (No. 15) [figure]: the total is 455/7296; the papyrus has 1̅6̅
+no-15 line 8 (No. 15) [figure]: the total is 2̅0̅ 1̅6̅0̅ 2̅8̅5̅ 3̅8̅4̅; the papyrus has 1̅6̅
     noted: Peet: "This is untrue, but the answer would have been correct had the original quantity read '32 '224."
 no-17 line 5 (No. 17) [notation]: 3̅ of 3̅ is 9̅; the papyrus has 9
     not carried: what follows is right
@@ -254,7 +254,7 @@ no-36 line 16 (No. 36) [figure]: the total is 30; the papyrus has 1
     could be wrong-row: half the row on line 14 (2)
     could be wrong-row: twice the row on line 15 (2̅)
     noted: the ticked products add to 30; Peet: "the scribe, instead of giving the total of the products as 30, gives it as 1. This must not be regarded as a mere error"; Chace prints dmd 1 without comment
-no-36 line 18 (No. 36) [notation]: 1 of 4̅ 3̅1̅ 1̅3̅1̅5̅ 2̅8̅8̅0̅7̅2̅7̅ 2̅4̅8̅9̅5̅7̅6̅1̅2̅6̅4̅8̅6̅0̅ is 4̅ 3̅1̅ 1̅3̅1̅5̅ 2̅8̅8̅0̅7̅2̅7̅ 2̅4̅8̅9̅5̅7̅6̅1̅2̅6̅4̅8̅6̅0̅; the papyrus has 4̅ 53 1̅0̅6̅ 2̅1̅2̅
+no-36 line 18 (No. 36) [notation]: 1 of 4̅ 5̅3̅ 1̅0̅6̅ 2̅1̅2̅ is 4̅ 5̅3̅ 1̅0̅6̅ 2̅1̅2̅; the papyrus has 4̅ 53 1̅0̅6̅ 2̅1̅2̅
     could be part-sign: 53 written for 5̅3̅: the part sign left off
     noted: 53 for '53: Chace fn 1: "The scribe omitted the fractional dots in these places."
 no-37 line 14 (No. 37) [notation]: 2̅ of 3 2̅ 1̅8̅ is 1 ⅔ 9̅; the papyrus has 1 2̅ 4̅ 36

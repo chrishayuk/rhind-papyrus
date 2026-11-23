@@ -16,6 +16,7 @@ const USAGE: &str = "rhind: the Rhind Mathematical Papyrus, run
   rhind reckon with 6 to find 21
   rhind double '7            (also halve, thirds: two-thirds of)
   rhind routes               does the scribe work each column the way rhind does?
+  rhind routes --derive      is each row of a column made from one before it, by operations the papyrus shows?
   rhind 2/n                  how were the entries of the 2 ÷ n table chosen? rules tested against the papyrus
   rhind decisions            the choices this reconstruction makes that the papyrus does not
   rhind lsp                  a language server on standard input and output
@@ -462,26 +463,150 @@ fn main() {
             check_only(p, &read(p))
         }
         "routes" => {
-            use rhind::routes::Verdict;
-            let all = rhind::routes::routes();
+            use rhind::routes::{Fidelity, Verdict};
             let show = |v: &[rhind::rat::Rat]| {
                 v.iter()
                     .map(|x| scribe::express(*x).to_string())
                     .collect::<Vec<_>>()
                     .join(" ")
             };
+            let readings = |rs: &[rhind::routes::Reading]| {
+                for r in rs {
+                    println!(
+                        "    line {}: {} read as {} ({})",
+                        r.line + 1,
+                        scribe::express(r.written),
+                        scribe::express(r.read),
+                        r.why
+                    );
+                }
+            };
+            if rest.first().map(|s| s == "--derive").unwrap_or(false) {
+                let all = rhind::routes::derive();
+                let listed = rest.iter().any(|s| s == "--all");
+                println!("Is every row of the scribe's column made from a row already written, by one of these, and every row used?\n");
+                for (_, what) in rhind::routes::OPS {
+                    println!("  {}", what);
+                }
+                println!("\nThe list is fixed; a column that needs another operation is reported, not accommodated.");
+                println!(
+                    "A row is used if it is ticked or another row is made from it. Products are checked elsewhere.\n"
+                );
+                type Set<'a> = &'a dyn Fn(&rhind::routes::Derivation) -> bool;
+                let count = |set: Set, f: Fidelity| all.iter().filter(|d| set(d) && d.fidelity == f).count();
+                let sets: [(&str, Set); 4] = [
+                    ("the columns routes compares", &|d| d.compared),
+                    ("  of which rhind's route matches", &|d| {
+                        d.verdict.map(|v| v.matches()).unwrap_or(false)
+                    }),
+                    ("  of which it does not", &|d| {
+                        d.compared && !d.verdict.map(|v| v.matches()).unwrap_or(false)
+                    }),
+                    ("every column read in full, beginning with 1", &|_| true),
+                ];
+                println!(
+                    "  {:<46} {:>8} {:>8} {:>8} {:>10} {:>6}",
+                    "", "faithful", "no ticks", "unused", "underived", "all"
+                );
+                for (name, set) in sets {
+                    println!(
+                        "  {:<46} {:>8} {:>8} {:>8} {:>10} {:>6}",
+                        name,
+                        count(set, Fidelity::Faithful),
+                        count(set, Fidelity::NoTicks),
+                        count(set, Fidelity::Unused),
+                        count(set, Fidelity::Underived),
+                        all.iter().filter(|d| set(d)).count()
+                    );
+                }
+                let theirs = |f: Fidelity| all.iter().filter(|d| d.rhind == Some(f)).count();
+                println!(
+                    "  {:<46} {:>8} {:>8} {:>8} {:>10} {:>6}",
+                    "rhind's own routes for the columns compared",
+                    theirs(Fidelity::Faithful),
+                    theirs(Fidelity::NoTicks),
+                    theirs(Fidelity::Unused),
+                    theirs(Fidelity::Underived),
+                    all.iter().filter(|d| d.rhind.is_some()).count()
+                );
+                let split = |m: bool, f: Fidelity| {
+                    all.iter()
+                        .filter(|d| {
+                            d.compared && d.verdict.map(|v| v.matches()).unwrap_or(false) == m && d.rhind == Some(f)
+                        })
+                        .count()
+                };
+                println!(
+                    "  {:<46} {:>8} {:>8} {:>8} {:>10} {:>6}",
+                    "  where it differs from the scribe's",
+                    split(false, Fidelity::Faithful),
+                    split(false, Fidelity::NoTicks),
+                    split(false, Fidelity::Unused),
+                    split(false, Fidelity::Underived),
+                    all.iter()
+                        .filter(|d| d.compared && !d.verdict.map(|v| v.matches()).unwrap_or(false))
+                        .count()
+                );
+                println!();
+                let mut ops: std::collections::BTreeMap<rhind::routes::Op, usize> = Default::default();
+                for d in &all {
+                    for r in &d.rows {
+                        if let Some((op, _)) = r.2 {
+                            *ops.entry(op).or_default() += 1;
+                        }
+                    }
+                }
+                print!("rows made by:");
+                for (op, n) in &ops {
+                    print!("  {} {}", op.name(), n);
+                }
+                println!("\n");
+                if !listed {
+                    println!("rhind routes --derive --all lists the columns that are not faithful, row by row.");
+                    exit(0);
+                }
+                for d in all
+                    .iter()
+                    .filter(|d| d.fidelity != Fidelity::Faithful || !d.readings.is_empty())
+                {
+                    println!(
+                        "{} line {}: {:?}{}",
+                        d.file,
+                        d.line + 1,
+                        d.fidelity,
+                        d.verdict.map(|v| format!(" (routes: {:?})", v)).unwrap_or_default()
+                    );
+                    let mut cells = Vec::new();
+                    for (i, (m, tick, how)) in d.rows.iter().enumerate() {
+                        let mark = if *tick { "\\" } else { "" };
+                        let how = match how {
+                            None if i == 0 => String::new(),
+                            None => " [none]".into(),
+                            Some((op, j)) if *j + 1 == i => format!(" [{}]", op.name()),
+                            Some((op, j)) => format!(" [{} of {}]", op.name(), scribe::express(d.rows[*j].0)),
+                        };
+                        let unused = if d.unused.contains(&i) { " [unused]" } else { "" };
+                        cells.push(format!("{}{}{}{}", mark, scribe::express(*m), how, unused));
+                    }
+                    println!("    {}", cells.join("  "));
+                    readings(&d.readings);
+                }
+                exit(0);
+            }
+            let all = rhind::routes::routes();
             let count = |v: Verdict| all.iter().filter(|r| r.verdict == v).count();
             let (all_cols, clean, eligible) = rhind::routes::census();
             println!("The problems have {} columns of two rows or more; {} can be read in full (nothing lost, restored or doubtful);", all_cols, clean);
             println!("{} of those begin with a row for 1, say what they multiply, and tick at least one row. Only those {} are compared.", eligible, eligible);
-            println!("A column that matches has the same multipliers and ticks as rhind's route; the products are checked elsewhere.\n");
+            println!("A column that matches has the same multipliers and ticks as rhind's route; the products are checked elsewhere.");
+            println!("A multiplier written without its part sign, where the check finds that, is read as the part.\n");
             for (v, what) in [
                 (Verdict::Same, "the same rows and ticks, by doubling"),
                 (Verdict::SameTens, "the same, multiplying the tens by a row for 10"),
                 (Verdict::SameThird, "the same, taking 3̅ straight from the first row"),
                 (Verdict::SameReckon, "the same, read as a division"),
                 (Verdict::Ticks, "the same rows, ticked differently"),
-                (Verdict::Extra, "the same, with rows written that are not used"),
+                (Verdict::Extra, "rhind's rows, with others written besides"),
                 (Verdict::Tens, "the scribe uses 10 another way"),
                 (
                     Verdict::Thirds,
@@ -493,7 +618,10 @@ fn main() {
             }
             println!("  {:>3}  columns in all\n", all.len());
             if rest.first().map(|s| s == "--all").unwrap_or(false) {
-                for r in all.iter().filter(|r| r.verdict != Verdict::Same) {
+                for r in all
+                    .iter()
+                    .filter(|r| r.verdict != Verdict::Same || !r.readings.is_empty())
+                {
                     println!(
                         "{} line {}: {:?}\n    scribe {}\n    rhind  {}",
                         r.file,
@@ -502,9 +630,10 @@ fn main() {
                         show(&r.scribe),
                         show(&r.rhind)
                     );
+                    readings(&r.readings);
                 }
             } else {
-                println!("rhind routes --all lists the columns that differ.");
+                println!("rhind routes --all lists the columns that differ; rhind routes --derive asks whether each row is made from one before it.");
             }
             0
         }

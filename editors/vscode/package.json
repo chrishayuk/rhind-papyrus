@@ -2,7 +2,7 @@
   "name": "rhind-language",
   "displayName": "Rhind Mathematical Papyrus",
   "description": "Syntax highlighting, a language server and a run button for pages of the Rhind Mathematical Papyrus (c. 1550 BCE): every figure of the scribe's working recomputed with the scribe's own operations.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "chrishayuk",
   "license": "Apache-2.0",
   "private": true,

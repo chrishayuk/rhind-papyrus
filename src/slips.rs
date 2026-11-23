@@ -193,7 +193,7 @@ pub fn multiplier_slip(written: &Eg, wanted: Rat) -> Option<String> {
     if wanted <= Rat::ZERO || wanted.denom() > 1_000_000 {
         return None;
     }
-    let we = scribe::express(wanted);
+    let we = scribe::try_express(wanted)?;
     // a single part, its number miswritten
     if let ([Term::Part(a)], [Term::Part(b)]) = (written.terms.as_slice(), we.terms.as_slice()) {
         if written.whole == 0 && we.whole == 0 {
@@ -238,7 +238,10 @@ fn in_the_list(run: &Run, f: &Finding) -> Vec<Slip> {
         if needed < Rat::ZERO {
             continue;
         }
-        let (ie, ne) = (written, scribe::express(needed));
+        let Some(ne) = scribe::try_express(needed) else {
+            continue;
+        };
+        let ie = written;
         let why = if item.fract() == needed.fract() {
             one_sign(needed.floor() as u64, item.floor() as u64)
         } else {
@@ -325,8 +328,9 @@ pub fn explain(run: &Run, f: &Finding) -> Vec<Slip> {
     if e < Rat::ZERO || w < Rat::ZERO {
         return out;
     }
-    let ee = scribe::express(e);
-    let we = scribe::express(w);
+    let (Some(ee), Some(we)) = (scribe::try_express(e), scribe::try_express(w)) else {
+        return out;
+    };
     // the figure as the scribe wrote it: give one of its numbers back its
     // part sign, and see if it is right then
     if let Some(written) = written_figure(run, f) {

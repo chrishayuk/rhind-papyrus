@@ -1,0 +1,158 @@
+Is every row of the scribe's column made from a row already written, by one of these, and every row used?
+
+  twice a row already written
+  half a row already written
+  ⅔ of a row already written
+  3̅ of a row already written, its ⅔ not written
+  10 times the first row
+  1̅0̅ of the first row
+  n̅ of the first row, where that makes 1 or a single part
+  a part the page's statement names, of the first row
+
+The list is fixed; a column that needs another operation is reported, not accommodated.
+A row is used if it is ticked or another row is made from it. Products are checked elsewhere.
+
+                                                 faithful no ticks   unused  underived    all
+  the columns routes compares                          55        0        5          5     65
+    of which rhind's route matches                     47        0        0          2     49
+    of which it does not                                8        0        5          3     16
+  every column read in full, beginning with 1          55       43        5         15    118
+  rhind's own routes for the columns compared          51        0        0         14     65
+    where it differs from the scribe's                  6        0        0         10     16
+
+rows made by:  double 114  halve 95  ⅔ 18  3̅ 15  ×10 14  1̅0̅ 12  unit part 13
+
+no-07 line 5: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-07b line 4: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-08 line 4: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-09 line 3: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-10 line 3: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-11 line 3: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-13 line 4: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-14 line 4: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-15 line 4: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-16 line 3: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-17 line 3: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-18 line 3: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-19 line 4: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-20 line 4: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-22 line 7: Faithful (routes: Same)
+    1  \1̅0̅ [1̅0̅]  \5̅ [double]
+    line 9: 5 read as 5̅ (5 written for 5̅: the part sign left off the multiplier)
+no-25 line 4: NoTicks
+    1  2̅ [halve]
+no-26 line 15: Underived
+    1  4̅ [none]
+no-27 line 4: NoTicks
+    1  5̅ [unit part]
+no-29 line 4: Underived
+    1  4̅ [none]  1̅0̅ [1̅0̅ of 1]
+no-31 line 13: Underived
+    1  ⅔ [⅔]  2̅ [halve of 1]  7̅ [none]
+no-32 line 5: Unused (routes: Thirds)
+    1  \⅔ [⅔]  \3̅ [halve]  \6̅ [halve]  \1̅2̅ [halve]  2̅2̅8̅ [unit part of 1]  1̅1̅4̅ [double] [unused]
+    line 8: 6 read as 6̅ (6 written for 6̅, and in the product 72 written for 7̅2̅: the part sign left off)
+no-32 line 30: Underived
+    1  3̅ [3̅]  4̅ [none]
+no-32 line 36: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-33 line 9: Underived (routes: Extra)
+    1  ⅔ [⅔] [unused]  2̅ [halve of 1]  \4̅ [halve]  \2̅8̅ [none]
+no-33 line 21: Underived
+    1  ⅔ [⅔]  2̅ [halve of 1]  7̅ [none]
+no-33 line 27: Underived
+    1  ⅔ [⅔]  2̅ [halve of 1]  4̅ [halve]  2̅8̅ [none]
+no-35 line 10: NoTicks
+    1  1̅0̅ [1̅0̅]  5̅ [double]
+no-35 line 15: Unused (routes: Extra)
+    \1  \2 [double]  3̅ [3̅ of 1] [unused]
+no-35 line 20: NoTicks
+    1  1̅0̅ [1̅0̅]  5̅ [double]
+no-35 line 25: NoTicks
+    1  2 [double]  3̅ [3̅ of 1]
+no-35 line 30: NoTicks
+    1  2 [double]  3̅ [3̅ of 1]
+no-36 line 6: NoTicks
+    1  3̅ [3̅]  5̅ [unit part of 1]
+no-36 line 18: Underived
+    1  2 [double]  3̅ [3̅ of 1]  5̅ [none]
+no-38 line 9: NoTicks
+    1  2̅2̅ [unit part]  1̅1̅ [double]  6̅ 6̅6̅ [double]
+no-38 line 16: NoTicks
+    1  2 [double]  7̅ [unit part of 1]
+no-38 line 22: Underived (routes: Thirds)
+    1  ⅔ [⅔]  3̅ [halve]  \6̅ [halve]  \1̅1̅ [none]  \2̅2̅ [halve]  \6̅6̅ [3̅]
+no-38 line 31: Underived (routes: Same)
+    \1  \2 [double]  \7̅ [none]
+no-38 line 36: NoTicks
+    1  2 [double]  7̅ [unit part of 1]
+no-39 line 5: Unused (routes: Tens)
+    1  \10 [×10]  2 [double of 1] [unused]  \2̅ [halve of 1]
+no-42 line 10: Faithful (routes: Other)
+    1  2 [double]  4 [double]  \8 [double]  \⅔ [3̅ of 2]  3̅ [halve]  \6̅ [halve]  \1̅8̅ [3̅]
+    line 16: 6 read as 6̅ (6 written for 6̅: the part sign left off the multiplier)
+no-44 line 10: NoTicks
+    1  10 [×10]
+no-44 line 12: NoTicks
+    1  10 [×10]
+no-44 line 14: NoTicks
+    1  2̅ [halve]
+no-44 line 16: NoTicks
+    1  1̅0̅ [1̅0̅]  2̅0̅ [halve]
+no-44 line 19: Unused (routes: Tens)
+    1  10 [×10]  \20 [double]  1̅0̅ [1̅0̅ of 1] [unused]
+no-45 line 7: NoTicks
+    1  10 [×10]  20 [double]
+no-45 line 11: NoTicks
+    1  1̅0̅ [1̅0̅]
+no-46 line 7: NoTicks
+    1  10 [×10]  20 [double]
+no-46 line 11: NoTicks
+    1  1̅0̅ [1̅0̅]
+no-49 line 6: Underived
+    1  10 [×10]  100 [none]
+no-50 line 9: NoTicks
+    1  9̅ [unit part]
+no-51 line 6: NoTicks
+    1  2̅ [halve]
+no-51 line 8: NoTicks
+    1  2 [double]
+no-52 line 9: NoTicks
+    1  2̅ [halve]
+no-53 line 7: Unused (routes: Extra)
+    \1  \2 [double]  2̅ [halve of 1]  4̅ [halve] [unused]
+no-54 line 5: Underived (routes: Same)
+    1  \2̅ [halve]  \5̅ [none]
+no-55 line 5: NoTicks
+    1  2̅ [halve]  1̅0̅ [1̅0̅ of 1]
+no-56 line 9: Underived
+    1  2̅ [halve]  5̅ [none]  5̅0̅ [none]
+    line 11: 5 read as 5̅ (5 written for 5̅: the part sign left off the multiplier)
+no-58 line 14: NoTicks
+    1  2̅ [halve]  4̅ [halve]
+no-67 line 6: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-67 line 22: NoTicks
+    1  ⅔ [⅔]  3̅ [halve]
+no-70 line 28: Underived (routes: Tens)
+    1  10 [×10]  \20 [double]  \5 [halve of 10]  \5̅ [none]
+no-70 line 34: Underived
+    1  10 [×10]  100 [none]
+no-79 line 4: NoTicks
+    1  2 [double]  4 [double]
+no-80 line 6: NoTicks
+    1  2̅ [halve]  4̅ [halve]  8̅ [halve]  1̅6̅ [halve]  3̅2̅ [halve]  6̅4̅ [halve]

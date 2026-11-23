@@ -1,6 +1,6 @@
 [package]
 name = "rhind"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "Apache-2.0"
 description = "The Rhind Mathematical Papyrus (c. 1550 BCE), run: every figure of the scribe's working recomputed with the scribe's own operations"
@@ -17,3 +17,5 @@ path = "src/main.rs"
 
 [profile.release]
 opt-level = 3
+# a wrapped fraction is a wrong figure: fail instead
+overflow-checks = true

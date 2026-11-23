@@ -1,0 +1,94 @@
+The problems have 139 columns of two rows or more; 128 can be read in full (nothing lost, restored or doubtful);
+65 of those begin with a row for 1, say what they multiply, and tick at least one row. Only those 65 are compared.
+A column that matches has the same multipliers and ticks as rhind's route; the products are checked elsewhere.
+A multiplier written without its part sign, where the check finds that, is read as the part.
+
+   41  the same rows and ticks, by doubling
+    4  the same, multiplying the tens by a row for 10
+    2  the same, taking 3̅ straight from the first row
+    2  the same, read as a division
+    0  the same rows, ticked differently
+    5  rhind's rows, with others written besides
+    4  the scribe uses 10 another way
+    4  the scribe goes by ⅔ where rhind halves, or the reverse
+    3  another route
+   65  columns in all
+
+no-21 line 10: Other
+    scribe 1 1̅0̅ 5̅ 1̅5̅
+    rhind  1 6̅ 1̅0̅
+no-22 line 7: Same
+    scribe 1 1̅0̅ 5̅
+    rhind  1 1̅0̅ 5̅
+    line 9: 5 read as 5̅ (5 written for 5̅: the part sign left off the multiplier)
+no-24 line 7: SameReckon
+    scribe 1 2 2̅ 4̅ 8̅
+    rhind  1 2 4̅ 8̅
+no-31 line 5: Extra
+    scribe 1 2 4 8 2̅ 4̅
+    rhind  1 2 4 8 4̅
+no-32 line 5: Thirds
+    scribe 1 ⅔ 3̅ 6̅ 1̅2̅ 2̅2̅8̅ 1̅1̅4̅
+    rhind  1 4̅
+    line 8: 6 read as 6̅ (6 written for 6̅, and in the product 72 written for 7̅2̅: the part sign left off)
+no-33 line 9: Extra
+    scribe 1 ⅔ 2̅ 4̅ 2̅8̅
+    rhind  1 4̅ 2̅8̅
+no-34 line 4: Thirds
+    scribe 1 2 4 7̅ 4̅ 2̅8̅ 2̅ 1̅4̅
+    rhind  1 2 4 ⅔ 2̅1̅
+no-35 line 5: SameThird
+    scribe 1 2 3̅
+    rhind  1 2 ⅔ 3̅
+no-35 line 15: Extra
+    scribe 1 2 3̅
+    rhind  1 2
+no-36 line 10: Other
+    scribe 1 2̅ 4̅ 1̅0̅6̅ 5̅3̅ 2̅1̅2̅
+    rhind  1 4̅ 5̅3̅ 1̅0̅6̅ 2̅1̅2̅
+no-38 line 22: Thirds
+    scribe 1 ⅔ 3̅ 6̅ 1̅1̅ 2̅2̅ 6̅6̅
+    rhind  1 4̅ 2̅2̅ 4̅4̅
+no-39 line 5: Tens
+    scribe 1 10 2 2̅
+    rhind  1 2 4 8 2̅
+no-39 line 10: SameThird
+    scribe 1 2 4 8 3̅
+    rhind  1 2 4 8 ⅔ 3̅
+no-41 line 14: SameTens
+    scribe 1 10 2̅
+    rhind  1 2 4 8 2̅
+no-42 line 10: Other
+    scribe 1 2 4 8 ⅔ 3̅ 6̅ 1̅8̅
+    rhind  1 2 4 8 2̅ ⅔ 3̅ 1̅8̅
+    line 16: 6 read as 6̅ (6 written for 6̅: the part sign left off the multiplier)
+no-43 line 16: SameTens
+    scribe 1 10 ⅔
+    rhind  1 2 4 8 ⅔
+no-43 line 23: Extra
+    scribe 1 1̅0̅ 2̅0̅
+    rhind  1 2̅0̅
+no-44 line 19: Tens
+    scribe 1 10 20 1̅0̅
+    rhind  1 2 4 8 16
+no-53 line 7: Extra
+    scribe 1 2 2̅ 4̅
+    rhind  1 2
+no-53 line 14: SameReckon
+    scribe 1 2 2̅ 4̅
+    rhind  1 2 4̅
+no-69 line 9: Tens
+    scribe 1 10 20 2 ⅔ 2̅1̅ 7̅
+    rhind  1 2 4 8 16 ⅔ 7̅ 2̅1̅
+no-69 line 30: SameTens
+    scribe 1 10 2 4
+    rhind  1 2 4 8
+no-70 line 6: Thirds
+    scribe 1 2 4 8 ⅔
+    rhind  1 2 4 8 2̅ 7̅ 1̅8̅
+no-70 line 28: Tens
+    scribe 1 10 20 5 5̅
+    rhind  1 2 4 8 16 5̅
+no-76 line 10: SameTens
+    scribe 1 10 2
+    rhind  1 2 4 8

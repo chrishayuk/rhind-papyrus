@@ -16,6 +16,7 @@ rhind: the Rhind Mathematical Papyrus, run
   rhind reckon with 6 to find 21
   rhind double '7            (also halve, thirds: two-thirds of)
   rhind routes               does the scribe work each column the way rhind does?
+  rhind routes --derive      is each row of a column made from one before it, by operations the papyrus shows?
   rhind 2/n                  how were the entries of the 2 ÷ n table chosen? rules tested against the papyrus
   rhind decisions            the choices this reconstruction makes that the papyrus does not
   rhind lsp                  a language server on standard input and output
@@ -53,7 +54,7 @@ a row for 1 after other rows. `No. 26` and `2 ÷ 7` begin a section.
 ```sh
 $ rhind decisions
 express
-    A value is written as its whole part and then its fraction: the fewest distinct unit fractions that make it, with ⅔ allowed first, and among those the one whose smallest part is largest, so that 3/4 is 2̅ 4̅ (not ⅔ 1̅2̅) and 7/8 is 2̅ 4̅ 8̅ (not 2̅ 3̅ 2̅4̅). Twice an odd part uses the 2 ÷ n table. rhind compares values, not forms, so this rule only decides how rhind writes a figure, never whether the scribe's is right. The rule is ours.
+    A value is written as its whole part and then its fraction: the fewest distinct unit fractions that make it, with ⅔ allowed first, and among those the one whose smallest part is largest, so that 3/4 is 2̅ 4̅ (not ⅔ 1̅2̅) and 7/8 is 2̅ 4̅ 8̅ (not 2̅ 3̅ 2̅4̅). Twice an odd part uses the 2 ÷ n table. Where the largest-part-first form runs past four parts or a part past 10,000, the shortest form of at most four parts, none past 10,000, is used instead (15/53 is 4̅ 5̅3̅ 1̅0̅6̅ 2̅1̅2̅, as No. 36 writes it); a value with no exact form within the bounds is never written approximately. rhind compares values, not forms, so this rule only decides how rhind writes a figure, never whether the scribe's is right. The rule is ours.
 
 double
     Twice a number is made term by term: n̅ for even n becomes (n/2)̅; for odd n the 2 ÷ n table is used, as the scribe would have; ⅔ becomes 1 3̅; 2̅ becomes 1. Repeated terms are then rewritten by value. The term-by-term part is the papyrus's (the table exists for it); the rewriting is ours.

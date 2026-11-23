@@ -191,7 +191,7 @@ impl Quantity {
         }
     }
     pub fn of(value: Rat) -> Quantity {
-        Quantity::plain(crate::scribe::express(value))
+        Quantity::plain(crate::scribe::try_express(value).unwrap_or_else(|| crate::scribe::approximate(value)))
     }
     /// Is this the exact value it was made from?
     pub fn exact(&self, value: Rat) -> bool {

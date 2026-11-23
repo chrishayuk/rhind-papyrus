@@ -86,6 +86,7 @@ rhind --check FILE         what is wrong with it, a line each
 rhind verify               run the whole papyrus and compare with the editions
 rhind errata               every wrong figure, the slips that fit it, and the editions' notes
 rhind routes               does the scribe set out each column the way rhind does?
+rhind routes --derive      is each row of a column made from one before it, by operations the papyrus shows?
 rhind 2/n                  how were the entries of the 2 ÷ n table chosen? rules tested against the papyrus
 rhind multiply 3 '2 by 5   the working, as the scribe would write it
 rhind reckon with 6 to find 21
@@ -204,24 +205,39 @@ photograph. It is not shown to be an error of the scribe's.
 `rhind routes` asks whether the scribe sets out a column the way `rhind`
 would. The problems have 139 columns of two rows or more. 128 can be read in
 full, and 65 of those begin with a row for 1, say what they multiply and tick
-at least one row; only those 65 are compared, by their multipliers and ticks:
+at least one row; only those 65 are compared, by their multipliers and ticks.
+A multiplier written without its part sign, where the check finds that, is
+read as the part, and the listing says so:
 
 | | columns |
 |---|---|
-| the same multipliers and ticks, by doubling | 40 |
-| the same, with the tens done by a row for 10 | 3 |
+| the same multipliers and ticks, by doubling | 41 |
+| the same, with the tens done by a row for 10 | 4 |
 | the same, taking 3̅ straight from the first row | 2 |
 | the same, read as a division | 2 |
-| the same, with rows written that are not used | 1 |
-| the scribe uses 10 another way | 5 |
-| the scribe goes by ⅔ where `rhind` halves, or the reverse | 6 |
-| another route | 6 |
+| `rhind`'s rows, with others written besides | 5 |
+| the scribe uses 10 another way | 4 |
+| the scribe goes by ⅔ where `rhind` halves, or the reverse | 4 |
+| another route | 3 |
 
-So 47 of the 65 eligible columns match after trying these three
+So 49 of the 65 eligible columns match after trying these three
 conventions. The targets are often taken from the scribe's own ticks, so this
-describes the subset, and does not validate the procedure; the columns that
-differ may differ because of the transcription or the model as well as the
-scribe's choice. `rhind routes --all` lists them.
+describes the subset, and does not validate the procedure. `rhind routes
+--all` lists the columns that differ.
+
+`rhind routes --derive` asks a question with no target and no choice of
+route. Is every row of the scribe's column made from one row already written,
+by a fixed list of operations? The list is twice, half, ⅔ or 3̅ of a row; 10
+times or 1̅0̅ of the first row; and n̅ of the first row where that makes 1 or a
+single part. Is every row also ticked or used to make another? 55 of the 65
+are. `rhind`'s own routes for the same columns pass the same test in 51.
+Where the two differ (16 columns), `rhind`'s route takes a part no listed
+operation makes in 10, and the scribe's in 3. The scribe reaches a part
+through a row he has already written (2̅ then 4̅; ⅔, 3̅, 6̅), or takes the part
+of the first row that makes a unit (1̅0̅6̅ of 106 is 1). `rhind` takes the part
+directly. [docs/routes.md](docs/routes.md) goes through the 18 columns 0.1.1
+left unmatched, the exceptions, and how the counts move if the list is
+loosened.
 
 ### The table of 2 ÷ n
 

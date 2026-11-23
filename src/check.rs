@@ -68,6 +68,8 @@ pub struct Column {
     pub other: Option<Rat>,
     /// multiplier, product, ticked: as written
     pub rows: Vec<(Rat, Rat, bool)>,
+    /// the line of each of `rows`
+    pub lines: Vec<usize>,
     /// every row could be read, none restored or in a table's double statement
     pub clean: bool,
 }
@@ -644,6 +646,11 @@ fn check_column(
             .iter()
             .filter(|r| checkable(&r.left) && checkable(&r.right))
             .map(|r| (val(&r.left).unwrap(), val(&r.right).unwrap(), r.tick))
+            .collect(),
+        lines: col
+            .iter()
+            .filter(|r| checkable(&r.left) && checkable(&r.right))
+            .map(|r| r.line)
             .collect(),
         clean: col.iter().all(|r| {
             checkable(&r.left) && checkable(&r.right) && !r.left.restored && !r.right.restored && r.third.is_none()

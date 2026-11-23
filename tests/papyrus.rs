@@ -64,6 +64,13 @@ fn the_table_rules_score_as_before() {
 }
 
 #[test]
+fn the_routes_are_as_before() {
+    // debug build: an overflow here panics, as it did in 0.1.1
+    same_as("routes.txt", &rhind(&["routes", "--all"]));
+    same_as("derive.txt", &rhind(&["routes", "--derive", "--all"]));
+}
+
+#[test]
 fn every_example_prints_its_page() {
     let dir = Path::new(env!("CARGO_MANIFEST_DIR")).join("examples");
     let mut n = 0;

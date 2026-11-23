@@ -16,14 +16,20 @@ use crate::table;
 /// then the 2 ÷ n table if what is left is twice a part, then the largest
 /// part that fits, again and again (decision `express`).
 pub fn express(v: Rat) -> Eg {
+    try_express(v).unwrap_or_else(|| panic!("rhind cannot write {v} as parts within its bounds"))
+}
+
+/// `express`, or `None` if the value cannot be written exactly within the
+/// bounds: a figure no scribe would write (a part past a million million).
+pub fn try_express(v: Rat) -> Option<Eg> {
     assert!(v >= Rat::ZERO, "the scribe has no negative numbers");
     let whole = v.floor() as u64;
     let f = v.fract();
-    let plain = fraction(f, false);
+    let plain = fraction(f, false)?;
     let mut eg = if f >= Rat::new(2, 3) {
         // with ⅔ or without: the fewer terms, and on a tie the one whose
         // smallest part is largest (3/4 is 2̅ 4̅, not ⅔ 1̅2̅)
-        let with = fraction(f, true);
+        let with = fraction(f, true)?;
         let key = |t: &Vec<Term>| {
             (
                 t.len(),
@@ -49,7 +55,8 @@ pub fn express(v: Rat) -> Eg {
         terms: std::mem::take(&mut eg),
     };
     sort(&mut out);
-    out
+    debug_assert_eq!(out.value(), v);
+    Some(out)
 }
 
 /// The shortest sum of distinct unit fractions for `f`, each part at most
@@ -97,46 +104,81 @@ fn search(f: Rat, k: usize, min_d: u64, dmax: u64) -> Option<Vec<u64>> {
     best
 }
 
-fn fraction(f: Rat, two_thirds: bool) -> Vec<Term> {
+fn fraction(f: Rat, two_thirds: bool) -> Option<Vec<Term>> {
     // two parts of an odd number: the papyrus's own table, whatever is shorter
     if !two_thirds && f.numer() == 2 {
         if let Some(parts) = table::twice(f.denom() as u64) {
-            return parts.iter().map(|d| Term::Part(*d)).collect();
+            return Some(parts.iter().map(|d| Term::Part(*d)).collect());
         }
     }
-    let greedy = greedy(f, two_thirds);
-    // look for a shorter or smaller form than the greedy one, within its bounds
     let lead = if two_thirds && f >= Rat::new(2, 3) {
         Rat::new(2, 3)
     } else {
         Rat::ZERO
     };
     let rest = f - lead;
+    let with_lead = |found: Vec<u64>| {
+        let mut out: Vec<Term> = if lead.is_zero() { vec![] } else { vec![Term::TwoThirds] };
+        out.extend(found.into_iter().map(Term::Part));
+        out
+    };
+    let greedy = greedy(f, two_thirds);
     let parts: Vec<u64> = greedy
-        .iter()
-        .filter_map(|t| if let Term::Part(n) = t { Some(*n) } else { None })
-        .collect();
+        .as_ref()
+        .map(|g| {
+            g.iter()
+                .filter_map(|t| if let Term::Part(n) = t { Some(*n) } else { None })
+                .collect()
+        })
+        .unwrap_or_default();
+    // look for a shorter or smaller form than the greedy one, within its bounds
     if rest.denom() <= 2000 && !parts.is_empty() && parts.len() <= 4 {
         let dmax = *parts.iter().max().unwrap();
         if let Some(found) = search(rest, parts.len(), 2, dmax) {
-            let mut out: Vec<Term> = if lead.is_zero() { vec![] } else { vec![Term::TwoThirds] };
-            out.extend(found.into_iter().map(Term::Part));
-            return out;
+            return Some(with_lead(found));
+        }
+    }
+    // the greedy form is long, or ran past any part the scribe would write
+    // (15/53 goes 4̅ 3̅1̅ 1̅3̅1̅5̅ 2̅8̅8̅0̅7̅2̅7̅ …): look for one of at most four
+    // parts, none past 10,000 (No. 36 writes 15/53 as 4̅ 5̅3̅ 1̅0̅6̅ 2̅1̅2̅)
+    let long = greedy.is_none() || parts.len() > 4 || parts.iter().any(|&d| d > 10_000);
+    if long && rest.denom() <= 10_000 {
+        if let Some(found) = search(rest, 4, 2, 10_000) {
+            return Some(with_lead(found));
         }
     }
     greedy
 }
 
-fn greedy(f: Rat, two_thirds: bool) -> Vec<Term> {
+/// A value too fine to write exactly (`try_express` gives `None`): its whole
+/// part and the largest parts that fit, stopping short of a part in a million
+/// million. Not its value; `Quantity::exact` says so, and `check::show` then
+/// prints the value as a fraction.
+pub fn approximate(v: Rat) -> Eg {
+    let mut f = v.fract();
+    let mut terms = Vec::new();
+    while !f.is_zero() && f.denom() <= 1_000_000_000_000 && terms.len() < 12 {
+        let d = (f.denom() + f.numer() - 1) / f.numer();
+        terms.push(Term::Part(d as u64));
+        f = f - Rat::part(d as u64);
+    }
+    Eg {
+        whole: v.floor() as u64,
+        terms,
+    }
+}
+
+/// The largest part that fits, again and again. `None` if a part would pass
+/// a part in a million million: the scribe never goes there, and the value
+/// would not be written exactly.
+fn greedy(f: Rat, two_thirds: bool) -> Option<Vec<Term>> {
     let mut f = f;
     let mut terms = Vec::new();
     if two_thirds && f >= Rat::new(2, 3) {
         terms.push(Term::TwoThirds);
         f = f - Rat::new(2, 3);
     }
-    let mut guard = 0;
-    while !f.is_zero() && guard < 12 {
-        guard += 1;
+    while !f.is_zero() {
         if f.numer() == 1 {
             terms.push(Term::Part(f.denom() as u64));
             break;
@@ -147,16 +189,14 @@ fn greedy(f: Rat, two_thirds: bool) -> Vec<Term> {
                 break;
             }
         }
-        // the largest part that fits; past a part in a thousand million the
-        // scribe would never go, and the arithmetic here would overflow
-        if f.denom() > 1_000_000_000_000 {
-            break;
+        if f.denom() > 1_000_000_000_000 || terms.len() >= 12 {
+            return None;
         }
         let d = (f.denom() + f.numer() - 1) / f.numer();
         terms.push(Term::Part(d as u64));
         f = f - Rat::part(d as u64);
     }
-    terms
+    Some(terms)
 }
 
 fn sort(eg: &mut Eg) {
@@ -418,31 +458,54 @@ pub fn total(rows: &[Row]) -> (Rat, Rat) {
 /// ⅔ and its halves, or with tenths, whichever needs fewest rows; failing
 /// all three, with parts of `by` itself (decision `reckon`).
 pub fn reckon(by: &Eg, target: &Eg) -> Vec<Row> {
+    reckon_with(by, target, Style::default())
+}
+
+/// `reckon`, with the whole of the quotient set out in `style`: with
+/// `tens`, a row for 10 and its doublings for the tens of the quotient, as
+/// Nos. 69 and 76 do. The remainder is made as `reckon` makes it.
+pub fn reckon_with(by: &Eg, target: &Eg, style: Style) -> Vec<Row> {
     let d = by.value();
     let t = target.value();
-    let mut rows = vec![Row {
-        tick: false,
-        left: Eg::int(1),
-        right: by.clone(),
-    }];
-    let mut p = 1u64;
-    while d * Rat::int((p * 2) as i128) <= t {
-        let next = double(&rows.last().unwrap().right);
-        p *= 2;
-        rows.push(Row {
+    let whole = (t / d).floor();
+    let mut rows = if style.tens && whole >= 10 {
+        let mut rows = multiply_with(
+            by,
+            &Eg::int(whole as u64),
+            Style {
+                tens: true,
+                third_direct: false,
+            },
+        );
+        rows.retain(|r| r.left.terms.is_empty());
+        rows
+    } else {
+        let mut rows = vec![Row {
             tick: false,
-            left: Eg::int(p),
-            right: next,
-        });
-    }
-    let mut got = Rat::ZERO;
-    for r in rows.iter_mut().rev() {
-        let v = r.right.value();
-        if got + v <= t {
-            r.tick = true;
-            got = got + v;
+            left: Eg::int(1),
+            right: by.clone(),
+        }];
+        let mut p = 1u64;
+        while d * Rat::int((p * 2) as i128) <= t {
+            let next = double(&rows.last().unwrap().right);
+            p *= 2;
+            rows.push(Row {
+                tick: false,
+                left: Eg::int(p),
+                right: next,
+            });
         }
-    }
+        let mut got = Rat::ZERO;
+        for r in rows.iter_mut().rev() {
+            let v = r.right.value();
+            if got + v <= t {
+                r.tick = true;
+                got = got + v;
+            }
+        }
+        rows
+    };
+    let got: Rat = rows.iter().filter(|r| r.tick).map(|r| r.right.value()).sum();
     let left = t - got;
     if left.is_zero() {
         return rows;
@@ -536,7 +599,7 @@ pub fn unit_of(q: &Quantity) -> Option<Unit> {
 pub const DECISIONS: &[(&str, &str)] = &[
     (
         "express",
-        "A value is written as its whole part and then its fraction: the fewest distinct unit fractions that make it, with ⅔ allowed first, and among those the one whose smallest part is largest, so that 3/4 is 2̅ 4̅ (not ⅔ 1̅2̅) and 7/8 is 2̅ 4̅ 8̅ (not 2̅ 3̅ 2̅4̅). Twice an odd part uses the 2 ÷ n table. rhind compares values, not forms, so this rule only decides how rhind writes a figure, never whether the scribe's is right. The rule is ours.",
+        "A value is written as its whole part and then its fraction: the fewest distinct unit fractions that make it, with ⅔ allowed first, and among those the one whose smallest part is largest, so that 3/4 is 2̅ 4̅ (not ⅔ 1̅2̅) and 7/8 is 2̅ 4̅ 8̅ (not 2̅ 3̅ 2̅4̅). Twice an odd part uses the 2 ÷ n table. Where the largest-part-first form runs past four parts or a part past 10,000, the shortest form of at most four parts, none past 10,000, is used instead (15/53 is 4̅ 5̅3̅ 1̅0̅6̅ 2̅1̅2̅, as No. 36 writes it); a value with no exact form within the bounds is never written approximately. rhind compares values, not forms, so this rule only decides how rhind writes a figure, never whether the scribe's is right. The rule is ours.",
     ),
     (
         "double",
@@ -629,6 +692,17 @@ mod tests {
         let rows = multiply(&eg("3 '2"), &eg("5"));
         assert_eq!(rows[2].right.to_string(), "14");
         assert_eq!(answer(&rows, false).to_string(), "17 2̅");
+    }
+    #[test]
+    fn express_is_exact() {
+        // No. 36: the greedy form of 15/53 runs past any part the scribe writes
+        let v = Rat::new(15, 53);
+        let e = express(v);
+        assert_eq!(e.value(), v);
+        assert!(e.terms.len() <= 4, "{e}");
+        for (n, d) in [(1, 7), (4, 13), (5, 121), (13, 97), (30, 106), (7, 22), (99, 100)] {
+            assert_eq!(express(Rat::new(n, d)).value(), Rat::new(n, d));
+        }
     }
     #[test]
     fn remainders_as_parts_of_the_divisor() {
