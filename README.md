@@ -66,9 +66,9 @@ rhind verify         # the whole papyrus
 rhind errata         # every disagreement, and the explanations that fit it
 ```
 
-For Visual Studio Code, download `rhind-language-0.1.1.vsix` from the
+For Visual Studio Code, download `rhind-language-0.1.2.vsix` from the
 [latest release](https://github.com/chrishayuk/rhind-papyrus/releases/latest)
-and run `code --install-extension rhind-language-0.1.1.vsix`: colours, the
+and run `code --install-extension rhind-language-0.1.2.vsix`: colours, the
 scribe's wrong figures as problems while you type, hover help that says how
 each row is made, and a run button. The extension carries its own copy of
 `rhind`. For Neovim, Helix and
